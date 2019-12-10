@@ -14,6 +14,18 @@ clibs is still experimental and for personal use only. The API may change withou
 
 **clibs** is written in ANSI C (C89). Nevertheless, We tested **clibs** against C89, C99 and C11. Hence, you may use it for code in either ANSI C or modern C.
 
+We tested **clibs** against several Unix or Unix-like systems:
+
+* Ubuntu 18.04 LTS
+* CentOS 8
+* openSUSE Leap 15.1
+* TrueOS, FreeBSD compatible
+* Solaris 11
+
+It should work on other Unix or Unix-like systems.
+
+BTW, though we didn't test **clibs** against Windows, it should work as well because **clibs** is implemented in ANSI C.
+
 ## What is clibs anyway?
 
 **clibs** are common utility declarations (types, macros, functions) used across various C programs. They are mostly domain neutral, able to be applied in different situations.
