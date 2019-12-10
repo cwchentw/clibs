@@ -8,6 +8,10 @@ DON'T USE IT IN PRODUCTION ENVIRONMENT.
 
 clibs is still experimental and for personal use only. The API may change without warning.
 
+## What is clibs anyway?
+
+**clibs** are common utility declarations (types, macros, functions) used across various C programs. They are mostly domain neutral, able to be applied in different situations.
+
 ## System Requirements
 
 * A C compiler that supports ANSI C
@@ -25,10 +29,6 @@ We tested **clibs** against several Unix or Unix-like systems:
 It should work on other Unix or Unix-like systems.
 
 BTW, though we didn't test **clibs** against Windows, it should work as well because **clibs** is implemented in ANSI C.
-
-## What is clibs anyway?
-
-**clibs** are common utility declarations (types, macros, functions) used across various C programs. They are mostly domain neutral, able to be applied in different situations.
 
 ## How to Use?
 
