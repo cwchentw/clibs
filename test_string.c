@@ -3,7 +3,7 @@
 
 #define TEST(cond) { \
     if (!(cond)) { \
-        DEBUG("Wrong test"); \
+        DEBUG_INFO("Wrong test"); \
         passed = FALSE; \
     } \
 }

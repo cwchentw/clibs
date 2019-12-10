@@ -17,25 +17,35 @@
     #endif
 #endif
 
-#define PRINT(format, ...) { \
-    fprintf(stdout, format, ##__VA_ARGS__); \
-}
+#ifndef PRINT
+    #define PRINT(format, ...) { \
+        fprintf(stdout, format, ##__VA_ARGS__); \
+    }
+#endif
 
-#define PERROR(format, ...) { \
-    fprintf(stderr, format, ##__VA_ARGS__); \
-}
+#ifndef PERROR
+    #define PERROR(format, ...) { \
+        fprintf(stderr, format, ##__VA_ARGS__); \
+    }
+#endif
 
-#define PUTS(format, ...) { \
-    fprintf(stdout, format "%s", ##__VA_ARGS__, END_OF_LINE); \
-}
+#ifndef PUTS
+    #define PUTS(format, ...) { \
+        fprintf(stdout, format "%s", ##__VA_ARGS__, END_OF_LINE); \
+    }
+#endif
 
-#define PUTERR(format, ...) { \
-    fprintf(stderr, format "%s", ##__VA_ARGS__, END_OF_LINE); \
-}
+#ifndef PUTERR
+    #define PUTERR(format, ...) { \
+        fprintf(stderr, format "%s", ##__VA_ARGS__, END_OF_LINE); \
+    }
+#endif
 
-#define DEBUG(format, ...) { \
-    fprintf(stderr, "(%s:%d) " format "%s", \
-        __FILE__, __LINE__, ##__VA_ARGS__, END_OF_LINE); \
-}
+#ifndef DEBUG_INFO
+    #define DEBUG_INFO(format, ...) { \
+        fprintf(stderr, "(%s:%d) " format "%s", \
+            __FILE__, __LINE__, ##__VA_ARGS__, END_OF_LINE); \
+    }
+#endif
 
 #endif  /* CLIBS_PRINT_FUNCTION_H */

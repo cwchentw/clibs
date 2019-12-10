@@ -3,7 +3,7 @@
 
 #define TEST(cond) { \
     if (!(cond)) { \
-        DEBUG("Wrong boolean relation"); \
+        DEBUG_INFO("Wrong boolean relation"); \
         passed = FALSE; \
     } \
 }
