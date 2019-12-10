@@ -1,6 +1,12 @@
 #ifndef CLIBS_PRINT_FUNCTION_H
 #define CLIBS_PRINT_FUNCTION_H
 
+#ifdef __cplusplus
+    #include <cstdio>
+#else
+    #include <stdio.h>
+#endif
+
 #ifndef END_OF_LINE
     #if _WIN32
         #define END_OF_LINE  "\r\n"
