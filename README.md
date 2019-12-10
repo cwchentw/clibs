@@ -29,6 +29,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *boolean.h*: boolean type for C
 * *platform.h*: manage platform-specific issues
 * *print_function.h*: handy print macro functions
+* *string.h* and *string.c*: utility functions for C string (null-terminated `char` array)
 
 ## Copyright
 
