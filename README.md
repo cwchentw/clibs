@@ -26,9 +26,9 @@ We tested **clibs** against several Unix or Unix-like systems:
 * TrueOS, FreeBSD compatible
 * Solaris 11
 
-It should work on other Unix or Unix-like systems.
+It should work on other Unix or Unix-like systems as well.
 
-BTW, though we didn't test **clibs** against Windows, it should work as well because **clibs** is implemented in ANSI C.
+BTW, though we didn't test **clibs** against Windows, it should also work because **clibs** is implemented in ANSI C.
 
 ## How to Use?
 
