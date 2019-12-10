@@ -1,0 +1,62 @@
+#!/bin/sh
+
+if [ $(uname) != "Linux" ] || [ $(uname) != "Darwin" ];
+then
+    make=gmake
+else
+    make=make
+fi
+
+if ! command -v $make 2>/dev/null 1>&2;
+then
+    echo "No GNU Make installed on your system" >&2;
+    exit 1;
+fi
+
+if ! command -v git 2>/dev/null 1>&2;
+then
+    echo "No Git installed on your system" >&2;
+    exit 1;
+fi
+
+if ! command -v perl 2>/dev/null 1>&2;
+then
+    echo "No Perl installed on your system" >&2;
+    exit 1;
+fi
+
+message=$1;
+
+if [ -z "$message" ];
+then
+    echo "No commit message" >&2;
+    exit 1;
+fi
+
+trims ()
+{
+	local file=$1
+
+	if [ -z "$file" ]
+	then
+		echo "No file" >&2
+		return 1
+	fi
+	perl -lpi -e "s{\s+$}{}g;" $@
+}
+
+modified=$(git ls-files --other --modified --exclude-standard)
+for file in $modified;
+do
+    if [ -f "$file" ];
+    then
+        trims $file;
+    fi
+done
+
+# Clean files.
+$make clean
+
+# Local commit.
+git add .
+git commit -m "$message";
