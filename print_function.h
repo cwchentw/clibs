@@ -1,12 +1,14 @@
 #ifndef CLIBS_PRINT_FUNCTION_H
 #define CLIBS_PRINT_FUNCTION_H
 
-#if _WIN32
-    #define END_OF_LINE  "\r\n"
-#elif __unix__ || __APPLE__
-    #define END_OF_LINE  "\n"
-#else
-    #error "Unsupported"
+#ifndef END_OF_LINE
+    #if _WIN32
+        #define END_OF_LINE  "\r\n"
+    #elif __unix__ || __APPLE__
+        #define END_OF_LINE  "\n"
+    #else
+        #error "Unsupported"
+    #endif
 #endif
 
 #define PRINT(format, ...) { \
