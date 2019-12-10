@@ -10,7 +10,7 @@ clibs is still experimental and for personal use only. The API may change withou
 
 ## What is clibs anyway?
 
-**clibs** are common utility declarations (types, macros, functions) used across various C programs. They are mostly domain neutral, able to be applied in different situations.
+**clibs** are common utilities (types, macros, functions) used across C programs. They are mostly domain neutral, able to be applied to various situations.
 
 ## System Requirements
 
