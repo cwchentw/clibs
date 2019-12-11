@@ -1,3 +1,5 @@
+/* boolean.h - boolean type for C.
+   Copyright (c) 2019 Michael Chen. Licensed under MIT. */
 #ifndef CLIBS_BOOLEAN_H
 #define CLIBS_BOOLEAN_H
 
