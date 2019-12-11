@@ -1,5 +1,5 @@
 #include "print_function.h"
-#include "string.h"
+#include "cstring.h"
 
 #define TEST(cond) { \
     if (!(cond)) { \
