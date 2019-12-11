@@ -36,12 +36,12 @@ The libraries in **clibs** are self-contained, distributed in either single head
 
 test_\*.c are test programs. You don't need them to use **clibs**.
 
-## Available Libraries:
+## Available Utilities:
 
 * *boolean.h*: boolean type for C
-* *platform.h*: manage platform-specific issues
-* *print_function.h*: handy print macro functions
-* *string.h* and *string.c*: utility functions for C string (null-terminated `char` array)
+* *cstring.h* and *cstring.c*: utility functions for C string (null-terminated `char` array)
+* *platform.h*: platform-specific data
+* *print_function.h*: handy console printing related function-like macros
 
 ## Copyright
 
