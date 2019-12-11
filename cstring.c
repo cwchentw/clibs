@@ -1,5 +1,5 @@
 #include <string.h>
-#include "string.h"
+#include "cstring.h"
 
 BOOL string_is_equal(char *a, char *b)
 {
