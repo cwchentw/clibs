@@ -1,3 +1,5 @@
+/* platform.h - platform specific data for C.
+   Copyright (c) 2019 Michael Chen. Licensed under MIT. */
 #ifndef CLIBS_PLATFORM_H
 #define CLIBS_PLATFORM_H
 
