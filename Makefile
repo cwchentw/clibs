@@ -6,10 +6,10 @@ endif
 CFLAGS=-Wall -Wextra -g -std=$(CSTD)
 
 TEST_BOOLEAN_EXEC=test_boolean
-TEST_STRING_EXEC=test_string
+TEST_STRING_EXEC=test_cstring
 
 TEST_BOOLEAN_SRC=test_boolean.c
-TEST_STRING_SRC=string.c test_string.c
+TEST_STRING_SRC=cstring.c test_cstring.c
 
 TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_STRING_EXEC)
 
