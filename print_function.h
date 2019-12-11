@@ -1,3 +1,5 @@
+/* print_function.h - console printing utilities.
+   Copyright (c) 2019 Michael Chen. Licensed under MIT. */
 #ifndef CLIBS_PRINT_FUNCTION_H
 #define CLIBS_PRINT_FUNCTION_H
 
