@@ -28,14 +28,8 @@ BOOL string_is_equal(char *a, char *b)
 
 BOOL string_starts_with(char *a, char *b)
 {
-    size_t sz_a = strlen(a);
-    size_t sz_b = strlen(b);
-
-    if (sz_a < sz_b)
-        return FALSE;
-
     size_t i = 0;
-    while (i < sz_b) {
+    while (a[i] && b[i]) {
         if (a[i] != b[i])
             return FALSE;
 
