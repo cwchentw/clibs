@@ -1,8 +1,14 @@
-/* cstring.h and cstring.c - 
-       string utilities for C string, aka null-terminated `char` array.
+/* cstring.h and cstring.c -
+      string utilities for C string, aka null-terminated `char` array.
    Copyright (c) 2019 Michael Chen. Licensed under MIT. */
 #ifndef CLIBS_CSTRING_H
 #define CLIBS_CSTRING_H
+
+#ifdef __cplusplus
+    #include <cstdio>
+#else
+    #include <stdio.h>
+#endif
 
 /* Custom boolean type. */
 #ifdef __cplusplus
@@ -39,6 +45,7 @@ BOOL string_contains(char *a, char *b);
 
 /* string_is_space_only will skip end of line. */
 BOOL string_is_space_only(char *a);
+FILE * string_to_stream(char *s);
 
 #ifdef __cplusplus
 }

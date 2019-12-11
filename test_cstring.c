@@ -23,8 +23,31 @@ int main(void)
     TEST(string_is_space_only(" \t\r\n"));
     TEST(!string_is_space_only(" !\n"));
 
-    if (!passed)
+/*-------1---------2---------3---------4---------5---------6---------7---------8---------9*/
+/*3456789012345678901234567890123456789012345678901234567890123456789012345678901234567890*/
+    char s[] = "C is a general-purpose, procedural computer programming language " END_OF_LINE
+               "supporting structured programming, lexical variable scope, and " END_OF_LINE
+               "recursion, while a static type system prevents unintended operations." END_OF_LINE;
+
+    FILE *fp = string_to_stream(s);
+    if (!fp)
         return 1;
+
+    do {
+        char c = fgetc(fp);
+
+        if (feof(fp))
+            break;
+
+        printf("%c", c);
+    } while (1);
+
+    if (!passed) {
+        fclose(fp);
+        return 1;
+    }
+
+    fclose(fp);
 
     return 0;
 }

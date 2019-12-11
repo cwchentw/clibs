@@ -1,5 +1,22 @@
+#include <stdio.h>
 #include <string.h>
 #include "cstring.h"
+
+#ifndef END_OF_LINE
+    #if _WIN32
+        #define END_OF_LINE  "\r\n"
+    #elif __unix__ || __APPLE__
+        #define END_OF_LINE  "\n"
+    #else
+        #error "Unsupported"
+    #endif
+#endif
+
+#ifndef PUTERR
+    #define PUTERR(format, ...) { \
+        fprintf(stderr, format "%s", ##__VA_ARGS__, END_OF_LINE); \
+    }
+#endif
 
 BOOL string_is_equal(char *a, char *b)
 {
@@ -85,4 +102,25 @@ BOOL string_is_space_only(char *a)
     }
 
     return TRUE;
+}
+
+FILE * string_to_stream(char *s)
+{
+    FILE *fp = tmpfile();
+    if (!fp) {
+        PUTERR("Failed to allocate memory for file stream");
+        PUTERR("Check available system memory");
+        return fp;
+    }
+
+    size_t i = 0;
+    while (s[i]) {
+        fputc(s[i], fp);
+        i++;
+    }
+
+    /* Set the file pointer at the beginning of the stream. */
+    rewind(fp);
+
+    return fp;
 }
