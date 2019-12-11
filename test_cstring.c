@@ -31,7 +31,7 @@ int main(void)
 
     FILE *fp = string_to_stream(s);
     if (!fp)
-        return 1;
+        goto ERROR;
 
     do {
         char c = fgetc(fp);
@@ -42,12 +42,16 @@ int main(void)
         printf("%c", c);
     } while (1);
 
-    if (!passed) {
-        fclose(fp);
-        return 1;
-    }
+    if (!passed)
+        goto ERROR;
 
     fclose(fp);
 
     return 0;
+
+ERROR:
+    if (fp)
+        fclose(fp);
+
+    return 1;
 }
