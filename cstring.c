@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,9 +14,10 @@
     #endif
 #endif
 
-#ifndef PUTERR
-    #define PUTERR(format, ...) { \
-        fprintf(stderr, format "%s", ##__VA_ARGS__, END_OF_LINE); \
+#ifndef DEBUG_INFO
+    #define DEBUG_INFO(format, ...) { \
+        fprintf(stderr, "(%s:%d) " format "%s", \
+            __FILE__, __LINE__, ##__VA_ARGS__, END_OF_LINE); \
     }
 #endif
 
@@ -99,8 +101,8 @@ char * string_allocate(char *s)
 
     char *out = (char *) malloc(sz * sizeof(char));
     if (!out) {
-        PUTERR("Failed to allocate memory for C string");
-        PUTERR("Check available system memory");
+        DEBUG_INFO("Failed to allocate memory for C string");
+        DEBUG_INFO("Check available system memory");
         return out;
     }
 
@@ -114,12 +116,39 @@ char * string_allocate(char *s)
     return out;
 }
 
+char * string_allocate_substring(char *s, size_t from, size_t to)
+{
+    assert(from < to);
+
+    size_t len = strlen(s);
+    assert(to <= len);
+
+    size_t sz = to - from + 1 + 1;
+
+    char *out = (char *) malloc(sz * sizeof(char));
+    if (!out) {
+        DEBUG_INFO("Failed to allocate memory for C string");
+        DEBUG_INFO("Check available system memory");
+        return out;
+    }
+
+    {
+        size_t i;
+        for (i = from; i <= to; i++)
+            out[i-from] = s[i];
+    }
+
+    out[sz-1] = '\0';  /* Trailing zero. */
+
+    return out;
+}
+
 FILE * string_to_stream(char *s)
 {
     FILE *fp = tmpfile();
     if (!fp) {
-        PUTERR("Failed to allocate memory for file stream");
-        PUTERR("Check available system memory");
+        DEBUG_INFO("Failed to allocate memory for file stream");
+        DEBUG_INFO("Check available system memory");
         return fp;
     }
 
