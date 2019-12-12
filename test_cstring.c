@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "print_function.h"
 #include "cstring.h"
 
@@ -22,6 +23,18 @@ int main(void)
         "The quick brown fox jumps over the lazy dog", "black"));
     TEST(string_is_space_only(" \t\r\n"));
     TEST(!string_is_space_only(" !\n"));
+
+    {
+        char *out = string_allocate("Hello World");
+        if (!out) {
+            free(out);
+            goto ERROR;
+        }
+
+        TEST(string_is_equal(out, "Hello World"));
+
+        free(out);
+    }
 
 /*-------1---------2---------3---------4---------5---------6---------7---------8---------9*/
 /*3456789012345678901234567890123456789012345678901234567890123456789012345678901234567890*/

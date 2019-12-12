@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $(uname) != "Linux" ] || [ $(uname) != "Darwin" ];
+if [ $(uname) != "Linux" ] && [ $(uname) != "Darwin" ];
 then
     make=gmake
 else

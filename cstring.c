@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "cstring.h"
 
@@ -90,6 +91,27 @@ BOOL string_is_space_only(char *a)
     }
 
     return TRUE;
+}
+
+char * string_allocate(char *s)
+{
+    size_t sz = strlen(s) + 1;  /* strlen(s) + '\0' */
+
+    char *out = (char *) malloc(sz * sizeof(char));
+    if (!out) {
+        PUTERR("Failed to allocate memory for C string");
+        PUTERR("Check available system memory");
+        return out;
+    }
+
+    {
+        size_t i;
+        for (i = 0; i < sz - 1; i++)
+            out[i] = s[i];
+    }
+    out[sz-1] = '\0';  /* Trailing zero. */
+
+    return out;
 }
 
 FILE * string_to_stream(char *s)
