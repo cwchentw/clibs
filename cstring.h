@@ -34,25 +34,33 @@
     #endif  /* C89 */
 #endif  /* __cplusplus */
 
+/* Fix Windows-specific DLL issue */
+#ifdef _WIN32
+    #ifndef DLL_EXPORT
+        #define DLL_EXPORT __declspec(dllimport)
+    #endif  /* DLL_EXPORT */
+#else
+    #define DLL_EXPORT
+#endif  /* WIN32 */
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-BOOL string_is_equal(char *a, char *b);
-BOOL string_starts_with(char *a, char *b);
-BOOL string_contains(char *a, char *b);
+DLL_EXPORT BOOL string_is_equal(char *a, char *b);
+DLL_EXPORT BOOL string_starts_with(char *a, char *b);
+DLL_EXPORT BOOL string_contains(char *a, char *b);
 
 /* string_is_space_only will skip end of line. */
-BOOL string_is_space_only(char *a);
+DLL_EXPORT BOOL string_is_space_only(char *a);
 
 /* Allocate a new C string from input. */
-char * string_allocate(char *s);
+DLL_EXPORT char * string_allocate(char *s);
 
 /* Allocate a new C substring from input. */
-char * string_allocate_substring(char *s, size_t from, size_t to);
+DLL_EXPORT char * string_allocate_substring(char *s, size_t from, size_t to);
 
-FILE * string_to_stream(char *s);
+DLL_EXPORT FILE * string_to_stream(char *s);
 
 #ifdef __cplusplus
 }
