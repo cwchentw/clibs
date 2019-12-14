@@ -1,17 +1,20 @@
 language: c
 
-os:
-  - linux
-  - osx
-
-dist: bionic
-
-osx_image: xcode11.2
+job:
+  include:
+    - name: "Linux"
+      os: linux
+      dist: bionic
+    - name: "macOS"
+      osx_image: xcode11.2
+    - name: "Windows"
+      os: windows
+      before_install:
+        - choco install -y llvm
+        - choco install -y make
 
 compiler:
   - gcc
   - clang
 
-script:
-  - make
-
+script: make
