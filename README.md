@@ -42,7 +42,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *cstring.h* and *cstring.c*: utility functions for C string (null-terminated `char` array)
 * *cmath.h*: basic math operations
 * *platform.h*: platform-specific data
-* *print_function.h*: handy console printing related function-like macros
+* *print.h*: handy console printing related function-like macros
 
 ## Copyright
 
