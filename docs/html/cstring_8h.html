@@ -114,8 +114,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a5594f2b0ce2c840820c0a28fc44b7956"><td class="memItemLeft" align="right" valign="top">DLL_EXPORT char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cstring_8h.html#a5594f2b0ce2c840820c0a28fc44b7956">string_allocate</a> (const char *s)</td></tr>
 <tr class="memdesc:a5594f2b0ce2c840820c0a28fc44b7956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a new string out of string <em>s</em>.  <a href="#a5594f2b0ce2c840820c0a28fc44b7956">More...</a><br /></td></tr>
 <tr class="separator:a5594f2b0ce2c840820c0a28fc44b7956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f33944441c46a997af3ebd1eeed1e82"><td class="memItemLeft" align="right" valign="top"><a id="a4f33944441c46a997af3ebd1eeed1e82"></a>
-DLL_EXPORT char *&#160;</td><td class="memItemRight" valign="bottom"><b>string_allocate_substring</b> (const char *s, size_t from, size_t to)</td></tr>
+<tr class="memitem:a4f33944441c46a997af3ebd1eeed1e82"><td class="memItemLeft" align="right" valign="top">DLL_EXPORT char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cstring_8h.html#a4f33944441c46a997af3ebd1eeed1e82">string_allocate_substring</a> (const char *s, size_t from, size_t to)</td></tr>
+<tr class="memdesc:a4f33944441c46a997af3ebd1eeed1e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a new substring out of string <em>s</em> from <em>from</em> to <em>to</em>.  <a href="#a4f33944441c46a997af3ebd1eeed1e82">More...</a><br /></td></tr>
 <tr class="separator:a4f33944441c46a997af3ebd1eeed1e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28b2afbc73cc0806bbec57eb1da1d6ec"><td class="memItemLeft" align="right" valign="top">DLL_EXPORT FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cstring_8h.html#a28b2afbc73cc0806bbec57eb1da1d6ec">string_to_stream</a> (char *s)</td></tr>
 <tr class="memdesc:a28b2afbc73cc0806bbec57eb1da1d6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to a file stream.  <a href="#a28b2afbc73cc0806bbec57eb1da1d6ec">More...</a><br /></td></tr>
@@ -147,6 +147,52 @@ DLL_EXPORT char *&#160;</td><td class="memItemRight" valign="bottom"><b>string_a
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The source string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>char * </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Free the memory of the returning string by yourself. </dd></dl>
+
+</div>
+</div>
+<a id="a4f33944441c46a997af3ebd1eeed1e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f33944441c46a997af3ebd1eeed1e82">&#9670;&nbsp;</a></span>string_allocate_substring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DLL_EXPORT char* string_allocate_substring </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate a new substring out of string <em>s</em> from <em>from</em> to <em>to</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>The source string. </td></tr>
+    <tr><td class="paramname">from</td><td>The start index of the substring. </td></tr>
+    <tr><td class="paramname">to</td><td>The end index of the substring </td></tr>
   </table>
   </dd>
 </dl>
@@ -322,7 +368,7 @@ DLL_EXPORT char *&#160;</td><td class="memItemRight" valign="bottom"><b>string_a
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FILE * </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Close the file stream by yourself.</dd></dl>
-<p>Internally the returning file stream is a temporary file. </p>
+<p>Internally, the returning file stream is a temporary file. </p>
 
 </div>
 </div>

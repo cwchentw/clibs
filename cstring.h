@@ -92,7 +92,7 @@ DLL_EXPORT BOOL string_is_space_only(const char *s);
  */
 DLL_EXPORT char * string_allocate(const char *s);
 
-/** @fn       string_allocate_substring(char *s, size_t from, size_t to)
+/** @fn       string_allocate_substring(const char *s, size_t from, size_t to)
  *  @brief    Allocate a new substring out of string \a s from \a from to \a to
  *  @param    s The source string.
  *  @param    from The start index of the substring.
@@ -108,7 +108,7 @@ DLL_EXPORT char * string_allocate_substring(const char *s, size_t from, size_t t
  *  @return   FILE *
  *  @warning  Close the file stream by yourself.
  *
- *  Internally the returning file stream is a temporary file.
+ *  Internally, the returning file stream is a temporary file.
  */
 DLL_EXPORT FILE * string_to_stream(char *s);
 
