@@ -39,10 +39,10 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 ## Available Utilities:
 
 * *boolean.h*: boolean type for C
-* *cstring.h* and *cstring.c*: utility functions for C string (null-terminated `char` array)
 * *cmath.h*: basic math operations
+* *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
 * *platform.h*: platform-specific data
-* *print.h*: handy console printing related function-like macros
+* *print.h*: console printing related function-like macros
 
 ## Copyright
 
