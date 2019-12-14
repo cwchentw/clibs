@@ -21,7 +21,7 @@
     }
 #endif
 
-BOOL string_is_equal(char *a, char *b)
+BOOL string_is_equal(const char *a, const char *b)
 {
     if (0 == strcmp(a, b))
         return TRUE;
@@ -29,7 +29,7 @@ BOOL string_is_equal(char *a, char *b)
     return FALSE;
 }
 
-BOOL string_starts_with(char *a, char *b)
+BOOL string_starts_with(const char *a, const char *b)
 {
     size_t i = 0;
     while (a[i] && b[i]) {
@@ -42,7 +42,7 @@ BOOL string_starts_with(char *a, char *b)
     return TRUE;
 }
 
-BOOL string_contains(char *a, char *b)
+BOOL string_contains(const char *a, const char *b)
 {
     size_t i = 0;
     while (a[i]) {
@@ -69,25 +69,25 @@ BOOL string_contains(char *a, char *b)
     return FALSE;
 }
 
-BOOL string_is_space_only(char *a)
+BOOL string_is_space_only(const char *s)
 {
-    size_t sz = strlen(a);
+    size_t sz = strlen(s);
 
     {
         size_t i;
         for (i = 0; i < sz; i++) {
             /* Stop on EOL for Unix. */
-            if ('\n' == a[i])
+            if ('\n' == s[i])
                 break;
 
             /* Stop on EOL for Windows. */
-            if ('\r' == a[i]) {
-                if (i + 1 < sz && '\n' == a[i+1]) {
+            if ('\r' == s[i]) {
+                if (i + 1 < sz && '\n' == s[i+1]) {
                     break;
                 }
             }
 
-            if (!(' ' == a[i] || '\t' == a[i]))
+            if (!(' ' == s[i] || '\t' == s[i]))
                 return FALSE;
         }
     }
@@ -95,7 +95,7 @@ BOOL string_is_space_only(char *a)
     return TRUE;
 }
 
-char * string_allocate(char *s)
+char * string_allocate(const char *s)
 {
     size_t sz = strlen(s) + 1;  /* strlen(s) + '\0' */
 
@@ -116,7 +116,7 @@ char * string_allocate(char *s)
     return out;
 }
 
-char * string_allocate_substring(char *s, size_t from, size_t to)
+char * string_allocate_substring(const char *s, size_t from, size_t to)
 {
     assert(from < to);
 

@@ -1,0 +1,186 @@
+\hypertarget{cstring_8h}{}\section{cstring.\+h File Reference}
+\label{cstring_8h}\index{cstring.\+h@{cstring.\+h}}
+
+
+Utility functions for C strings.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for cstring.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{cstring_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cstring_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{cstring_8h_aa93f0eb578d23995850d61f7d61c55c1}} 
+\#define {\bfseries F\+A\+L\+SE}~0
+\item 
+\mbox{\Hypertarget{cstring_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{cstring_8h_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\#define {\bfseries T\+R\+UE}~1
+\item 
+\mbox{\Hypertarget{cstring_8h_a1ca888bd091694c05472e1b91df1a97b}\label{cstring_8h_a1ca888bd091694c05472e1b91df1a97b}} 
+\#define {\bfseries D\+L\+L\+\_\+\+E\+X\+P\+O\+RT}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cstring_8h_af492d2bddcb2befacb3aa03dcdf9aafd}\label{cstring_8h_af492d2bddcb2befacb3aa03dcdf9aafd}} 
+typedef char {\bfseries B\+O\+OL}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_a788b79461659ad8e79a9164af28d8ef2}{string\+\_\+is\+\_\+equal} (const char $\ast$a, const char $\ast$b)
+\begin{DoxyCompactList}\small\item\em Check whether two strings are equal. \end{DoxyCompactList}\item 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_ad17149d107c4366f280da504df45cc10}{string\+\_\+starts\+\_\+with} (const char $\ast$a, const char $\ast$b)
+\begin{DoxyCompactList}\small\item\em Check whether string {\itshape a} starts with string {\itshape b}. \end{DoxyCompactList}\item 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_ae0bb75ef00bf73fe720b76c56c98325f}{string\+\_\+contains} (const char $\ast$a, const char $\ast$b)
+\begin{DoxyCompactList}\small\item\em Check whether string {\itshape a} contains string {\itshape b}. \end{DoxyCompactList}\item 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_a4b78c493fbd5c995fd8b1edc5067caf2}{string\+\_\+is\+\_\+space\+\_\+only} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Check whether string {\itshape s} composes of only spaces. \end{DoxyCompactList}\item 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT char $\ast$ \hyperlink{cstring_8h_a5594f2b0ce2c840820c0a28fc44b7956}{string\+\_\+allocate} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Allocate a new string out of string {\itshape s}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cstring_8h_a4f33944441c46a997af3ebd1eeed1e82}\label{cstring_8h_a4f33944441c46a997af3ebd1eeed1e82}} 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT char $\ast$ {\bfseries string\+\_\+allocate\+\_\+substring} (const char $\ast$s, size\+\_\+t from, size\+\_\+t to)
+\item 
+D\+L\+L\+\_\+\+E\+X\+P\+O\+RT F\+I\+LE $\ast$ \hyperlink{cstring_8h_a28b2afbc73cc0806bbec57eb1da1d6ec}{string\+\_\+to\+\_\+stream} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Convert a string to a file stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility functions for C strings. 
+
+\begin{DoxyAuthor}{Author}
+Michael Chen 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+M\+IT
+\end{DoxyCopyright}
+{\bfseries \hyperlink{cstring_8h}{cstring.\+h}} and {\bfseries cstring.\+c} only support null-\/terminated {\ttfamily char} array. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cstring_8h_a5594f2b0ce2c840820c0a28fc44b7956}\label{cstring_8h_a5594f2b0ce2c840820c0a28fc44b7956}} 
+\index{cstring.\+h@{cstring.\+h}!string\+\_\+allocate@{string\+\_\+allocate}}
+\index{string\+\_\+allocate@{string\+\_\+allocate}!cstring.\+h@{cstring.\+h}}
+\subsubsection{\texorpdfstring{string\+\_\+allocate()}{string\_allocate()}}
+{\footnotesize\ttfamily D\+L\+L\+\_\+\+E\+X\+P\+O\+RT char$\ast$ string\+\_\+allocate (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Allocate a new string out of string {\itshape s}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The source string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Free the memory of the returning string by yourself. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{cstring_8h_ae0bb75ef00bf73fe720b76c56c98325f}\label{cstring_8h_ae0bb75ef00bf73fe720b76c56c98325f}} 
+\index{cstring.\+h@{cstring.\+h}!string\+\_\+contains@{string\+\_\+contains}}
+\index{string\+\_\+contains@{string\+\_\+contains}!cstring.\+h@{cstring.\+h}}
+\subsubsection{\texorpdfstring{string\+\_\+contains()}{string\_contains()}}
+{\footnotesize\ttfamily D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+contains (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Check whether string {\itshape a} contains string {\itshape b}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The source string. \\
+\hline
+{\em b} & The target string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cstring_8h_a788b79461659ad8e79a9164af28d8ef2}\label{cstring_8h_a788b79461659ad8e79a9164af28d8ef2}} 
+\index{cstring.\+h@{cstring.\+h}!string\+\_\+is\+\_\+equal@{string\+\_\+is\+\_\+equal}}
+\index{string\+\_\+is\+\_\+equal@{string\+\_\+is\+\_\+equal}!cstring.\+h@{cstring.\+h}}
+\subsubsection{\texorpdfstring{string\+\_\+is\+\_\+equal()}{string\_is\_equal()}}
+{\footnotesize\ttfamily D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+is\+\_\+equal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Check whether two strings are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first string. \\
+\hline
+{\em b} & The second string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cstring_8h_a4b78c493fbd5c995fd8b1edc5067caf2}\label{cstring_8h_a4b78c493fbd5c995fd8b1edc5067caf2}} 
+\index{cstring.\+h@{cstring.\+h}!string\+\_\+is\+\_\+space\+\_\+only@{string\+\_\+is\+\_\+space\+\_\+only}}
+\index{string\+\_\+is\+\_\+space\+\_\+only@{string\+\_\+is\+\_\+space\+\_\+only}!cstring.\+h@{cstring.\+h}}
+\subsubsection{\texorpdfstring{string\+\_\+is\+\_\+space\+\_\+only()}{string\_is\_space\_only()}}
+{\footnotesize\ttfamily D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+is\+\_\+space\+\_\+only (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Check whether string {\itshape s} composes of only spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The source string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL
+\end{DoxyReturn}
+string\+\_\+is\+\_\+space\+\_\+only will always skip end of line. \mbox{\Hypertarget{cstring_8h_ad17149d107c4366f280da504df45cc10}\label{cstring_8h_ad17149d107c4366f280da504df45cc10}} 
+\index{cstring.\+h@{cstring.\+h}!string\+\_\+starts\+\_\+with@{string\+\_\+starts\+\_\+with}}
+\index{string\+\_\+starts\+\_\+with@{string\+\_\+starts\+\_\+with}!cstring.\+h@{cstring.\+h}}
+\subsubsection{\texorpdfstring{string\+\_\+starts\+\_\+with()}{string\_starts\_with()}}
+{\footnotesize\ttfamily D\+L\+L\+\_\+\+E\+X\+P\+O\+RT \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+starts\+\_\+with (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Check whether string {\itshape a} starts with string {\itshape b}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The source string. \\
+\hline
+{\em b} & The target string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cstring_8h_a28b2afbc73cc0806bbec57eb1da1d6ec}\label{cstring_8h_a28b2afbc73cc0806bbec57eb1da1d6ec}} 
+\index{cstring.\+h@{cstring.\+h}!string\+\_\+to\+\_\+stream@{string\+\_\+to\+\_\+stream}}
+\index{string\+\_\+to\+\_\+stream@{string\+\_\+to\+\_\+stream}!cstring.\+h@{cstring.\+h}}
+\subsubsection{\texorpdfstring{string\+\_\+to\+\_\+stream()}{string\_to\_stream()}}
+{\footnotesize\ttfamily D\+L\+L\+\_\+\+E\+X\+P\+O\+RT F\+I\+LE$\ast$ string\+\_\+to\+\_\+stream (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Convert a string to a file stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The source string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+I\+LE $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Close the file stream by yourself.
+\end{DoxyWarning}
+Internally the returning file stream is a temporary file. 

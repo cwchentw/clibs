@@ -1,6 +1,10 @@
-/* cstring.h and cstring.c -
-     string utilities for C string, aka null-terminated `char` array.
-   Copyright (c) 2019 Michael Chen. Licensed under MIT. */
+/** @file       cstring.h
+ *  @brief      Utility functions for C strings.
+ *  @author     Michael Chen
+ *  @copyright  MIT
+ *
+ *  \b cstring.h and \b cstring.c only support null-terminated \c char array.
+ */
 #ifndef CLIBS_CSTRING_H
 #define CLIBS_CSTRING_H
 
@@ -47,19 +51,65 @@
 extern "C" {
 #endif
 
-DLL_EXPORT BOOL string_is_equal(char *a, char *b);
-DLL_EXPORT BOOL string_starts_with(char *a, char *b);
-DLL_EXPORT BOOL string_contains(char *a, char *b);
+/** @fn      string_is_equal(const char *a, const char *b)
+ *  @brief   Check whether two strings are equal.
+ *  @param   a The first string.
+ *  @param   b The second string.
+ *  @return  BOOL
+ */
+DLL_EXPORT BOOL string_is_equal(const char *a, const char *b);
 
-/* string_is_space_only will skip end of line. */
-DLL_EXPORT BOOL string_is_space_only(char *a);
+/** @fn      string_starts_with(const char *a, const char *b)
+ *  @brief   Check whether string \a a starts with string \a b
+ *  @param   a The source string.
+ *  @param   b The target string.
+ *  @return  BOOL
+ */
+DLL_EXPORT BOOL string_starts_with(const char *a, const char *b);
 
-/* Allocate a new C string from input. */
-DLL_EXPORT char * string_allocate(char *s);
+/** @fn      string_contains(const char *a, const char *b)
+ *  @brief   Check whether string \a a contains string \a b
+ *  @param   a The source string.
+ *  @param   b The target string.
+ *  @return  BOOL
+ */
+DLL_EXPORT BOOL string_contains(const char *a, const char *b);
 
-/* Allocate a new C substring from input. */
-DLL_EXPORT char * string_allocate_substring(char *s, size_t from, size_t to);
+/** @fn      string_is_space_only(const char *s)
+ *  @brief   Check whether string \a s composes of only spaces
+ *  @param   s The source string.
+ *  @return  BOOL
+ *
+ *  string_is_space_only will always skip end of line.
+ */
+DLL_EXPORT BOOL string_is_space_only(const char *s);
 
+/** @fn      string_allocate(const char *s)
+ *  @brief   Allocate a new string out of string \a s
+ *  @param   s The source string.
+ *  @return  char *
+ *  @warning  Free the memory of the returning string by yourself.
+ */
+DLL_EXPORT char * string_allocate(const char *s);
+
+/** @fn       string_allocate_substring(char *s, size_t from, size_t to)
+ *  @brief    Allocate a new substring out of string \a s from \a from to \a to
+ *  @param    s The source string.
+ *  @param    from The start index of the substring.
+ *  @param    to The end index of the substring
+ *  @return   char *
+ *  @warning  Free the memory of the returning string by yourself.
+ */
+DLL_EXPORT char * string_allocate_substring(const char *s, size_t from, size_t to);
+
+/** @fn       string_to_stream(char *s)
+ *  @brief    Convert a string to a file stream.
+ *  @param    s The source string.
+ *  @return   FILE *
+ *  @warning  Close the file stream by yourself.
+ *
+ *  Internally the returning file stream is a temporary file.
+ */
 DLL_EXPORT FILE * string_to_stream(char *s);
 
 #ifdef __cplusplus

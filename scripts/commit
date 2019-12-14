@@ -57,6 +57,12 @@ done
 # Clean files.
 $make clean
 
+# Update site documentation. (Optional)
+if command -v doxygen 2>/dev/null 1>&2;
+then
+    doxygen
+fi
+
 # Local commit.
 git add .
 git commit -m "$message";
