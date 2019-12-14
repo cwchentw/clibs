@@ -48,6 +48,8 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *platform.h*: platform-specific data
 * *print.h*: console printing related function-like macros
 
+Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
+
 ## Copyright
 
 Copyright (c) 2019 Michael Chen. Licensed under MIT.
