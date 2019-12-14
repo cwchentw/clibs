@@ -8,9 +8,10 @@ dist: bionic
 
 osx_image: xcode11.2
 
-compiler
+compiler:
   - gcc
   - clang
 
 script:
   - make
+
