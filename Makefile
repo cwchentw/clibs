@@ -1,3 +1,10 @@
+ifeq ($(OS),Windows_NT)
+    detected_OS := Windows
+else
+    detected_OS := $(shell sh -c 'uname -s 2>/dev/null || echo not')
+endif
+
+
 CSTD := $(CSTD)
 ifndef $(CSTD)
 	CSTD=c89
@@ -37,7 +44,11 @@ $(TEST_MATH_EXEC):
 	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_SRC) $(CFLAGS)
 
 $(TEST_STRING_EXEC):
+ifeq ($(detected_OS),Windows)
+	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_SRC) $(CFLAGS) -lcstring
+else
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_SRC) $(CFLAGS)
+endif
 
 clean:
 	$(RM) $(TEST_EXEC)
