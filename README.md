@@ -1,5 +1,7 @@
 # clibs
 
+[![Build Status](https://travis-ci.org/cwchentw/clibs.svg?branch=master)](https://travis-ci.org/cwchentw/clibs)
+
 Tiny but handy utility libraries for C.
 
 Visit the website of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
