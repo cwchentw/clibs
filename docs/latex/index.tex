@@ -1,0 +1,60 @@
+Tiny but handy utility libraries for C.
+
+Visit the website of {\bfseries clibs} \href{https://cwchentw.github.io/clibs/}{\tt here}.
+
+Vist the repository of {\bfseries clibs} \href{https://github.com/cwchentw/clibs/}{\tt here}.
+
+\subsection*{Warning}
+
+D\+ON\textquotesingle{}T U\+SE IT IN P\+R\+O\+D\+U\+C\+T\+I\+ON E\+N\+V\+I\+R\+O\+N\+M\+E\+NT.
+
+clibs is still experimental and for personal use only. The A\+PI may change without warning.
+
+\subsection*{What is clibs anyway?}
+
+{\bfseries clibs} are common utilities (types, macros, functions) used across C programs. They are mostly domain neutral, able to be applied to various situations.
+
+\subsection*{System Requirements}
+
+
+\begin{DoxyItemize}
+\item A C compiler that supports A\+N\+SI C
+\end{DoxyItemize}
+
+{\bfseries clibs} is written in A\+N\+SI C (C89). Nevertheless, We tested {\bfseries clibs} against C89, C99 and C11. Hence, you may use it for code in either A\+N\+SI C or modern C.
+
+We tested {\bfseries clibs} against several Unix or Unix-\/like systems\+:
+
+
+\begin{DoxyItemize}
+\item Ubuntu 18.\+04 L\+TS
+\item Cent\+OS 8
+\item open\+S\+U\+SE Leap 15.\+1
+\item True\+OS, Free\+B\+SD compatible
+\item Solaris 11
+\end{DoxyItemize}
+
+It should work on other Unix or Unix-\/like systems as well.
+
+B\+TW, though we didn\textquotesingle{}t test {\bfseries clibs} against Windows, it should also work because {\bfseries clibs} is implemented in A\+N\+SI C.
+
+\subsection*{How to Use?}
+
+The libraries in {\bfseries clibs} are self-\/contained, distributed in either single header or single header plus single source combo. Just copy what you need to your own C project.
+
+test\+\_\+$\ast$.c are test programs. You don\textquotesingle{}t need them to use {\bfseries clibs}.
+
+\subsection*{Available Utilities\+:}
+
+
+\begin{DoxyItemize}
+\item {\itshape \hyperlink{boolean_8h}{boolean.\+h}}\+: boolean type for C
+\item {\itshape \hyperlink{cmath_8h}{cmath.\+h}}\+: basic math operations
+\item {\itshape \hyperlink{cstring_8h_source}{cstring.\+h}} and {\itshape cstring.\+c}\+: utility functions for C strings (null-\/terminated {\ttfamily char} arrays)
+\item {\itshape \hyperlink{platform_8h_source}{platform.\+h}}\+: platform-\/specific data
+\item {\itshape \hyperlink{print_8h}{print.\+h}}\+: console printing related function-\/like macros
+\end{DoxyItemize}
+
+\subsection*{Copyright}
+
+Copyright (c) 2019 Michael Chen. Licensed under M\+IT. 
