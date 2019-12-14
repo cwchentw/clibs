@@ -79,6 +79,9 @@ Include dependency graph for print.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:aa3d2b101ea5e31185ae18e499d30ed11"><td class="memItemLeft" align="right" valign="top"><a id="aa3d2b101ea5e31185ae18e499d30ed11"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>END_OF_LINE</b>&#160;&#160;&#160;&quot;\n&quot;</td></tr>
+<tr class="separator:aa3d2b101ea5e31185ae18e499d30ed11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af990e936c83edcff058ae8ec5864adec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="print_8h.html#af990e936c83edcff058ae8ec5864adec">PRINT</a>(format, ...)</td></tr>
 <tr class="memdesc:af990e936c83edcff058ae8ec5864adec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print formated string to <b>stdout</b> without trailing EOL.  <a href="#af990e936c83edcff058ae8ec5864adec">More...</a><br /></td></tr>
 <tr class="separator:af990e936c83edcff058ae8ec5864adec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,7 +101,8 @@ Macros</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Console printing related macros. </p>
 <dl class="section author"><dt>Author</dt><dd>Michael Chen </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT</dd></dl>
+<p>The macro definition seen in this document represent the platform data of Unix. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a994994514490b70ee6a5dd679f28acbc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a994994514490b70ee6a5dd679f28acbc">&#9670;&nbsp;</a></span>DEBUG_INFO</h2>
@@ -125,7 +129,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, <span class="stringliteral">&quot;(%s:%d) &quot;</span> format <span class="stringliteral">&quot;%s&quot;</span>, \</div><div class="line">            __FILE__, __LINE__, ##__VA_ARGS__, END_OF_LINE); \</div><div class="line">    }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, <span class="stringliteral">&quot;(%s:%d) &quot;</span> format <span class="stringliteral">&quot;%s&quot;</span>, \</div><div class="line">            __FILE__, __LINE__, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:20</div></div>
+</div><!-- fragment -->
 <p>Print formated debug message to <b>stderr</b> with trailing EOL. </p>
 <p><b>DEBUG_INFO</b> works similarly to <b>PUTERR</b> but adds source file and line number. Hence, developers can track the location of the message more easily. </p>
 
@@ -218,7 +223,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, END_OF_LINE); \</div><div class="line">    }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:20</div></div>
+</div><!-- fragment -->
 <p>Print formated string to <b>stderr</b> with trailing EOL. </p>
 <p>The EOL will change according to the host environment. </p>
 
@@ -249,7 +255,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stdout, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, END_OF_LINE); \</div><div class="line">    }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stdout, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:20</div></div>
+</div><!-- fragment -->
 <p>Print formated string to <b>stdout</b> with trailing EOL. </p>
 <p>The EOL will change according to the host environment. </p>
 

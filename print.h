@@ -2,6 +2,8 @@
  *  @brief      Console printing related macros
  *  @author     Michael Chen
  *  @copyright  MIT
+ * 
+ * The macro definition seen in this document represent the platform data of Unix.
  */
 #ifndef CLIBS_PRINT_H
 #define CLIBS_PRINT_H

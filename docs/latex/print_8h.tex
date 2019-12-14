@@ -6,8 +6,7 @@ Console printing related macros.
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for print.\+h\+:
-\nopagebreak
+Include dependency graph for print.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,6 +15,9 @@ Include dependency graph for print.\+h\+:
 \end{figure}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{print_8h_aa3d2b101ea5e31185ae18e499d30ed11}\label{print_8h_aa3d2b101ea5e31185ae18e499d30ed11}} 
+\#define {\bfseries E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+NE}~\char`\"{}\textbackslash{}n\char`\"{}
 \item 
 \#define \hyperlink{print_8h_af990e936c83edcff058ae8ec5864adec}{P\+R\+I\+NT}(format, ...)
 \begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stdout} without trailing E\+OL. \end{DoxyCompactList}\item 
@@ -36,9 +38,9 @@ Console printing related macros.
 Michael Chen 
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-M\+IT 
+M\+IT
 \end{DoxyCopyright}
-
+The macro definition seen in this document represent the platform data of Unix. 
 
 \subsection{Macro Definition Documentation}
 \mbox{\Hypertarget{print_8h_a994994514490b70ee6a5dd679f28acbc}\label{print_8h_a994994514490b70ee6a5dd679f28acbc}} 
@@ -51,7 +53,7 @@ M\+IT
 \begin{DoxyCode}
 \{ \(\backslash\)
         fprintf(stderr, \textcolor{stringliteral}{"(%s:%d) "} format \textcolor{stringliteral}{"%s"}, \(\backslash\)
-            \_\_FILE\_\_, \_\_LINE\_\_, ##\_\_VA\_ARGS\_\_, END\_OF\_LINE); \(\backslash\)
+            \_\_FILE\_\_, \_\_LINE\_\_, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -99,7 +101,7 @@ Basically, {\bfseries P\+R\+I\+NT} is just a repackaged {\itshape printf} functi
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{ \(\backslash\)
-        fprintf(stderr, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, END\_OF\_LINE); \(\backslash\)
+        fprintf(stderr, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
     \}
 \end{DoxyCode}
 
@@ -115,7 +117,7 @@ The E\+OL will change according to the host environment. \mbox{\Hypertarget{prin
 {\bfseries Value\+:}
 \begin{DoxyCode}
 \{ \(\backslash\)
-        fprintf(stdout, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, END\_OF\_LINE); \(\backslash\)
+        fprintf(stdout, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
     \}
 \end{DoxyCode}
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['false',['FALSE',['../boolean_8h.html#aa93f0eb578d23995850d61f7d61c55c1',1,'boolean.h']]]
+  ['end_5fof_5fline',['END_OF_LINE',['../platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11',1,'platform.h']]]
 ];
