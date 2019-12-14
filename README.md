@@ -2,7 +2,7 @@
 
 Tiny but handy utility libraries for C.
 
-Visit the website of **clibs** [here](https://cwchentw.github.io/clibs/).
+Visit the website of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
 
 Vist the repository of **clibs** [here](https://github.com/cwchentw/clibs/).
 
