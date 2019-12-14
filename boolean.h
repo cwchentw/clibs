@@ -1,8 +1,20 @@
-/* boolean.h - boolean type for C.
-   Copyright (c) 2019 Michael Chen. Licensed under MIT. */
+/** @file       boolean.h
+ *  @brief      Boolean type for C
+ *  @author     Michael Chen
+ *  @copyright  MIT
+ */
 #ifndef CLIBS_BOOLEAN_H
 #define CLIBS_BOOLEAN_H
 
+/** @typedef  BOOL
+ *  @brief    Custom boolean type
+ *
+ *  @def    FALSE
+ *  @brief  False in boolean type
+ *
+ *  @def    TRUE
+ *  @brief  True in boolean type
+ */
 #ifdef __cplusplus
     #ifndef BOOL
         typedef bool BOOL;
