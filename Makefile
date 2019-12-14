@@ -6,12 +6,14 @@ endif
 CFLAGS=-Wall -Wextra -g -std=$(CSTD)
 
 TEST_BOOLEAN_EXEC=test_boolean
+TEST_MATH_EXEC=test_cmath
 TEST_STRING_EXEC=test_cstring
 
 TEST_BOOLEAN_SRC=test_boolean.c
+TEST_MATH_SRC=test_cmath.c
 TEST_STRING_SRC=cstring.c test_cstring.c
 
-TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_STRING_EXEC)
+TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC)
 
 
 .PHONY: all test clean
@@ -30,6 +32,9 @@ test: $(TEST_EXEC)
 
 $(TEST_BOOLEAN_EXEC):
 	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_SRC) $(CFLAGS)
+
+$(TEST_MATH_EXEC):
+	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_SRC) $(CFLAGS)
 
 $(TEST_STRING_EXEC):
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_SRC) $(CFLAGS)

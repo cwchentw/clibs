@@ -1,5 +1,5 @@
 #include "boolean.h"
-#include "print_function.h"
+#include "print.h"
 
 #define TEST(cond) { \
     if (!(cond)) { \

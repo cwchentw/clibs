@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include "print_function.h"
 #include "cstring.h"
+#include "print.h"
 
 #define TEST(cond) { \
     if (!(cond)) { \
