@@ -1,11 +1,12 @@
 language: c
 
-job:
+jobs:
   include:
     - name: "Linux"
       os: linux
       dist: bionic
     - name: "macOS"
+      os: osx
       osx_image: xcode11.2
     - name: "Windows"
       os: windows
@@ -13,8 +14,6 @@ job:
         - choco install -y llvm
         - choco install -y make
 
-compiler:
-  - gcc
-  - clang
-
-script: make
+script:
+  - make
+  - make CC=clang

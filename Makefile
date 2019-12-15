@@ -45,7 +45,9 @@ $(TEST_MATH_EXEC):
 
 $(TEST_STRING_EXEC):
 ifeq ($(detected_OS),Windows)
-	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_SRC) $(CFLAGS) -lcstring
+    $(CC) -c cstring.c $(CFLAGS)
+	ar rcs libcstring.a cstring.o
+	$(CC) -o $(TEST_STRING_EXEC) test_cstring.c libcstring.a $(CFLAGS)
 else
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_SRC) $(CFLAGS)
 endif
