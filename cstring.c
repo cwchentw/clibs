@@ -106,6 +106,8 @@ char * string_allocate(const char *s)
         return out;
     }
 
+    out[0] = '\0';
+
     {
         size_t i;
         for (i = 0; i < sz - 1; i++)
@@ -131,6 +133,8 @@ char * string_allocate_substring(const char *s, size_t from, size_t to)
         DEBUG_INFO("Check available system memory");
         return out;
     }
+
+    out[0] = '\0';
 
     {
         size_t i;
