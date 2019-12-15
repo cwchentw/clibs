@@ -99,7 +99,7 @@ char * string_allocate_substring(const char *s, size_t from, size_t to);
  *  @return   FILE *
  *  @warning  Close the file stream by yourself.
  *
- *  Internally, the returning file stream is a temporary file.
+ *  Internally, the returning file stream is a temporary file. Due to the limitation imposed by the \a stdio.h on Windows, this function may fail.
  */
 FILE * string_to_stream(char *s);
 

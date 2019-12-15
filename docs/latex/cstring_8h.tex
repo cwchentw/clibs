@@ -204,4 +204,4 @@ F\+I\+LE $\ast$
 \begin{DoxyWarning}{Warning}
 Close the file stream by yourself.
 \end{DoxyWarning}
-Internally, the returning file stream is a temporary file. 
+Internally, the returning file stream is a temporary file. Due to the limitation imposed by the {\itshape stdio.\+h} on Windows, this function may fail. 
