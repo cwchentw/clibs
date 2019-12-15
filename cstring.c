@@ -145,7 +145,16 @@ char * string_allocate_substring(const char *s, size_t from, size_t to)
 
 FILE * string_to_stream(char *s)
 {
+#ifdef _WIN32
+    FILE *fp = NULL;
+
+    if (!tmpfile_s(&fp)) {
+        DEBUG_INFO("Failed to create temp file")
+        return fp;
+    }
+#else
     FILE *fp = tmpfile();
+#endif
     if (!fp) {
         DEBUG_INFO("Failed to allocate memory for file stream");
         DEBUG_INFO("Check available system memory");

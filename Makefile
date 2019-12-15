@@ -5,20 +5,40 @@ else
 endif
 
 
+ifeq ($(detected_OS),Windows)
+	RM=del
+endif
+
 CSTD := $(CSTD)
 ifndef $(CSTD)
 	CSTD=c89
 endif
 
-CFLAGS=-Wall -Wextra -g -std=$(CSTD)
+ifeq ($(CC),cl)
+	CFLAGS=/W4 /sdl
+else
+	CFLAGS=-Wall -Wextra -g -std=$(CSTD)
+endif
 
-TEST_BOOLEAN_EXEC=test_boolean
-TEST_MATH_EXEC=test_cmath
-TEST_STRING_EXEC=test_cstring
+ifeq ($(detected_OS),Windows)
+	TEST_BOOLEAN_EXEC=test_boolean.exe
+	TEST_MATH_EXEC=test_cmath.exe
+	TEST_STRING_EXEC=test_cstring.exe
+else
+	TEST_BOOLEAN_EXEC=test_boolean
+	TEST_MATH_EXEC=test_cmath
+	TEST_STRING_EXEC=test_cstring
+endif
 
-TEST_BOOLEAN_SRC=test_boolean.c
-TEST_MATH_SRC=test_cmath.c
-TEST_STRING_SRC=cstring.c test_cstring.c
+ifeq ($(CC),cl)
+	TEST_BOOLEAN_OBJ=test_boolean.obj
+	TEST_MATH_OBJ=test_cmath.obj
+	TEST_STRING_OBJ=cstring.obj test_cstring.obj
+else
+	TEST_BOOLEAN_OBJ=test_boolean.o
+	TEST_MATH_OBJ=test_cmath.o
+	TEST_STRING_OBJ=cstring.o test_cstring.o
+endif
 
 TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC)
 
@@ -26,31 +46,48 @@ TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC)
 .PHONY: all test clean
 
 all: test
+ifeq ($(Cc),cl)
+	$(MAKE) test
+	$(MAKE) clean
+else
 	$(MAKE) test
 	$(MAKE) clean
 	$(MAKE) test CSTD=c99
 	$(MAKE) clean
 	$(MAKE) test CSTD=c11
 	$(MAKE) clean
+endif
 
 test: $(TEST_EXEC)
 	./$(TEST_BOOLEAN_EXEC)
 	./$(TEST_STRING_EXEC)
 
-$(TEST_BOOLEAN_EXEC):
-	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_SRC) $(CFLAGS)
-
-$(TEST_MATH_EXEC):
-	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_SRC) $(CFLAGS)
-
-$(TEST_STRING_EXEC):
-ifeq ($(detected_OS),Windows)
-	$(CC) -c cstring.c $(CFLAGS)
-	ar rcs libcstring.a cstring.o
-	$(CC) -o $(TEST_STRING_EXEC) test_cstring.c libcstring.a $(CFLAGS)
+$(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
+ifeq ($(CC),cl)
+	$(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 else
-	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_SRC) $(CFLAGS)
+	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 endif
 
+$(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
+ifeq ($(CC),cl)
+	$(CC) /Fe: $(TEST_MATH_EXEC) $(TEST_MATH_OBJ)
+else
+	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
+endif
+
+$(TEST_STRING_EXEC): $(TEST_STRING_OBJ)
+ifeq ($(CC),cl)
+	$(CC) /Fe: $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
+else
+	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
+endif
+
+%.obj: %.c
+	$(CC) /c $< $(CFLAGS)
+
+%.o: %.c
+	$(CC) -c $< $(CFLAGS)
+
 clean:
-	$(RM) $(TEST_EXEC)
+	$(RM) $(TEST_EXEC) $(TEST_BOOLEAN_OBJ) $(TEST_MATH_OBJ) $(TEST_STRING_OBJ)
