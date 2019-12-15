@@ -5,15 +5,14 @@ jobs:
     - name: "Linux"
       os: linux
       dist: bionic
+      script:
+        - make
+        - make CC=clang
     - name: "macOS"
       os: osx
       osx_image: xcode11.2
-    - name: "Windows"
-      os: windows
       before_install:
-        - choco install -y llvm
-        - choco install -y make
-
-script:
-  - make
-  - make CC=clang
+        - brew install gcc
+      script:
+        - make CC=gcc-9
+        - make CC=clang

@@ -21,7 +21,7 @@
     }
 #endif
 
-DLL_EXPORT BOOL string_is_equal(const char *a, const char *b)
+BOOL string_is_equal(const char *a, const char *b)
 {
     if (0 == strcmp(a, b))
         return TRUE;
@@ -29,7 +29,7 @@ DLL_EXPORT BOOL string_is_equal(const char *a, const char *b)
     return FALSE;
 }
 
-DLL_EXPORT BOOL string_starts_with(const char *a, const char *b)
+BOOL string_starts_with(const char *a, const char *b)
 {
     size_t i = 0;
     while (a[i] && b[i]) {
@@ -42,7 +42,7 @@ DLL_EXPORT BOOL string_starts_with(const char *a, const char *b)
     return TRUE;
 }
 
-DLL_EXPORT BOOL string_contains(const char *a, const char *b)
+BOOL string_contains(const char *a, const char *b)
 {
     size_t i = 0;
     while (a[i]) {
@@ -69,7 +69,7 @@ DLL_EXPORT BOOL string_contains(const char *a, const char *b)
     return FALSE;
 }
 
-DLL_EXPORT BOOL string_is_space_only(const char *s)
+BOOL string_is_space_only(const char *s)
 {
     size_t sz = strlen(s);
 
@@ -95,7 +95,7 @@ DLL_EXPORT BOOL string_is_space_only(const char *s)
     return TRUE;
 }
 
-DLL_EXPORT char * string_allocate(const char *s)
+char * string_allocate(const char *s)
 {
     size_t sz = strlen(s) + 1;  /* strlen(s) + '\0' */
 
@@ -116,7 +116,7 @@ DLL_EXPORT char * string_allocate(const char *s)
     return out;
 }
 
-DLL_EXPORT char * string_allocate_substring(const char *s, size_t from, size_t to)
+char * string_allocate_substring(const char *s, size_t from, size_t to)
 {
     assert(from < to);
 
@@ -143,7 +143,7 @@ DLL_EXPORT char * string_allocate_substring(const char *s, size_t from, size_t t
     return out;
 }
 
-DLL_EXPORT FILE * string_to_stream(char *s)
+FILE * string_to_stream(char *s)
 {
     FILE *fp = tmpfile();
     if (!fp) {
