@@ -4,8 +4,7 @@ else
     detected_OS := $(shell sh -c 'uname -s 2>/dev/null || echo not')
 endif
 
-
-ifeq ($(detected_OS),Windows)
+ifeq ($(CC),cl)
 	RM=del
 endif
 
@@ -46,7 +45,7 @@ TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC)
 .PHONY: all test clean
 
 all: test
-ifeq ($(Cc),cl)
+ifeq ($(CC),cl)
 	$(MAKE) test
 	$(MAKE) clean
 else
@@ -59,8 +58,15 @@ else
 endif
 
 test: $(TEST_EXEC)
+ifeq ($(detected_OS),Windows)
+	.\$(TEST_BOOLEAN_EXEC)
+	.\$(TEST_MATH_EXEC)
+	.\$(TEST_STRING_EXEC)
+else
 	./$(TEST_BOOLEAN_EXEC)
+	./$(TEST_MATH_EXEC)
 	./$(TEST_STRING_EXEC)
+endif
 
 $(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
 ifeq ($(CC),cl)
