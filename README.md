@@ -1,6 +1,6 @@
 # clibs
 
-[![Build Status](https://travis-ci.org/cwchentw/clibs.svg?branch=master)](https://travis-ci.org/cwchentw/clibs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/cwchentw/clibs.svg?branch=master)](https://travis-ci.org/cwchentw/clibs)
 
 Tiny but handy utility libraries for C.
 
