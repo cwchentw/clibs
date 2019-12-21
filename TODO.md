@@ -1,4 +1,3 @@
-* Add prefix to **clibs**
 * `cio` module for C string, i.e. null-terminated `char` array
   * `read_line` function to read stream line by line
   * `read_all` function to read all text from stream
