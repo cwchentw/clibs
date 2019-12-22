@@ -21,28 +21,31 @@
 /* Custom boolean type. */
 #ifndef _WIN32
 #ifdef __cplusplus
-    #ifndef BOOL
+    #ifndef _BOOL_IS_DEFINED
         typedef bool BOOL;
         #define FALSE  false
         #define TRUE   true
+        #define _BOOL_IS_DEFINED
     #endif  /* BOOL */
 #else
     #if __STDC_VERSION__ < 199901L
-        #ifndef BOOL
+        #ifndef _BOOL_IS_DEFINED
             typedef char BOOL;
             #define FALSE  0
             #define TRUE   1
+            #define _BOOL_IS_DEFINED
         #endif  /* BOOL */
     #else
-        #ifndef BOOL
+        #ifndef _BOOL_IS_DEFINED
             #include <stdbool.h>
             typedef bool BOOL;
             #define FALSE  false
             #define TRUE   true
+            #define _BOOL_IS_DEFINED
         #endif  /* BOOL */
     #endif  /* C89 */
 #endif  /* __cplusplus */
-#endif  /* Windows */
+#endif
 
 #ifdef __cplusplus
 extern "C" {
