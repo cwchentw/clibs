@@ -1,3 +1,4 @@
+* `term_color` module for colored text and/or background in console
 * `cio` module for I/O as C string, i.e. null-terminated `char` array
   * `stream_read_line` function to read stream line by line
   * `stream_read_all` function to read all text from stream
