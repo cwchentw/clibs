@@ -7,4 +7,4 @@ install:
 
 test_script:
 - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-- make CC=cl.exe
+- make test CC=cl.exe
