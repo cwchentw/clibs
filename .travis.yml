@@ -19,6 +19,6 @@ jobs:
     - name: "Windows"
       os: windows
       before_install:
-        - export PATH="/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/VC/Tools/MSVC/15.8.9.0/bin/Hostx86/x64:$PATH"
+        - alias cl=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/VC/Tools/MSVC/15.8.9.0/bin/Hostx86/x64/cl.exe
       script:
-        - mingw32-make CC=cl.exe
+        - mingw32-make CC=cl
