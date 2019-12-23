@@ -4,7 +4,9 @@ else
     detected_OS := $(shell sh -c 'uname -s 2>/dev/null || echo not')
 endif
 
-ifeq ($(CC),cl)
+VISUAL_CPP=cl cl.exe
+
+ifneq (filter $(CC),$(VISUAL_CPP))
 	RM=del
 endif
 
@@ -13,7 +15,7 @@ ifndef $(CSTD)
 	CSTD=c89
 endif
 
-ifeq ($(CC),cl)
+ifneq (filter $(CC),$(VISUAL_CPP))
 	CFLAGS=/W4 /sdl
 else
 	CFLAGS=-Wall -Wextra -g -std=$(CSTD)
@@ -29,7 +31,7 @@ else
 	TEST_STRING_EXEC=test_cstring
 endif
 
-ifeq ($(CC),cl)
+ifneq (filter $(CC),$(VISUAL_CPP))
 	TEST_BOOLEAN_OBJ=test_boolean.obj
 	TEST_MATH_OBJ=test_cmath.obj
 	TEST_STRING_OBJ=cstring.obj test_cstring.obj
@@ -69,21 +71,21 @@ else
 endif
 
 $(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
-ifeq ($(CC),cl)
+ifneq (filter $(CC),$(VISUAL_CPP))
 	$(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 endif
 
 $(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
-ifeq ($(CC),cl)
+ifneq (filter $(CC),$(VISUAL_CPP))
 	$(CC) /Fe: $(TEST_MATH_EXEC) $(TEST_MATH_OBJ)
 else
 	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
 endif
 
 $(TEST_STRING_EXEC): $(TEST_STRING_OBJ)
-ifeq ($(CC),cl)
+ifneq (filter $(CC),$(VISUAL_CPP))
 	$(CC) /Fe: $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)

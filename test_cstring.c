@@ -30,7 +30,7 @@ int main(void)
 
         char *out = string_allocate_substring(s, 0, 2);
         if (!out)
-            goto ERROR;
+            goto ERROR_CSTRING;
 
         TEST(string_is_equal(out, "The"));
 
@@ -42,7 +42,7 @@ int main(void)
 
         char *out = string_allocate_substring(s, 10, 14);
         if (!out)
-            goto ERROR;
+            goto ERROR_CSTRING;
 
         TEST(string_is_equal(out, "brown"));
 
@@ -54,7 +54,7 @@ int main(void)
 
         char *out = string_allocate_substring(s, strlen(s) - 3, strlen(s));
         if (!out)
-            goto ERROR;
+            goto ERROR_CSTRING;
 
         TEST(string_is_equal(out, "dog"));
 
@@ -65,7 +65,7 @@ int main(void)
         char *out = string_allocate("Hello World");
         if (!out) {
             free(out);
-            goto ERROR;
+            goto ERROR_CSTRING;
         }
 
         TEST(string_is_equal(out, "Hello World"));
@@ -83,7 +83,7 @@ int main(void)
 
         FILE *fp = string_to_stream(s);
         if (!fp)
-            goto ERROR;
+            goto ERROR_CSTRING;
 
         do {
             char c = fgetc(fp);
@@ -98,10 +98,10 @@ int main(void)
     }
 
     if (!passed)
-        goto ERROR;
+        goto ERROR_CSTRING;
 
     return 0;
 
-ERROR:
+ERROR_CSTRING:
     return 1;
 }
