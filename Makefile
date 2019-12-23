@@ -4,7 +4,7 @@ else
     detected_OS := $(shell sh -c 'uname -s 2>/dev/null || echo not')
 endif
 
-ifneq (,$(findstring cl,$(CC)))
+ifneq (,$(findstring cl.exe,$(CC)))
 	RM=del
 endif
 
@@ -13,7 +13,7 @@ ifndef $(CSTD)
 	CSTD=c89
 endif
 
-ifneq (,$(findstring cl,$(CC)))
+ifneq (,$(findstring cl.exe,$(CC)))
 	CFLAGS=/W4 /sdl
 else
 	CFLAGS=-Wall -Wextra -g -std=$(CSTD)
@@ -69,21 +69,21 @@ else
 endif
 
 $(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
-ifneq (,$(findstring cl,$(CC)))
+ifneq (,$(findstring cl.exe,$(CC)))
 	$(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 endif
 
 $(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
-ifneq (,$(findstring cl,$(CC)))
+ifneq (,$(findstring cl.exe,$(CC)))
 	$(CC) /Fe: $(TEST_MATH_EXEC) $(TEST_MATH_OBJ)
 else
 	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
 endif
 
 $(TEST_STRING_EXEC): $(TEST_STRING_OBJ)
-ifneq (,$(findstring cl,$(CC)))
+ifneq (,$(findstring cl.exe,$(CC)))
 	$(CC) /Fe: $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
