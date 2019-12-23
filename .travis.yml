@@ -19,4 +19,4 @@ jobs:
     - name: "Windows"
       os: windows
       script:
-        - mingw32-make CC="/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/VC/Tools/MSVC/15.8.9.0/bin/Hostx86/x64/cl.exe"
+        - mingw32-make CC="/c/Program\\ Files\\ \\(x86\\)/Microsoft\\ Visual\\ Studio/2017/BuildTools/VC/Tools/MSVC/15.8.9.0/bin/Hostx86/x64/cl.exe"
