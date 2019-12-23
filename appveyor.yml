@@ -7,8 +7,10 @@ build: off
 
 install:
 - cmd: cinst make
+- sh: if test $CI_LINUX; then sudo apt update; sudo apt install -y clang; else brew install gcc; fi
 
 test_script:
 - cmd: call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
 - cmd: make test CC=cl.exe
-- sh: make
+- sh: make CC=gcc
+- sh: make CC=clang
