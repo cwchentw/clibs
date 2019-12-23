@@ -19,7 +19,4 @@ jobs:
       script:
         - make CC=gcc-9
         - make CC=clang
-    - name: "Windows"
-      os: windows
-      script:
-        - mingw32-make CC=cl.exe
+

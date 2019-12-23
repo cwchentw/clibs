@@ -41,8 +41,6 @@ endif
 
 TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC)
 
-VSDEVCMD=C:\\Program Files \`(x86\`)\\Microsoft Visual Studio\\2017\\BuildTools\\Common7\\Tools\\VsDevCmd.bat
-
 .PHONY: all test clean
 
 all: test
@@ -71,43 +69,27 @@ endif
 
 $(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
 ifneq (,$(findstring $(CC),cl.exe))
-ifeq ($(TRAVIS_OS_NAME),windows)
-	powershell -NoProfile -Command "$(VSDEVCMD) -and $(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)"
-else
 	$(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
-endif  # TRAVIS_OS_NAME
 else
 	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
 ifneq (,$(findstring $(CC),cl.exe))
-ifeq ($(TRAVIS_OS_NAME),windows)
-	powershell -NoProfile -Command "$(VSDEVCMD) -and $(CC) /Fe: $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)"
-else
 	$(CC) /Fe: $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
-endif  # TRAVIS_OS_NAME
 else
 	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_STRING_EXEC): $(TEST_STRING_OBJ)
 ifneq (,$(findstring $(CC),cl.exe))
-ifeq ($(TRAVIS_OS_NAME),windows)
-	powershell -NoProfile -Command "$(VSDEVCMD) -and $(CC) /Fe: $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)"
-else
 	$(CC) /Fe: $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
-endif  # TRAVIS_OS_NAME
 else
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 %.obj: %.c
-ifeq ($(TRAVIS_OS_NAME),windows)
-	powershell -NoProfile -Command "$(VSDEVCMD) -and $(CC) /c $< $(CFLAGS)"
-else
 	$(CC) /c $< $(CFLAGS)
-endif
 
 %.o: %.c
 	$(CC) -c $< $(CFLAGS)
