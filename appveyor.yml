@@ -1,8 +1,8 @@
-environment:
-  matrix:
-    - image: Visual Studio 2019
-    - before_install:
-      - cinst make
-    - script:
-      - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-      - mingw32-make CC=cl.exe
+image: Visual Studio 2019
+
+install:
+- cinst make
+
+test_script:
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat
+- mingw32-make CC=cl.exe
