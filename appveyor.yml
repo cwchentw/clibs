@@ -1,5 +1,7 @@
 image: Visual Studio 2019
 
+build: script
+
 install:
 - cinst make
 
