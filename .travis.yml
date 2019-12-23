@@ -18,5 +18,7 @@ jobs:
         - make CC=clang
     - name: "Windows"
       os: windows
+      before_install:
+        - export CC=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/VC/Tools/MSVC/15.8.9.0/bin/Hostx86/x64/cl.exe
       script:
-        - /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/Common7/Tools/VsDevCmd.bat && mingw32-make CC=cl.exe
+        - /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/Common7/Tools/VsDevCmd.bat && mingw32-make
