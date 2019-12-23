@@ -19,4 +19,4 @@ jobs:
     - name: "Windows"
       os: windows
       script:
-        - mingw32-make CC=cl
+        - mingw32-make CC=cl.exe
