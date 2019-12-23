@@ -41,7 +41,7 @@ endif
 
 TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC)
 
-VSDEVCMD=C:\\Program\ Files\ \(x86\)\\Microsoft\ Visual\ Studio\\2017\\BuildTools\\Common7\\Tools\\VsDevCmd.bat
+VSDEVCMD=C:\\\\Program\ Files\ \(x86\)\\\\Microsoft\ Visual\ Studio\\\\2017\\\\BuildTools\\\\Common7\\\\Tools\\\\VsDevCmd.bat
 
 .PHONY: all test clean
 
