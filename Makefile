@@ -5,7 +5,7 @@ else
 endif
 
 ifneq (,$(findstring $(CC),cl.exe))
-	RM=del
+	RM=del /q /f
 endif
 
 CSTD := $(CSTD)
