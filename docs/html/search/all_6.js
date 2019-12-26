@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['max_10',['MAX',['../cmath_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'cmath.h']]],
-  ['min_11',['MIN',['../cmath_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'cmath.h']]]
+  ['max',['MAX',['../cmath_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'cmath.h']]],
+  ['min',['MIN',['../cmath_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'cmath.h']]]
 ];
