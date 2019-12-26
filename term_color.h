@@ -55,6 +55,47 @@
 #define TERM_COLOR_WHITE  "\e[0;37m"
 
 
+/** @def TERM_BOLD_COLOR_BLACK
+ *  @brief Bold black color in foreground.
+ */
+#define TERM_BOLD_COLOR_BLACK  "\e[1;30m"
+
+/** @def TERM_BOLD_COLOR_RED
+ *  @brief Bold red color in foreground.
+ */
+#define TERM_BOLD_COLOR_RED  "\e[1;31m"
+
+/** @def TERM_BOLD_COLOR_GREEN
+ *  @brief Bold  green color in foreground.
+ */
+#define TERM_BOLD_COLOR_GREEN  "\e[1;32m"
+
+/** @def TERM_BOLD_COLOR_YELLOW
+ *  @brief Bold yellow color in foreground.
+ */
+#define TERM_BOLD_COLOR_YELLOW  "\e[1;33m"
+
+/** @def TERM_BOLD_COLOR_BLUE
+ *  @brief Bold blue color in foreground.
+ */
+#define TERM_BOLD_COLOR_BLUE  "\e[1;34m"
+
+/** @def TERM_BOLD_COLOR_PURPLE
+ *  @brief Bold purple color in foreground.
+ */
+#define TERM_BOLD_COLOR_PURPLE  "\e[1;35m"
+
+/** @def TERM_BOLD_COLOR_CYAN
+ *  @brief Bold cyan color in foreground.
+ */
+#define TERM_BOLD_COLOR_CYAN  "\e[1;36m"
+
+/** @def TERM_BOLD_COLOR_WHITE
+ *  @brief Bold cyan color in foreground.
+ */
+#define TERM_BOLD_COLOR_WHITE  "\e[1;37m"
+
+
 /** @def TERM_BACKGROUND_COLOR_BLACK
  *  @brief Regular black color in background.
  */
