@@ -6,6 +6,7 @@ int main(void)
 {
     #define TARGET_STRING  "*Color*"
 
+    /* Regular color on regular background color. */
     PRINT("%s%s%s%s",
         TERM_COLOR_BLACK,
         TERM_BACKGROUND_COLOR_BLACK,
@@ -344,6 +345,7 @@ int main(void)
 
     PUTS("");
 
+    /* Bright color on bright background color. */
     PRINT("%s%s%s%s",
         TERM_BRIGHT_COLOR_BLACK,
         TERM_BRIGHT_BACKGROUND_COLOR_BLACK,
@@ -428,8 +430,135 @@ int main(void)
         TERM_COLOR_RESET);
     PUTS("");
 
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_BLACK,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_RED,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_GREEN,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_YELLOW,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_BLUE,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_PURPLE,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_CYAN,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_WHITE,
+        TERM_BRIGHT_BACKGROUND_COLOR_GREEN,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
     PUTS("");
 
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_BLACK,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_RED,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_GREEN,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_YELLOW,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_BLUE,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_PURPLE,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_CYAN,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_WHITE,
+        TERM_BRIGHT_BACKGROUND_COLOR_YELLOW,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PUTS("");
+
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_BLACK,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_RED,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_GREEN,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_YELLOW,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_BLUE,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_PURPLE,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_CYAN,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PRINT("%s%s%s%s",
+        TERM_BRIGHT_COLOR_WHITE,
+        TERM_BRIGHT_BACKGROUND_COLOR_BLUE,
+        TARGET_STRING,
+        TERM_COLOR_RESET);
+    PUTS("");
+
+    PUTS("");
+
+    /* Bold color on regular background color. */
     PRINT("%s%s%s%s",
         TERM_BOLD_COLOR_BLACK,
         TERM_BACKGROUND_COLOR_BLACK,
