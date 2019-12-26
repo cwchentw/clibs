@@ -49,6 +49,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
 * *platform.h*: platform-specific data
 * *print.h*: console printing related function-like macros
+* *term_color.h*: console color related macro
 
 Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
 

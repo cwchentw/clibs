@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['true_51',['TRUE',['../boolean_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'boolean.h']]]
+  ['term_5fbackground_5fcolor_5fblack_70',['TERM_BACKGROUND_COLOR_BLACK',['../term__color_8h.html#a9e80a0171d248748fb2d695246550257',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fblue_71',['TERM_BACKGROUND_COLOR_BLUE',['../term__color_8h.html#a8f3a91abef51b356986b4046ece92b13',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fcyan_72',['TERM_BACKGROUND_COLOR_CYAN',['../term__color_8h.html#a17e766fc8ce8160aaf032595b16b6bb5',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fgreen_73',['TERM_BACKGROUND_COLOR_GREEN',['../term__color_8h.html#a30bf12665e41db7f08d3d56f5c4b1240',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fpurple_74',['TERM_BACKGROUND_COLOR_PURPLE',['../term__color_8h.html#a43735cc3ee68d9caaafdae83b1207ba9',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fred_75',['TERM_BACKGROUND_COLOR_RED',['../term__color_8h.html#ace99216e4253ac1f1baed737571fc5ee',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fwhite_76',['TERM_BACKGROUND_COLOR_WHITE',['../term__color_8h.html#a327430a8e314013f44e40d1ff4d4d492',1,'term_color.h']]],
+  ['term_5fbackground_5fcolor_5fyellow_77',['TERM_BACKGROUND_COLOR_YELLOW',['../term__color_8h.html#aea93b57a7abead073d05f0ef074ac17c',1,'term_color.h']]],
+  ['term_5fcolor_5fblack_78',['TERM_COLOR_BLACK',['../term__color_8h.html#ad2e838c3c191be13ff1b47fda72f1f22',1,'term_color.h']]],
+  ['term_5fcolor_5fblue_79',['TERM_COLOR_BLUE',['../term__color_8h.html#a403697ea12f3cb2dd5b0051efaa00a8d',1,'term_color.h']]],
+  ['term_5fcolor_5fcyan_80',['TERM_COLOR_CYAN',['../term__color_8h.html#afcc94812f2fbb0b4c388642e2825065a',1,'term_color.h']]],
+  ['term_5fcolor_5fgreen_81',['TERM_COLOR_GREEN',['../term__color_8h.html#a684eca9ff18601657c590e87c04d3003',1,'term_color.h']]],
+  ['term_5fcolor_5fpurple_82',['TERM_COLOR_PURPLE',['../term__color_8h.html#a954de58d7b12304297d694bc352b48a3',1,'term_color.h']]],
+  ['term_5fcolor_5fred_83',['TERM_COLOR_RED',['../term__color_8h.html#a149966c2d8deae14337743cc86213686',1,'term_color.h']]],
+  ['term_5fcolor_5freset_84',['TERM_COLOR_RESET',['../term__color_8h.html#a5d08f00bc9bcef4f7cecd3467addf42b',1,'term_color.h']]],
+  ['term_5fcolor_5fwhite_85',['TERM_COLOR_WHITE',['../term__color_8h.html#aab6765d472f7ad6a69ac4ad24ba2cad4',1,'term_color.h']]],
+  ['term_5fcolor_5fyellow_86',['TERM_COLOR_YELLOW',['../term__color_8h.html#a50fd646705ee1bf7e4496302acfd8a94',1,'term_color.h']]],
+  ['true_87',['TRUE',['../boolean_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'boolean.h']]]
 ];
