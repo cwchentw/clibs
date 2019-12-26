@@ -55,6 +55,47 @@
 #define TERM_COLOR_WHITE  "\e[0;37m"
 
 
+/** @def TERM_BRIGHT_COLOR_BLACK
+ *  @brief Bright black color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_BLACK  "\e[0;90m"
+
+/** @def TERM_BRIGHT_COLOR_RED
+ *  @brief Bright red color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_RED  "\e[0;91m"
+
+/** @def TERM_BRIGHT_COLOR_GREEN
+ *  @brief Bright green color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_GREEN  "\e[0;92m"
+
+/** @def TERM_BRIGHT_COLOR_YELLOW
+ *  @brief Bright yellow color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_YELLOW  "\e[0;93m"
+
+/** @def TERM_BRIGHT_COLOR_BLUE
+ *  @brief Bright blue color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_BLUE  "\e[0;94m"
+
+/** @def TERM_BRIGHT_COLOR_PURPLE
+ *  @brief Bright purple color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_PURPLE  "\e[0;95m"
+
+/** @def TERM_BRIGHT_COLOR_CYAN
+ *  @brief Bright cyan color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_CYAN  "\e[0;96m"
+
+/** @def TERM_BRIGHT_COLOR_WHITE
+ *  @brief Bright white color in foreground.
+ */
+#define TERM_BRIGHT_COLOR_WHITE  "\e[0;97m"
+
+
 /** @def TERM_BOLD_COLOR_BLACK
  *  @brief Bold black color in foreground.
  */
@@ -135,5 +176,46 @@
  *  @brief Regular white color in background.
  */
 #define TERM_BACKGROUND_COLOR_WHITE  "\e[47m"
+
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_BLACK
+ *  @brief Bright black color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_BLACK  "\e[100m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_RED
+ *  @brief Bright red color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_RED  "\e[101m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_GREEN
+ *  @brief Bright green color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_GREEN  "\e[102m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_YELLOW
+ *  @brief Bright yellow color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_YELLOW  "\e[103m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_BLUE
+ *  @brief Bright blue color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_BLUE  "\e[104m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_PURPLE
+ *  @brief Bright purple color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_PURPLE  "\e[105m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_CYAN
+ *  @brief Bright cyan color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_CYAN  "\e[106m"
+
+/** @def TERM_BRIGHT_BACKGROUND_COLOR_WHITE
+ *  @brief Bright white color in background.
+ */
+#define TERM_BRIGHT_BACKGROUND_COLOR_WHITE  "\e[107m"
 
 #endif  /* CLIBS_TERM_COLOR */
