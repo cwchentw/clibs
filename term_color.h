@@ -2,10 +2,8 @@
  *  @brief      Add colors, either foreground or background, on console environment.
  *  @author     Michael Chen
  *  @copyright  MIT
- * 
+ *
  * Windows is not supported.
- * 
- * You should always use \b has_colors() function in \b curses.h to check whether current terminal supports colored output or not. 
  */
 #ifndef CLIBS_TERM_COLOR
 #define CLIBS_TERM_COLOR

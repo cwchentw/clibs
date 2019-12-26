@@ -4,13 +4,6 @@
 
 int main(void)
 {
-#if __unix__ || __unix || unix
-    if (!has_colors()) {
-        PUTERR("Colored output is not supported. Skip the program");
-        return 0;
-    }
-#endif
-
     #define TARGET_STRING  "Hello World"
 
     PUTS("%s%s%s%s",
