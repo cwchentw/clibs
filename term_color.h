@@ -132,9 +132,50 @@
 #define TERM_BOLD_COLOR_CYAN  "\e[1;36m"
 
 /** @def TERM_BOLD_COLOR_WHITE
- *  @brief Bold cyan color in foreground.
+ *  @brief Bold white color in foreground.
  */
 #define TERM_BOLD_COLOR_WHITE  "\e[1;37m"
+
+
+/** @def TERM_BOLD_BRIGHT_COLOR_BLACK
+ *  @brief Bold bright black color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_BLACK  "\e[1;90m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_RED
+ *  @brief Bold bright red color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_RED  "\e[1;91m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_GREEN
+ *  @brief Bold bright green color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_GREEN  "\e[1;92m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_YELLOW
+ *  @brief Bold bright yellow color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_YELLOW  "\e[1;93m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_BLUE
+ *  @brief Bold bright blue color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_BLUE  "\e[1;94m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_PURPLE
+ *  @brief Bold bright purple color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_PURPLE  "\e[1;95m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_CYAN
+ *  @brief Bold bright cyan color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_CYAN  "\e[1;96m"
+
+/** @def TERM_BOLD_BRIGHT_COLOR_WHITE
+ *  @brief Bold bright white color in foreground.
+ */
+#define TERM_BOLD_BRIGHT_COLOR_WHITE  "\e[1;97m"
 
 
 /** @def TERM_BACKGROUND_COLOR_BLACK
