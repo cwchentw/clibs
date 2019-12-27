@@ -51,5 +51,13 @@ var searchData=
   ['term_5fcolor_5freset_73',['TERM_COLOR_RESET',['../term__color_8h.html#a5d08f00bc9bcef4f7cecd3467addf42b',1,'term_color.h']]],
   ['term_5fcolor_5fwhite_74',['TERM_COLOR_WHITE',['../term__color_8h.html#aab6765d472f7ad6a69ac4ad24ba2cad4',1,'term_color.h']]],
   ['term_5fcolor_5fyellow_75',['TERM_COLOR_YELLOW',['../term__color_8h.html#a50fd646705ee1bf7e4496302acfd8a94',1,'term_color.h']]],
-  ['true_76',['TRUE',['../boolean_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'boolean.h']]]
+  ['term_5funderline_5fcolor_5fblack_76',['TERM_UNDERLINE_COLOR_BLACK',['../term__color_8h.html#afb61486725dabf524b49340c8490fb12',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fblue_77',['TERM_UNDERLINE_COLOR_BLUE',['../term__color_8h.html#abf33ad293d1867bb28b746efa409631a',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fcyan_78',['TERM_UNDERLINE_COLOR_CYAN',['../term__color_8h.html#a1a1236d90f6102c66e4d92a2b6c2af12',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fgreen_79',['TERM_UNDERLINE_COLOR_GREEN',['../term__color_8h.html#a5592bb507e2dee58584cc469fd892b62',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fpurple_80',['TERM_UNDERLINE_COLOR_PURPLE',['../term__color_8h.html#a2edef6ee35d8f3ffd9271d51958f16ff',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fred_81',['TERM_UNDERLINE_COLOR_RED',['../term__color_8h.html#aacb10ec64746332aed4cc4ae4336b39a',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fwhite_82',['TERM_UNDERLINE_COLOR_WHITE',['../term__color_8h.html#afe0c772e549934403b44e7d2799cf11f',1,'term_color.h']]],
+  ['term_5funderline_5fcolor_5fyellow_83',['TERM_UNDERLINE_COLOR_YELLOW',['../term__color_8h.html#ab1fcfd554cc8de387301dc61d3718860',1,'term_color.h']]],
+  ['true_84',['TRUE',['../boolean_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'boolean.h']]]
 ];

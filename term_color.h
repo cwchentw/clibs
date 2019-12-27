@@ -8,6 +8,13 @@
 #ifndef CLIBS_TERM_COLOR
 #define CLIBS_TERM_COLOR
 
+
+#ifndef _TERM_COLOR_DEFINED
+    typedef const char * term_color_t;
+    #define _TERM_COLOR_DEFINED
+#endif
+
+
 /** @def TERM_COLOR_RESET
  *  @brief Reset console color.
  */
@@ -176,6 +183,47 @@
  *  @brief Bold bright white color in foreground.
  */
 #define TERM_BOLD_BRIGHT_COLOR_WHITE  "\e[1;97m"
+
+
+/** @def TERM_UNDERLINE_COLOR_BLACK
+ *  @brief Underline black color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_BLACK  "\e[4;30m"
+
+/** @def TERM_UNDERLINE_COLOR_RED
+ *  @brief Underline red color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_RED  "\e[4;31m"
+
+/** @def TERM_UNDERLINE_COLOR_GREEN
+ *  @brief Underline green color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_GREEN  "\e[4;32m"
+
+/** @def TERM_UNDERLINE_COLOR_YELLOW
+ *  @brief Underline yellow color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_YELLOW  "\e[4;33m"
+
+/** @def TERM_UNDERLINE_COLOR_BLUE
+ *  @brief Underline blue color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_BLUE  "\e[4;34m"
+
+/** @def TERM_UNDERLINE_COLOR_PURPLE
+ *  @brief Underline purple color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_PURPLE  "\e[4;35m"
+
+/** @def TERM_UNDERLINE_COLOR_CYAN
+ *  @brief Underline cyan color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_CYAN  "\e[4;36m"
+
+/** @def TERM_UNDERLINE_COLOR_WHITE
+ *  @brief Underline white color in foreground.
+ */
+#define TERM_UNDERLINE_COLOR_WHITE  "\e[4;37m"
 
 
 /** @def TERM_BACKGROUND_COLOR_BLACK
