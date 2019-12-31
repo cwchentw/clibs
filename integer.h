@@ -138,6 +138,8 @@
         #endif
     #endif
 
+    /* `long long int` in C89 is defined as a compiler extension
+        in either GCC or Clang. */
     #if __GNUC__ || __clang__
         #if __APPLE__
             #ifndef INT64_IS_DEFINED && _SIZEOF_LONG_LONG <= 64
