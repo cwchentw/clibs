@@ -15,6 +15,7 @@ test_script:
 - cmd: make test CC=cl.exe
 - sh: if [ true = "$CI_LINUX" ]; then make test; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_boolean; fi
+- sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_integer; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_cmath; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_cstring; fi
 - sh: if [ true = "$CI_LINUX" ]; then make clean; fi
