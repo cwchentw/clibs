@@ -21,11 +21,13 @@ endif
 
 ifeq ($(detected_OS),Windows)
 	TEST_BOOLEAN_EXEC=test_boolean.exe
+	TEST_INTEGER_EXEC=test_integer.exe
 	TEST_MATH_EXEC=test_cmath.exe
 	TEST_STRING_EXEC=test_cstring.exe
 	TEST_TERM_COLOR_EXEC=
 else
 	TEST_BOOLEAN_EXEC=test_boolean
+	TEST_INTEGER_EXEC=test_integer
 	TEST_MATH_EXEC=test_cmath
 	TEST_STRING_EXEC=test_cstring
 	TEST_TERM_COLOR_EXEC=test_term_color
@@ -33,18 +35,20 @@ endif
 
 ifneq (,$(findstring $(CC),cl.exe))
 	TEST_BOOLEAN_OBJ=test_boolean.obj
+	TEST_INTEGER_OBJ=test_integer.obj
 	TEST_MATH_OBJ=test_cmath.obj
 	TEST_STRING_OBJ=cstring.obj test_cstring.obj
 	TEST_TERM_COLOR_OBJ=test_term_color.obj
 else
 	TEST_BOOLEAN_OBJ=test_boolean.o
+	TEST_INTEGER_OBJ=test_integer.o
 	TEST_MATH_OBJ=test_cmath.o
 	TEST_STRING_OBJ=cstring.o test_cstring.o
 	TEST_TERM_COLOR_OBJ=test_term_color.o
 endif
 
-TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_MATH_EXEC) $(TEST_STRING_EXEC) \
-	$(TEST_TERM_COLOR_EXEC)
+TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_INTEGER_EXEC) $(TEST_MATH_EXEC) \
+	$(TEST_STRING_EXEC) $(TEST_TERM_COLOR_EXEC)
 
 .PHONY: all test clean
 
@@ -64,11 +68,13 @@ endif
 test: $(TEST_EXEC)
 ifeq ($(detected_OS),Windows)
 	.\$(TEST_BOOLEAN_EXEC)
+	.\$(TEST_INTEGER_EXEC)
 	.\$(TEST_MATH_EXEC)
 	.\$(TEST_STRING_EXEC)
 	echo "Skip term color testing"
 else
 	./$(TEST_BOOLEAN_EXEC)
+	./$(TEST_INTEGER_EXEC)
 	./$(TEST_MATH_EXEC)
 	./$(TEST_STRING_EXEC)
 	./$(TEST_TERM_COLOR_EXEC)
@@ -79,6 +85,13 @@ ifneq (,$(findstring $(CC),cl.exe))
 	$(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
+endif  # cl.exe
+
+$(TEST_INTEGER_EXEC): $(TEST_INTEGER_OBJ)
+ifneq (,$(findstring $(CC),cl.exe))
+	$(CC) /Fe: $(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
+else
+	$(CC) -o $(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
@@ -102,6 +115,13 @@ else
 	$(CC) -o $(TEST_TERM_COLOR_EXEC) $(TEST_TERM_COLOR_OBJ) $(CFLAGS)
 endif  # Windows
 
+test_integer.o:
+ifeq ($(CSTD),c89)
+	$(CC) -std=c89 -o get_sizeof_data_type get_sizeof_data_type.c
+	./get_sizeof_data_type
+endif  # c89
+	$(CC) -c test_integer.c $(CFLAGS)
+
 %.obj: %.c
 	$(CC) /c $< $(CFLAGS)
 
@@ -109,5 +129,6 @@ endif  # Windows
 	$(CC) -c $< $(CFLAGS)
 
 clean:
-	$(RM) $(TEST_EXEC) $(TEST_BOOLEAN_OBJ) $(TEST_MATH_OBJ) $(TEST_STRING_OBJ) \
-		$(TEST_TERM_COLOR_OBJ)
+	$(RM) $(TEST_EXEC) $(TEST_BOOLEAN_OBJ) $(TEST_INTEGER_OBJ) \
+		$(TEST_MATH_OBJ) $(TEST_STRING_OBJ) $(TEST_TERM_COLOR_OBJ) \
+		get_sizeof_data_type get_sizeof_data_type.exe _sizeof_data_type.h

@@ -56,3 +56,8 @@ dkms.conf
 
 # Backup files
 *~
+
+# Non-portable by products
+get_sizeof_data_type
+get_sizeof_data_type.exe
+_sizeof_data_type.h

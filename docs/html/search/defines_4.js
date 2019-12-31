@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['max_106',['MAX',['../cmath_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'cmath.h']]],
-  ['min_107',['MIN',['../cmath_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'cmath.h']]]
+  ['int16_5fis_5fdefined_128',['INT16_IS_DEFINED',['../integer_8h.html#a7a2c4d518e1638b47faa7c28c15f1989',1,'integer.h']]],
+  ['int32_5fis_5fdefined_129',['INT32_IS_DEFINED',['../integer_8h.html#a21fcd99088ee0c1e09ddc74877567fbb',1,'integer.h']]],
+  ['int8_5fis_5fdefined_130',['INT8_IS_DEFINED',['../integer_8h.html#aa401da1cbe54e588db88e13ed05308ae',1,'integer.h']]]
 ];

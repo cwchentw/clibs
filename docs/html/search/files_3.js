@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['term_5fcolor_2eh_91',['term_color.h',['../term__color_8h.html',1,'']]]
+  ['platform_2eh_104',['platform.h',['../platform_8h.html',1,'']]],
+  ['print_2eh_105',['print.h',['../print_8h.html',1,'']]]
 ];

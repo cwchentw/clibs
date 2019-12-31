@@ -12,6 +12,9 @@
     #error "term_color.h is not supported"
 #endif
 
+/** @typedef  term_color_t
+ *  @brief    Type of term color
+ */
 #ifndef _TERM_COLOR_DEFINED
     typedef const char * term_color_t;
     #define _TERM_COLOR_DEFINED

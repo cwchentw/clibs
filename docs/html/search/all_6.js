@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['max_11',['MAX',['../cmath_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'cmath.h']]],
-  ['min_12',['MIN',['../cmath_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'cmath.h']]]
+  ['int16_5fis_5fdefined_11',['INT16_IS_DEFINED',['../integer_8h.html#a7a2c4d518e1638b47faa7c28c15f1989',1,'integer.h']]],
+  ['int16_5ft_12',['int16_t',['../integer_8h.html#a2140805d08462d474b82ddc8d1c2f3e6',1,'integer.h']]],
+  ['int32_5fis_5fdefined_13',['INT32_IS_DEFINED',['../integer_8h.html#a21fcd99088ee0c1e09ddc74877567fbb',1,'integer.h']]],
+  ['int32_5ft_14',['int32_t',['../integer_8h.html#afd12020da5a235dfcf0c3c748fb5baed',1,'integer.h']]],
+  ['int8_5fis_5fdefined_15',['INT8_IS_DEFINED',['../integer_8h.html#aa401da1cbe54e588db88e13ed05308ae',1,'integer.h']]],
+  ['int8_5ft_16',['int8_t',['../integer_8h.html#a20c38cc5aac7cc6b0a3c6ab05428436d',1,'integer.h']]],
+  ['integer_2eh_17',['integer.h',['../integer_8h.html',1,'']]]
 ];

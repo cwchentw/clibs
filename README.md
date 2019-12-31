@@ -48,6 +48,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *boolean.h*: boolean type for C
 * *cmath.h*: basic math operations
 * *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
+* *integer.h*: fixed-width integer type for C (*experimental*)
 * *platform.h*: platform-specific data
 * *print.h*: console printing related function-like macros
 * *term_color.h*: console color related macros
