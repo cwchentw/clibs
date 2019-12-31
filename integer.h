@@ -98,10 +98,16 @@
     #endif
 
     #if _SIZEOF_INT >= 64
-       typedef  signed int    int64_t;
-       typedef  unsigned int  uint64_t;
-       #define  INT64_IS_DEFINED
-       #define  UINT64_is_DEFINED
+        #if __APPLE__
+            typedef  unsigned long  uint64_t;
+            #define INT64_IS_DEFINED
+            #define UINT64_IS_DEFINED
+        #else
+            typedef  signed int    int64_t;
+            typedef  unsigned int  uint64_t;
+            #define  INT64_IS_DEFINED
+            #define  UINT64_is_DEFINED
+        #endif
     #elif _SIZEOF_INT >= 32
        #ifndef INT32_IS_DEFINED
            typedef  signed int    int32_t;
@@ -142,13 +148,13 @@
         in either GCC or Clang. */
     #if __GNUC__ || __clang__
         #if __APPLE__
-            #ifndef INT64_IS_DEFINED && _SIZEOF_LONG_LONG <= 64
+            #if !defined(INT64_IS_DEFINED) && _SIZEOF_LONG_LONG <= 64
                 typedef  unsigned long long  uint64_t;
                 #define INT64_IS_DEFINED
                 #define UINT64_IS_DEFINED
             #endif
         #else
-            #ifndef INT64_IS_DEFINED && _SIZEOF_LONG_LONG <= 64
+            #if !defined(INT64_IS_DEFINED) && _SIZEOF_LONG_LONG <= 64
                 typedef  signed long long    int64_t;
                 typedef  unsigned long long  uint64_t;
                 #define INT64_IS_DEFINED
