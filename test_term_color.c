@@ -1,4 +1,3 @@
-#include <curses.h>
 #include "print.h"
 #include "term_color.h"
 
