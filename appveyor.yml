@@ -18,6 +18,7 @@ test_script:
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_integer; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_cmath; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_cstring; fi
+- sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_term_color; fi
 - sh: if [ true = "$CI_LINUX" ]; then make clean; fi
 - sh: make CC=gcc
 - sh: make CC=clang
