@@ -27,4 +27,14 @@
     #define ABS(a) ((a) > 0.0 ? (a) : -(a))
 #endif
 
+/** @def EQUAL(a, b)
+ *  @brief Check the equality between two floating-point numbers
+ */
+#ifndef EQUAL
+    #define EQUAL(a, b) \
+        (sizeof((a)) == 16 ? ABS((a) - (b)) <= 0.000000000000000000000001 : \
+         (sizeof((a)) == 8 ? ABS((a) - (b)) <= 0.000000000000001 : \
+                             ABS((a) - (b)) <= 0.0000001))
+#endif
+
 #endif  /* CLIBS_CMATH_H */

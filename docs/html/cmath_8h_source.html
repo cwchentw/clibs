@@ -82,7 +82,14 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="cmath_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">   27</a></span>&#160;<span class="preprocessor">    #define ABS(a) ((a) &gt; 0.0 ? (a) : -(a))</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef EQUAL</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="cmath_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89">   34</a></span>&#160;<span class="preprocessor">    #define EQUAL(a, b) \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        (sizeof((a)) == 16 ? ABS((a) - (b)) &lt;= 0.000000000000000000000001 : \</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">         (sizeof((a)) == 8 ? ABS((a) - (b)) &lt;= 0.000000000000001 : \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">                             ABS((a) - (b)) &lt;= 0.0000001))</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

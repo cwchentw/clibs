@@ -16,7 +16,9 @@ Common math operations.
 \begin{DoxyCompactList}\small\item\em Get the minimal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{cmath_8h_ae2f08dc603ae93c402abd918ba4e23e1}\label{cmath_8h_ae2f08dc603ae93c402abd918ba4e23e1}} 
 \#define \mbox{\hyperlink{cmath_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}}(a)~((a) $>$ 0.\+0 ? (a) \+: -\/(a))
-\begin{DoxyCompactList}\small\item\em Get the absolute value of {\itshape a}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the absolute value of {\itshape a}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cmath_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+AL}}(a,  b)
+\begin{DoxyCompactList}\small\item\em Check the equality between two floating-\/point numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -28,3 +30,23 @@ Michael Chen
 \begin{DoxyCopyright}{Copyright}
 M\+IT 
 \end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cmath_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}\label{cmath_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}} 
+\index{cmath.h@{cmath.h}!EQUAL@{EQUAL}}
+\index{EQUAL@{EQUAL}!cmath.h@{cmath.h}}
+\doxysubsubsection{\texorpdfstring{EQUAL}{EQUAL}}
+{\footnotesize\ttfamily \#define E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\textcolor{keyword}{sizeof}((a)) == 16 ? \mbox{\hyperlink{cmath_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}}((a) -\/ (b)) <= 0.000000000000000000000001 : \(\backslash\)}
+\DoxyCodeLine{         (\textcolor{keyword}{sizeof}((a)) == 8 ? \mbox{\hyperlink{cmath_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}}((a) -\/ (b)) <= 0.000000000000001 : \(\backslash\)}
+\DoxyCodeLine{                             ABS((a) -\/ (b)) <= 0.0000001))}
+
+\end{DoxyCode}
+
+
+Check the equality between two floating-\/point numbers. 
+
