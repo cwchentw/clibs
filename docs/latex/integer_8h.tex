@@ -33,7 +33,13 @@ Include dependency graph for integer.\+h\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Flag to check whether 32 bit signed integer is defined. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{integer_8h_a51c3b95a84e265395b18cc87052b677e}\label{integer_8h_a51c3b95a84e265395b18cc87052b677e}} 
 \#define \mbox{\hyperlink{integer_8h_a51c3b95a84e265395b18cc87052b677e}{U\+I\+N\+T32\+\_\+\+I\+S\+\_\+\+D\+E\+F\+I\+N\+ED}}
-\begin{DoxyCompactList}\small\item\em Flag to check whether 32 bit unsigned integer is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flag to check whether 32 bit unsigned integer is defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{integer_8h_a6058bc8df0e0b57d592ccd129dc1268d}\label{integer_8h_a6058bc8df0e0b57d592ccd129dc1268d}} 
+\#define \mbox{\hyperlink{integer_8h_a6058bc8df0e0b57d592ccd129dc1268d}{I\+N\+T64\+\_\+\+I\+S\+\_\+\+D\+E\+F\+I\+N\+ED}}
+\begin{DoxyCompactList}\small\item\em Flag to check whether 64 bit signed integer is defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{integer_8h_abcee45b69494d6a1a7bc355d9bd26393}\label{integer_8h_abcee45b69494d6a1a7bc355d9bd26393}} 
+\#define \mbox{\hyperlink{integer_8h_abcee45b69494d6a1a7bc355d9bd26393}{U\+I\+N\+T64\+\_\+\+I\+S\+\_\+\+D\+E\+F\+I\+N\+ED}}
+\begin{DoxyCompactList}\small\item\em Flag to check whether 64 bit unsigned integer is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,7 +60,13 @@ typedef signed int \mbox{\hyperlink{integer_8h_afd12020da5a235dfcf0c3c748fb5baed
 \begin{DoxyCompactList}\small\item\em 32 bit signed integer \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{integer_8h_a09a1e304d66d35dd47daffee9731edaa}\label{integer_8h_a09a1e304d66d35dd47daffee9731edaa}} 
 typedef unsigned int \mbox{\hyperlink{integer_8h_a09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em 32 bit unsigned integer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 32 bit unsigned integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{integer_8h_a21214d6ef664ff09b89c1fd75fe0a042}\label{integer_8h_a21214d6ef664ff09b89c1fd75fe0a042}} 
+typedef signed long long \mbox{\hyperlink{integer_8h_a21214d6ef664ff09b89c1fd75fe0a042}{int64\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 64 bit signed integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{integer_8h_a5dc34568a989dd90728a4ed499cd9fab}\label{integer_8h_a5dc34568a989dd90728a4ed499cd9fab}} 
+typedef unsigned long long \mbox{\hyperlink{integer_8h_a5dc34568a989dd90728a4ed499cd9fab}{uint64\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 64 bit unsigned integer \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -66,4 +78,6 @@ Michael Chen
 \begin{DoxyCopyright}{Copyright}
 M\+IT
 \end{DoxyCopyright}
+To use this header for C89 code, compile and run {\itshape get\+\_\+sizeof\+\_\+data\+\_\+type.\+c} to generate {\itshape \+\_\+sizeof\+\_\+data\+\_\+type.\+h}. {\itshape \mbox{\hyperlink{integer_8h}{integer.\+h}}} needs platform-\/specific data type information in {\itshape \+\_\+sizeof\+\_\+data\+\_\+type.\+h} to work properly.
+
 This header is still experimental. Use it with caution. 

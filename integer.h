@@ -2,7 +2,11 @@
  *  @brief      Fixed-width integer type for C.
  *  @author     Michael Chen
  *  @copyright  MIT
- * 
+ *
+ *  To use this header for C89 code, compile and run \a get_sizeof_data_type.c
+ *  to generate \a _sizeof_data_type.h. \a integer.h needs platform-specific
+ *  data type information in \a _sizeof_data_type.h to work properly.
+ *
  *  This header is still experimental. Use it with caution.
  */
 
