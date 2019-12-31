@@ -3,7 +3,7 @@
  *  @author     Michael Chen
  *  @copyright  MIT
  *
- *  This header may fail on Windows because Win32 C API defines its own BOOL type.
+ *  Win32 API provides its own \b BOOL type. Hence, this header is useless in Win32 API programming.
  */
 #ifndef CLIBS_BOOLEAN_H
 #define CLIBS_BOOLEAN_H

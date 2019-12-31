@@ -8,10 +8,6 @@
 #ifndef CLIBS_CSTRING_H
 #define CLIBS_CSTRING_H
 
-#ifdef _WIN32
-    #include <windows.h>
-#endif
-
 #ifdef __cplusplus
     #include <cstdio>
 #else
@@ -19,7 +15,9 @@
 #endif
 
 /* Custom boolean type. */
-#ifndef _WIN32
+#if _MSC_VER
+    #include <windows.h>
+#else
 #ifdef __cplusplus
     #ifndef _BOOL_IS_DEFINED
         typedef bool BOOL;

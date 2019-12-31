@@ -1,4 +1,9 @@
-#include "boolean.h"
+#if _MSC_VER
+    #define WIN32_LEAN_AND_MEAN
+    #include <windows.h>
+#else
+    #include "boolean.h"
+#endif
 #include "print.h"
 
 #define TEST(cond) { \

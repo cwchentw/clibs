@@ -8,6 +8,9 @@
 #ifndef CLIBS_TERM_COLOR
 #define CLIBS_TERM_COLOR
 
+#if _WIN32
+    #error "term_color.h is not supported"
+#endif
 
 #ifndef _TERM_COLOR_DEFINED
     typedef const char * term_color_t;
