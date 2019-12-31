@@ -128,9 +128,13 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Check the equality between two floating-point numbers. </p>
 <p><b><a class="el" href="cmath_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89" title="Check the equality between two floating-point numbers.">EQUAL(a, b)</a></b> compares two floating-point numbers by the absolute value of the difference between them. The value should be small enough to be viewed as equal. <b><a class="el" href="cmath_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89" title="Check the equality between two floating-point numbers.">EQUAL(a, b)</a></b> utilizes <b>sizeof</b> to get the width of the number to be compared so that it can compute a proper error value.</p>
-<p>float: 24 bit -&gt; 7 digits double: 53 bit -&gt; 15 digits long double: 80 bit -&gt; 24 digits</p>
-<p>Formula to get the precision of each data type: digit = bit * log(2) / log(10) </p>
-
+<ul>
+<li>float: 24 bit -&gt; 7 digits</li>
+<li>double: 53 bit -&gt; 15 digits</li>
+<li>long double: 80 bit -&gt; 24 digits</li>
+</ul>
+<p>Formula to get the precision of each data type: </p><pre class="fragment">digit = bit * log(2) / log(10)
+</pre> 
 </div>
 </div>
 </div><!-- contents -->

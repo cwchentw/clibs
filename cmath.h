@@ -35,12 +35,13 @@
  *  viewed as equal.  <b>EQUAL(a, b)</b> utilizes \b sizeof to get the width
  *  of the number to be compared so that it can compute a proper error value.
  *
- *  float:       24 bit -> 7 digits
- *  double:      53 bit -> 15 digits
- *  long double: 80 bit -> 24 digits
+ *  - float:       24 bit -> 7 digits
+ *  - double:      53 bit -> 15 digits
+ *  - long double: 80 bit -> 24 digits
  *
  *  Formula to get the precision of each data type:
- *  digit = bit * log(2) / log(10)
+ * 
+ *      digit = bit * log(2) / log(10)
  */
 #ifndef EQUAL
     #define EQUAL(a, b) \
