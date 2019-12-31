@@ -2,7 +2,7 @@
  *  @brief      Platform-specific data
  *  @author     Michael Chen
  *  @copyright  MIT
- * 
+ *
  *  The macro definitions seen in this document represent the platform data of Unix.
  */
 #ifndef CLIBS_PLATFORM_H
@@ -10,7 +10,7 @@
 
 /** @def END_OF_LINE
  *  @brief End of line of specific host.
- * 
+ *
  *  Currently, EOL_OF_LINE works on Windows and Unix.
  */
 #ifndef END_OF_LINE
@@ -25,7 +25,7 @@
 
 /** @def DIRECTORY_SEPARATOR
  *  @brief Directory separator of specific host.
- * 
+ *
  *  Currently, DIRECTORY_SEPARATOR works on Windows and Unix.
  */
 #ifndef DIRECTORY_SEPARATOR

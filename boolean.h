@@ -2,7 +2,7 @@
  *  @brief      Boolean type for C
  *  @author     Michael Chen
  *  @copyright  MIT
- * 
+ *
  *  This header may fail on Windows because Win32 C API defines its own BOOL type.
  */
 #ifndef CLIBS_BOOLEAN_H
