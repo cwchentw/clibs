@@ -102,13 +102,20 @@
        typedef  unsigned int  uint64_t;
        #define  INT64_IS_DEFINED
        #define  UINT64_is_DEFINED
-    #else
+    #elif _SIZEOF_INT >= 32
        #ifndef INT32_IS_DEFINED
            typedef  signed int    int32_t;
            typedef  unsigned int  uint32_t;
            #define INT32_IS_DEFINED
            #define UINT32_IS_DEFINED
        #endif
+    #else
+        #ifndef INT16_IS_DEFINED
+            typedef signed int    int16_t;
+            typedef unsigned int  int16_t;
+            #define INT16_IS_DEFINED
+            #define UINT16_IS_DEFINED
+        #endif
     #endif
 
     #if _SIZEOF_LONG >= 64
@@ -133,13 +140,13 @@
 
     #if __GNUC__ || __clang__
         #if __APPLE__
-            #ifndef INT64_IS_DEFINED
+            #ifndef INT64_IS_DEFINED && _SIZEOF_LONG_LONG <= 64
                 typedef  unsigned long long  uint64_t;
                 #define INT64_IS_DEFINED
                 #define UINT64_IS_DEFINED
             #endif
-        #else 
-            #ifndef INT64_IS_DEFINED
+        #else
+            #ifndef INT64_IS_DEFINED && _SIZEOF_LONG_LONG <= 64
                 typedef  signed long long    int64_t;
                 typedef  unsigned long long  uint64_t;
                 #define INT64_IS_DEFINED
