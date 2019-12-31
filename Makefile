@@ -99,7 +99,7 @@ $(TEST_TERM_COLOR_EXEC): $(TEST_TERM_COLOR_OBJ)
 ifeq ($(detected_OS),Windows)
 	echo "Not supported"
 else
-	$(CC) -o $(TEST_TERM_COLOR_EXEC) $(TEST_TERM_COLOR_OBJ) $(CFLAGS) -lncurses
+	$(CC) -o $(TEST_TERM_COLOR_EXEC) $(TEST_TERM_COLOR_OBJ) $(CFLAGS)
 endif  # Windows
 
 %.obj: %.c

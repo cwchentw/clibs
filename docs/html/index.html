@@ -78,7 +78,7 @@ $(function() {
 <h1>System Requirements</h1>
 <ul>
 <li>A C compiler that supports ANSI C</li>
-<li>ncurses (only for testing)</li>
+<li>GNU Make (only for testing)</li>
 </ul>
 <p><b>clibs</b> is written in ANSI C (C89). Nevertheless, We tested <b>clibs</b> against C89, C99 and C11. Hence, you may use it for code in either ANSI C or modern C.</p>
 <p>We tested <b>clibs</b> against several Unix or Unix-like systems:</p>
@@ -90,7 +90,7 @@ $(function() {
 <li>Solaris 11</li>
 </ul>
 <p>It should work on other Unix or Unix-like systems as well.</p>
-<p>BTW, though we didn't test <b>clibs</b> against Windows, it should also work because <b>clibs</b> is implemented in ANSI C.</p>
+<p>In addition, we tested <b>clibs</b> on a Windows container provided by <a href="https://www.appveyor.com/">AppVeyor</a>. Hence, <b>clibs</b> should work on Windows as well.</p>
 <h1>How to Use?</h1>
 <p>The libraries in <b>clibs</b> are self-contained, distributed in either single header or single header plus single source combo. Just copy what you need to your own C project.</p>
 <p>test_*.c are test programs. You don't need them to use <b>clibs</b>.</p>

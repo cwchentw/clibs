@@ -21,7 +21,7 @@ clibs is still experimental and for personal use only. The API may change withou
 ## System Requirements
 
 * A C compiler that supports ANSI C
-* ncurses (only for testing)
+* GNU Make (only for testing)
 
 **clibs** is written in ANSI C (C89). Nevertheless, We tested **clibs** against C89, C99 and C11. Hence, you may use it for code in either ANSI C or modern C.
 
@@ -35,7 +35,7 @@ We tested **clibs** against several Unix or Unix-like systems:
 
 It should work on other Unix or Unix-like systems as well.
 
-BTW, though we didn't test **clibs** against Windows, it should also work because **clibs** is implemented in ANSI C.
+In addition, we tested **clibs** on a Windows container provided by [AppVeyor](https://www.appveyor.com/). Hence, **clibs** should work on Windows as well.
 
 ## How to Use?
 
