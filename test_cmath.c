@@ -33,6 +33,9 @@ int main(void)
     TEST(!EQUAL(3.14f, 3.15f));
     TEST(!EQUAL(3.14159, 3.14160));
 
+    TEST(EQUAL(1.0 / 3.0 + 1.0 / 3.0 + 1.0 / 3.0, 1.0));
+    TEST(EQUAL(1.0 - 0.3 - 0.5 - 0.2, 0.0));
+
     if (!passed)
         return 1;
 
