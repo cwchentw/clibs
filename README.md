@@ -16,7 +16,7 @@ clibs is still experimental and for personal use only. The API may change withou
 
 ## What is clibs anyway?
 
-**clibs** are common utilities (types, macros, functions) used across C programs. They are mostly domain neutral, able to be applied to various situations.
+**clibs** are common utilities (types, typedefs, macros, functions) used across C programs. They are mostly domain neutral, able to be applied to various situations.
 
 ## System Requirements
 
@@ -35,7 +35,7 @@ We tested **clibs** against several Unix or Unix-like systems:
 
 It should work on other Unix or Unix-like systems as well.
 
-In addition, we tested **clibs** on a Windows container provided by [AppVeyor](https://www.appveyor.com/). Hence, **clibs** should work on Windows as well.
+In addition, we test **clibs** on a Windows container provided by [AppVeyor](https://www.appveyor.com/). Hence, **clibs** should work on Windows as well.
 
 ## How to Use?
 
