@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['int16_5fis_5fdefined_134',['INT16_IS_DEFINED',['../integer_8h.html#a7a2c4d518e1638b47faa7c28c15f1989',1,'integer.h']]],
-  ['int32_5fis_5fdefined_135',['INT32_IS_DEFINED',['../integer_8h.html#a21fcd99088ee0c1e09ddc74877567fbb',1,'integer.h']]],
-  ['int64_5fis_5fdefined_136',['INT64_IS_DEFINED',['../integer_8h.html#a6058bc8df0e0b57d592ccd129dc1268d',1,'integer.h']]],
-  ['int8_5fis_5fdefined_137',['INT8_IS_DEFINED',['../integer_8h.html#aa401da1cbe54e588db88e13ed05308ae',1,'integer.h']]]
+  ['perror_130',['PERROR',['../print_8h.html#a36f6a6453e7533808c32a37f455068a0',1,'print.h']]],
+  ['print_131',['PRINT',['../print_8h.html#af990e936c83edcff058ae8ec5864adec',1,'print.h']]],
+  ['puterr_132',['PUTERR',['../print_8h.html#a84559fc324a4622242ee818f9025141f',1,'print.h']]],
+  ['puts_133',['PUTS',['../print_8h.html#ad5ec9098821844c0c27cd849fc930c90',1,'print.h']]]
 ];

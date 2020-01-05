@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['string_5fallocate_28',['string_allocate',['../cstring_8h.html#ae5545ccfb4a0e724d8c51bb09dd59975',1,'cstring.c']]],
-  ['string_5fallocate_5fsubstring_29',['string_allocate_substring',['../cstring_8h.html#a57dbcc036c590f2cb98571f619700597',1,'cstring.c']]],
-  ['string_5fcontains_30',['string_contains',['../cstring_8h.html#ac5530f6f236cfec990a0e2248a3f5004',1,'cstring.c']]],
-  ['string_5fis_5fequal_31',['string_is_equal',['../cstring_8h.html#aca96c88ab0b1f5a78953da011d066cd2',1,'cstring.c']]],
-  ['string_5fis_5fspace_5fonly_32',['string_is_space_only',['../cstring_8h.html#ae7ebe8f808dbc71ded2f909b20362d3e',1,'cstring.c']]],
-  ['string_5fstarts_5fwith_33',['string_starts_with',['../cstring_8h.html#ab54f92ad286b028ebf7c7355050cefcd',1,'cstring.c']]],
-  ['string_5fto_5fstream_34',['string_to_stream',['../cstring_8h.html#a8c07069d410eb4896af51d6b6a35bc56',1,'cstring.c']]]
+  ['uint16_5fis_5fdefined_91',['UINT16_IS_DEFINED',['../integer_8h.html#a2a4a95fd69450b71295b5add4fc2a279',1,'integer.h']]],
+  ['uint16_5ft_92',['uint16_t',['../integer_8h.html#a5a8b2dc9e45a9ee81a94ef304fb62505',1,'integer.h']]],
+  ['uint32_5fis_5fdefined_93',['UINT32_IS_DEFINED',['../integer_8h.html#a51c3b95a84e265395b18cc87052b677e',1,'integer.h']]],
+  ['uint32_5ft_94',['uint32_t',['../integer_8h.html#a09a1e304d66d35dd47daffee9731edaa',1,'integer.h']]],
+  ['uint64_5fis_5fdefined_95',['UINT64_IS_DEFINED',['../integer_8h.html#abcee45b69494d6a1a7bc355d9bd26393',1,'integer.h']]],
+  ['uint64_5ft_96',['uint64_t',['../integer_8h.html#a5dc34568a989dd90728a4ed499cd9fab',1,'integer.h']]],
+  ['uint8_5fis_5fdefined_97',['UINT8_IS_DEFINED',['../integer_8h.html#adea19da0bf797e5de0354aab62b6a2c3',1,'integer.h']]],
+  ['uint8_5ft_98',['uint8_t',['../integer_8h.html#ae1affc9ca37cfb624959c866a73f83c2',1,'integer.h']]]
 ];

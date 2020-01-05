@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['end_5fof_5fline_8',['END_OF_LINE',['../platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11',1,'platform.h']]],
-  ['equal_9',['EQUAL',['../cmath_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89',1,'cmath.h']]]
+  ['false_7',['FALSE',['../boolean_8h.html#aa93f0eb578d23995850d61f7d61c55c1',1,'boolean.h']]]
 ];

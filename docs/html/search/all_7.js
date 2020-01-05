@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['max_20',['MAX',['../cmath_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'cmath.h']]],
-  ['min_21',['MIN',['../cmath_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'cmath.h']]]
+  ['string_5fallocate_23',['string_allocate',['../cstring_8h.html#ae5545ccfb4a0e724d8c51bb09dd59975',1,'cstring.c']]],
+  ['string_5fallocate_5fsubstring_24',['string_allocate_substring',['../cstring_8h.html#a57dbcc036c590f2cb98571f619700597',1,'cstring.c']]],
+  ['string_5fcontains_25',['string_contains',['../cstring_8h.html#ac5530f6f236cfec990a0e2248a3f5004',1,'cstring.c']]],
+  ['string_5fis_5fequal_26',['string_is_equal',['../cstring_8h.html#aca96c88ab0b1f5a78953da011d066cd2',1,'cstring.c']]],
+  ['string_5fis_5fspace_5fonly_27',['string_is_space_only',['../cstring_8h.html#ae7ebe8f808dbc71ded2f909b20362d3e',1,'cstring.c']]],
+  ['string_5fstarts_5fwith_28',['string_starts_with',['../cstring_8h.html#ab54f92ad286b028ebf7c7355050cefcd',1,'cstring.c']]],
+  ['string_5fto_5fstream_29',['string_to_stream',['../cstring_8h.html#a8c07069d410eb4896af51d6b6a35bc56',1,'cstring.c']]]
 ];

@@ -4,7 +4,7 @@
 #else
     #include "boolean.h"
 #endif
-#include "cmath.h"
+#include "clibs_math.h"
 #include "print.h"
 
 #define TEST(cond) { \

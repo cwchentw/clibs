@@ -25,12 +25,14 @@ ifeq ($(detected_OS),Windows)
 	TEST_MATH_EXEC=test_cmath.exe
 	TEST_STRING_EXEC=test_cstring.exe
 	TEST_TERM_COLOR_EXEC=
+	TEST_TIME_EXEC=test_ctime.exe
 else
 	TEST_BOOLEAN_EXEC=test_boolean
 	TEST_INTEGER_EXEC=test_integer
 	TEST_MATH_EXEC=test_cmath
 	TEST_STRING_EXEC=test_cstring
 	TEST_TERM_COLOR_EXEC=test_term_color
+	TEST_TIME_EXEC=test_ctime
 endif
 
 ifneq (,$(findstring $(CC),cl.exe))
@@ -39,16 +41,18 @@ ifneq (,$(findstring $(CC),cl.exe))
 	TEST_MATH_OBJ=test_cmath.obj
 	TEST_STRING_OBJ=cstring.obj test_cstring.obj
 	TEST_TERM_COLOR_OBJ=test_term_color.obj
+	TEST_TIME_OBJ=test_ctime.obj clibs_time.obj
 else
 	TEST_BOOLEAN_OBJ=test_boolean.o
 	TEST_INTEGER_OBJ=test_integer.o
 	TEST_MATH_OBJ=test_cmath.o
 	TEST_STRING_OBJ=cstring.o test_cstring.o
 	TEST_TERM_COLOR_OBJ=test_term_color.o
+	TEST_TIME_OBJ=test_ctime.o clibs_time.o
 endif
 
 TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_INTEGER_EXEC) $(TEST_MATH_EXEC) \
-	$(TEST_STRING_EXEC) $(TEST_TERM_COLOR_EXEC)
+	$(TEST_STRING_EXEC) $(TEST_TERM_COLOR_EXEC) $(TEST_TIME_EXEC)
 
 .PHONY: all test clean
 
@@ -72,12 +76,14 @@ ifeq ($(detected_OS),Windows)
 	.\$(TEST_MATH_EXEC)
 	.\$(TEST_STRING_EXEC)
 	echo "Skip term color testing"
+	.\$(TEST_TIME_EXEC)
 else
 	./$(TEST_BOOLEAN_EXEC)
 	./$(TEST_INTEGER_EXEC)
 	./$(TEST_MATH_EXEC)
 	./$(TEST_STRING_EXEC)
 	./$(TEST_TERM_COLOR_EXEC)
+	./$(TEST_TIME_EXEC)
 endif
 
 $(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
@@ -115,6 +121,13 @@ else
 	$(CC) -o $(TEST_TERM_COLOR_EXEC) $(TEST_TERM_COLOR_OBJ) $(CFLAGS)
 endif  # Windows
 
+$(TEST_TIME_EXEC): $(TEST_TIME_OBJ)
+ifneq (,$(findstring $(CC),cl.exe))
+	$(CC) /Fe: $(TEST_TIME_EXEC) $(TEST_TIME_OBJ) $(CFLAGS)
+else
+	$(CC) -o $(TEST_TIME_EXEC) $(TEST_TIME_OBJ) $(CFLAGS)
+endif
+
 test_integer.o:
 ifeq ($(CSTD),c89)
 	$(CC) -std=c89 -o get_sizeof_data_type get_sizeof_data_type.c
@@ -131,4 +144,5 @@ endif  # c89
 clean:
 	$(RM) $(TEST_EXEC) $(TEST_BOOLEAN_OBJ) $(TEST_INTEGER_OBJ) \
 		$(TEST_MATH_OBJ) $(TEST_STRING_OBJ) $(TEST_TERM_COLOR_OBJ) \
+		$(TEST_TIME_OBJ) \
 		get_sizeof_data_type get_sizeof_data_type.exe _sizeof_data_type.h
