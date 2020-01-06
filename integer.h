@@ -69,9 +69,22 @@
     typedef  unsigned __int64  uint64_t;
 #elif __STDC_VERSION__ >= 199901L
     #include <stdint.h>
+    #define INT8_IS_DEFINED
+    #define UINT8_IS_DEFINED
+    #define INT16_IS_DEFINED
+    #define UINT16_IS_DEFINED
+    #define INT32_IS_DEFINED
+    #define UINT32_IS_DEFINED
+    #define INT64_IS_DEFINED
+    #define UINT64_IS_DEFINED
 #else
     #include "_sizeof_data_type.h"
-    #if _SIZEOF_CHAR >= 16
+    #if _SIZEOF_CHAR >= 32
+        typedef signed char    int32_t;
+        typedef unsigned char  uint32_t;
+        #define INT32_IS_DEFINED
+        #define UINT32_IS_DEFINED
+    #elif _SIZEOF_CHAR >= 16
         typedef signed char    int16_t;
         typedef unsigned char  uint16_t;
         #define INT16_IS_DEFINED
