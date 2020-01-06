@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['end_5fof_5fline_6',['END_OF_LINE',['../platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11',1,'platform.h']]]
+  ['date_5fcreate_7',['date_create',['../clibs__time_8h.html#aad8adbc23ac66ccf954bcd462bf1fa03',1,'clibs_time.c']]],
+  ['debug_5finfo_8',['DEBUG_INFO',['../print_8h.html#a994994514490b70ee6a5dd679f28acbc',1,'print.h']]],
+  ['directory_5fseparator_9',['DIRECTORY_SEPARATOR',['../platform_8h.html#af1e88bb4b1ff9546e6803eec85e0684c',1,'platform.h']]]
 ];

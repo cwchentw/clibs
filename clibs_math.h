@@ -1,4 +1,4 @@
-/** @file       cmath.h
+/** @file       clibs_math.h
  *  @brief      Common math operations.
  *  @author     Michael Chen
  *  @copyright  MIT

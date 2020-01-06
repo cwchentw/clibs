@@ -1,0 +1,87 @@
+\hypertarget{clibs__time_8h}{}\doxysection{clibs\+\_\+time.\+h File Reference}
+\label{clibs__time_8h}\index{clibs\_time.h@{clibs\_time.h}}
+
+
+Common time operations.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for clibs\+\_\+time.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{clibs__time_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct tm \mbox{\hyperlink{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}{date\+\_\+create}} (int year, int month, int day)
+\begin{DoxyCompactList}\small\item\em Create a date object. \end{DoxyCompactList}\item 
+struct tm \mbox{\hyperlink{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}{time\+\_\+create}} (int year, int month, int day, int hour, int min, int sec)
+\begin{DoxyCompactList}\small\item\em Create a time object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common time operations. 
+
+\begin{DoxyAuthor}{Author}
+Michael Chen 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+M\+IT 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}\label{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}} 
+\index{clibs\_time.h@{clibs\_time.h}!date\_create@{date\_create}}
+\index{date\_create@{date\_create}!clibs\_time.h@{clibs\_time.h}}
+\doxysubsubsection{\texorpdfstring{date\_create()}{date\_create()}}
+{\footnotesize\ttfamily struct tm date\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day }\end{DoxyParamCaption})}
+
+
+
+Create a date object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & year in Gregorian calendar \\
+\hline
+{\em month} & from 1 to 12 \\
+\hline
+{\em day} & from 1 to 31 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct tm
+\end{DoxyReturn}
+Time is kept at 9\+:00 AM. \mbox{\Hypertarget{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}\label{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}} 
+\index{clibs\_time.h@{clibs\_time.h}!time\_create@{time\_create}}
+\index{time\_create@{time\_create}!clibs\_time.h@{clibs\_time.h}}
+\doxysubsubsection{\texorpdfstring{time\_create()}{time\_create()}}
+{\footnotesize\ttfamily struct tm time\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day,  }\item[{int}]{hour,  }\item[{int}]{min,  }\item[{int}]{sec }\end{DoxyParamCaption})}
+
+
+
+Create a time object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & year in Gregorian calendar \\
+\hline
+{\em month} & from 1 to 12 \\
+\hline
+{\em day} & from 1 to 31 \\
+\hline
+{\em hour} & from 0 to 23 \\
+\hline
+{\em min} & from 0 to 59 \\
+\hline
+{\em sec} & from 0 to 59 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct tm 
+\end{DoxyReturn}

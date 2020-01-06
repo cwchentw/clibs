@@ -1,5 +1,5 @@
-/** @file       cmath.h
- *  @brief      Common math operations.
+/** @file       clibs_time.h
+ *  @brief      Common time operations.
  *  @author     Michael Chen
  *  @copyright  MIT
  */
