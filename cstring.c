@@ -95,6 +95,23 @@ BOOL string_is_space_only(const char *s)
     return TRUE;
 }
 
+char * string_allocate_char(const char c)
+{
+    size_t sz = 2;  /* char + '\0' */
+
+    char *out = (char *) malloc(sz * sizeof(char));
+    if (!out) {
+        DEBUG_INFO("Failed to allocate memory for C string");
+        DEBUG_INFO("Check available system memory");
+        return out;
+    }
+
+    out[0] = c;
+    out[1] = '\0';
+
+    return out;
+}
+
 char * string_allocate(const char *s)
 {
     size_t sz = strlen(s) + 1;  /* strlen(s) + '\0' */

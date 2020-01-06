@@ -82,6 +82,14 @@ BOOL string_contains(const char *a, const char *b);
  */
 BOOL string_is_space_only(const char *s);
 
+/** @fn      string_allocate_char(const char c)
+ *  @brief   Allocate a new string out of char \a c
+ *  @param   c The source char.
+ *  @return  char *
+ *  @warning  Free the memory of the returning string by yourself.
+ */
+char * string_allocate_char(const char c);
+
 /** @fn      string_allocate(const char *s)
  *  @brief   Allocate a new string out of string \a s
  *  @param   s The source string.
