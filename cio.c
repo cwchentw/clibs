@@ -72,7 +72,13 @@ char * stream_read_all(FILE *fp)
                 }
             }
 
-            strcat(buffer, line);  /* Copy line to buffer. */
+            /* Copy line to buffer. */
+        #if _MSC_VER
+            strcat_s(buffer, buffer_size, line);
+        #else
+            strcat(buffer, line);
+        #endif
+
             length += strlen(line);
             buffer[length] = '\0';
         }

@@ -67,6 +67,14 @@
     typedef  unsigned __int32  uint32_t;
     typedef  signed __int64    int64_t;
     typedef  unsigned __int64  uint64_t;
+    #define INT8_IS_DEFINED
+    #define UINT8_IS_DEFINED
+    #define INT16_IS_DEFINED
+    #define UINT16_IS_DEFINED
+    #define INT32_IS_DEFINED
+    #define UINT32_IS_DEFINED
+    #define INT64_IS_DEFINED
+    #define UINT64_IS_DEFINED
 #elif __STDC_VERSION__ >= 199901L
     #include <stdint.h>
     #define INT8_IS_DEFINED

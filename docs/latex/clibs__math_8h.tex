@@ -1,27 +1,27 @@
-\hypertarget{clibs__math_8h}{}\section{clibs\+\_\+math.\+h File Reference}
-\label{clibs__math_8h}\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
+\hypertarget{clibs__math_8h}{}\doxysection{clibs\+\_\+math.\+h File Reference}
+\label{clibs__math_8h}\index{clibs\_math.h@{clibs\_math.h}}
 
 
 Common math operations.  
 
 
-\subsection*{Macros}
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}} 
-\#define \hyperlink{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{M\+AX}(a,  b)~((a) $>$ (b) ? (a) \+: (b))
+\#define \mbox{\hyperlink{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{M\+AX}}(a,  b)~((a) $>$ (b) ? (a) \+: (b))
 \begin{DoxyCompactList}\small\item\em Get the maximal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\label{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}} 
-\#define \hyperlink{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
+\#define \mbox{\hyperlink{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
 \begin{DoxyCompactList}\small\item\em Get the minimal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}\label{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}} 
-\#define \hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}(a)~((a) $>$ 0.\+0 ? (a) \+: -\/(a))
+\#define \mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}}(a)~((a) $>$ 0.\+0 ? (a) \+: -\/(a))
 \begin{DoxyCompactList}\small\item\em Get the absolute value of {\itshape a}. \end{DoxyCompactList}\item 
-\#define \hyperlink{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+AL}(a,  b)
+\#define \mbox{\hyperlink{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+AL}}(a,  b)
 \begin{DoxyCompactList}\small\item\em Check the equality between two floating-\/point numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Common math operations. 
 
 \begin{DoxyAuthor}{Author}
@@ -32,24 +32,25 @@ M\+IT
 \end{DoxyCopyright}
 
 
-\subsection{Macro Definition Documentation}
+\doxysubsection{Macro Definition Documentation}
 \mbox{\Hypertarget{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}\label{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}} 
-\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!E\+Q\+U\+AL@{E\+Q\+U\+AL}}
-\index{E\+Q\+U\+AL@{E\+Q\+U\+AL}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
-\subsubsection{\texorpdfstring{E\+Q\+U\+AL}{EQUAL}}
+\index{clibs\_math.h@{clibs\_math.h}!EQUAL@{EQUAL}}
+\index{EQUAL@{EQUAL}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{EQUAL}{EQUAL}}
 {\footnotesize\ttfamily \#define E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-(\textcolor{keyword}{sizeof}((a)) == 16 ? \hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}((a) - (b)) <= 0.000000000000000000000001 : \(\backslash\)
-         (\textcolor{keyword}{sizeof}((a)) == 8 ? \hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}((a) - (b)) <= 0.000000000000001 : \(\backslash\)
-                             ABS((a) - (b)) <= 0.0000001))
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\textcolor{keyword}{sizeof}((a)) == 16 ? \mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}}((a) -\/ (b)) <= 0.000000000000000000000001 : \(\backslash\)}
+\DoxyCodeLine{         (\textcolor{keyword}{sizeof}((a)) == 8 ? \mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}}((a) -\/ (b)) <= 0.000000000000001 : \(\backslash\)}
+\DoxyCodeLine{                             ABS((a) -\/ (b)) <= 0.0000001))}
+
 \end{DoxyCode}
 
 
 Check the equality between two floating-\/point numbers. 
 
-{\bfseries \hyperlink{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+A\+L(a, b)}} compares two floating-\/point numbers by the absolute value of the difference between them. The value should be small enough to be viewed as equal. {\bfseries \hyperlink{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+A\+L(a, b)}} utilizes {\bfseries sizeof} to get the width of the number to be compared so that it can compute a proper error value.
+{\bfseries{\mbox{\hyperlink{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+A\+L(a, b)}}}} compares two floating-\/point numbers by the absolute value of the difference between them. The value should be small enough to be viewed as equal. {\bfseries{\mbox{\hyperlink{clibs__math_8h_a8eb7da27bde11ccd5bf0c204ad32fb89}{E\+Q\+U\+A\+L(a, b)}}}} utilizes {\bfseries{sizeof}} to get the width of the number to be compared so that it can compute a proper error value.
 
 
 \begin{DoxyItemize}
@@ -58,5 +59,6 @@ Check the equality between two floating-\/point numbers.
 \item long double\+: 80 bit -\/$>$ 24 digits
 \end{DoxyItemize}
 
-Formula to get the precision of each data type\+: \begin{DoxyVerb}digit = bit * log(2) / log(10)\end{DoxyVerb}
+Formula to get the precision of each data type\+: \begin{DoxyVerb}digit = bit * log(2) / log(10)
+\end{DoxyVerb}
  

@@ -1,5 +1,5 @@
-\hypertarget{print_8h}{}\section{print.\+h File Reference}
-\label{print_8h}\index{print.\+h@{print.\+h}}
+\hypertarget{print_8h}{}\doxysection{print.\+h File Reference}
+\label{print_8h}\index{print.h@{print.h}}
 
 
 Console printing related macros.  
@@ -14,25 +14,25 @@ Include dependency graph for print.\+h\+:
 \includegraphics[width=126pt]{print_8h__incl}
 \end{center}
 \end{figure}
-\subsection*{Macros}
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{print_8h_aa3d2b101ea5e31185ae18e499d30ed11}\label{print_8h_aa3d2b101ea5e31185ae18e499d30ed11}} 
 \#define {\bfseries E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+NE}~\char`\"{}\textbackslash{}n\char`\"{}
 \item 
-\#define \hyperlink{print_8h_af990e936c83edcff058ae8ec5864adec}{P\+R\+I\+NT}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stdout} without trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_a36f6a6453e7533808c32a37f455068a0}{P\+E\+R\+R\+OR}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stderr} without trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_ad5ec9098821844c0c27cd849fc930c90}{P\+U\+TS}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stdout} with trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_a84559fc324a4622242ee818f9025141f}{P\+U\+T\+E\+RR}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stderr} with trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_a994994514490b70ee6a5dd679f28acbc}{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated debug message to {\bfseries stderr} with trailing E\+OL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{print_8h_af990e936c83edcff058ae8ec5864adec}{P\+R\+I\+NT}}(format, ...)
+\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries{stdout}} without trailing E\+OL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_a36f6a6453e7533808c32a37f455068a0}{P\+E\+R\+R\+OR}}(format, ...)
+\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries{stderr}} without trailing E\+OL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_ad5ec9098821844c0c27cd849fc930c90}{P\+U\+TS}}(format, ...)
+\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries{stdout}} with trailing E\+OL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_a84559fc324a4622242ee818f9025141f}{P\+U\+T\+E\+RR}}(format, ...)
+\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries{stderr}} with trailing E\+OL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_a994994514490b70ee6a5dd679f28acbc}{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}}(format, ...)
+\begin{DoxyCompactList}\small\item\em Print formated debug message to {\bfseries{stderr}} with trailing E\+OL. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Console printing related macros. 
 
 \begin{DoxyAuthor}{Author}
@@ -43,86 +43,91 @@ M\+IT
 \end{DoxyCopyright}
 The macro definition seen in this document represent the platform data of Unix. 
 
-\subsection{Macro Definition Documentation}
+\doxysubsection{Macro Definition Documentation}
 \mbox{\Hypertarget{print_8h_a994994514490b70ee6a5dd679f28acbc}\label{print_8h_a994994514490b70ee6a5dd679f28acbc}} 
-\index{print.\+h@{print.\+h}!D\+E\+B\+U\+G\+\_\+\+I\+N\+FO@{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}}
-\index{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO@{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}{DEBUG\_INFO}}
+\index{print.h@{print.h}!DEBUG\_INFO@{DEBUG\_INFO}}
+\index{DEBUG\_INFO@{DEBUG\_INFO}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_INFO}{DEBUG\_INFO}}
 {\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stderr, \textcolor{stringliteral}{"(%s:%d) "} format \textcolor{stringliteral}{"%s"}, \(\backslash\)
-            \_\_FILE\_\_, \_\_LINE\_\_, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        fprintf(stderr, \textcolor{stringliteral}{"(\%s:\%d) "} format \textcolor{stringliteral}{"\%s"}, \(\backslash\)}
+\DoxyCodeLine{            \_\_FILE\_\_, \_\_LINE\_\_, \#\#\_\_VA\_ARGS\_\_, \mbox{\hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}}); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
 \end{DoxyCode}
 
 
-Print formated debug message to {\bfseries stderr} with trailing E\+OL. 
+Print formated debug message to {\bfseries{stderr}} with trailing E\+OL. 
 
-{\bfseries D\+E\+B\+U\+G\+\_\+\+I\+N\+FO} works similarly to {\bfseries P\+U\+T\+E\+RR} but adds source file and line number. Hence, developers can track the location of the message more easily. \mbox{\Hypertarget{print_8h_a36f6a6453e7533808c32a37f455068a0}\label{print_8h_a36f6a6453e7533808c32a37f455068a0}} 
-\index{print.\+h@{print.\+h}!P\+E\+R\+R\+OR@{P\+E\+R\+R\+OR}}
-\index{P\+E\+R\+R\+OR@{P\+E\+R\+R\+OR}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+E\+R\+R\+OR}{PERROR}}
+{\bfseries{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}} works similarly to {\bfseries{P\+U\+T\+E\+RR}} but adds source file and line number. Hence, developers can track the location of the message more easily. \mbox{\Hypertarget{print_8h_a36f6a6453e7533808c32a37f455068a0}\label{print_8h_a36f6a6453e7533808c32a37f455068a0}} 
+\index{print.h@{print.h}!PERROR@{PERROR}}
+\index{PERROR@{PERROR}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PERROR}{PERROR}}
 {\footnotesize\ttfamily \#define P\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stderr, format, ##\_\_VA\_ARGS\_\_); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        fprintf(stderr, format, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stderr} without trailing E\+OL. 
+Print formated string to {\bfseries{stderr}} without trailing E\+OL. 
 
-{\bfseries P\+E\+R\+R\+OR} works as {\bfseries P\+R\+I\+NT}, but to {\bfseries stderr}. \mbox{\Hypertarget{print_8h_af990e936c83edcff058ae8ec5864adec}\label{print_8h_af990e936c83edcff058ae8ec5864adec}} 
-\index{print.\+h@{print.\+h}!P\+R\+I\+NT@{P\+R\+I\+NT}}
-\index{P\+R\+I\+NT@{P\+R\+I\+NT}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+R\+I\+NT}{PRINT}}
+{\bfseries{P\+E\+R\+R\+OR}} works as {\bfseries{P\+R\+I\+NT}}, but to {\bfseries{stderr}}. \mbox{\Hypertarget{print_8h_af990e936c83edcff058ae8ec5864adec}\label{print_8h_af990e936c83edcff058ae8ec5864adec}} 
+\index{print.h@{print.h}!PRINT@{PRINT}}
+\index{PRINT@{PRINT}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PRINT}{PRINT}}
 {\footnotesize\ttfamily \#define P\+R\+I\+NT(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stdout, format, ##\_\_VA\_ARGS\_\_); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        fprintf(stdout, format, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stdout} without trailing E\+OL. 
+Print formated string to {\bfseries{stdout}} without trailing E\+OL. 
 
-Basically, {\bfseries P\+R\+I\+NT} is just a repackaged {\itshape printf} function seen {\bfseries stdio.\+h}. \mbox{\Hypertarget{print_8h_a84559fc324a4622242ee818f9025141f}\label{print_8h_a84559fc324a4622242ee818f9025141f}} 
-\index{print.\+h@{print.\+h}!P\+U\+T\+E\+RR@{P\+U\+T\+E\+RR}}
-\index{P\+U\+T\+E\+RR@{P\+U\+T\+E\+RR}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+U\+T\+E\+RR}{PUTERR}}
+Basically, {\bfseries{P\+R\+I\+NT}} is just a repackaged {\itshape printf} function seen {\bfseries{stdio.\+h}}. \mbox{\Hypertarget{print_8h_a84559fc324a4622242ee818f9025141f}\label{print_8h_a84559fc324a4622242ee818f9025141f}} 
+\index{print.h@{print.h}!PUTERR@{PUTERR}}
+\index{PUTERR@{PUTERR}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PUTERR}{PUTERR}}
 {\footnotesize\ttfamily \#define P\+U\+T\+E\+RR(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stderr, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        fprintf(stderr, format \textcolor{stringliteral}{"\%s"}, \#\#\_\_VA\_ARGS\_\_, \mbox{\hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}}); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stderr} with trailing E\+OL. 
+Print formated string to {\bfseries{stderr}} with trailing E\+OL. 
 
 The E\+OL will change according to the host environment. \mbox{\Hypertarget{print_8h_ad5ec9098821844c0c27cd849fc930c90}\label{print_8h_ad5ec9098821844c0c27cd849fc930c90}} 
-\index{print.\+h@{print.\+h}!P\+U\+TS@{P\+U\+TS}}
-\index{P\+U\+TS@{P\+U\+TS}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+U\+TS}{PUTS}}
+\index{print.h@{print.h}!PUTS@{PUTS}}
+\index{PUTS@{PUTS}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PUTS}{PUTS}}
 {\footnotesize\ttfamily \#define P\+U\+TS(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stdout, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        fprintf(stdout, format \textcolor{stringliteral}{"\%s"}, \#\#\_\_VA\_ARGS\_\_, \mbox{\hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}}); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stdout} with trailing E\+OL. 
+Print formated string to {\bfseries{stdout}} with trailing E\+OL. 
 
 The E\+OL will change according to the host environment. 

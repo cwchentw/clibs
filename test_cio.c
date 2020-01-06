@@ -6,9 +6,17 @@
 int main(void)
 {
     {
-        FILE *fp = fopen("cio.h", "r");
-        if (!fp) {
+        FILE *fp;
+    #if _MSC_VER
+        if (0 != fopen_s(&fp, "cio.h", "r")) {
             PUTERR("Failed to read file");
+            return 1;
+        }
+    #else
+        fp = fopen("cio.h", "r");
+    #endif
+        if (!fp) {
+            PUTERR("Failed to get stream object");
             return 1;
         }
 
