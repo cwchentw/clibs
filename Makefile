@@ -22,6 +22,7 @@ endif
 ifeq ($(detected_OS),Windows)
 	TEST_BOOLEAN_EXEC=test_boolean.exe
 	TEST_INTEGER_EXEC=test_integer.exe
+	TEST_IO_EXEC=test_cio.exe
 	TEST_MATH_EXEC=test_cmath.exe
 	TEST_STRING_EXEC=test_cstring.exe
 	TEST_TERM_COLOR_EXEC=
@@ -29,6 +30,7 @@ ifeq ($(detected_OS),Windows)
 else
 	TEST_BOOLEAN_EXEC=test_boolean
 	TEST_INTEGER_EXEC=test_integer
+	TEST_IO_EXEC=test_cio
 	TEST_MATH_EXEC=test_cmath
 	TEST_STRING_EXEC=test_cstring
 	TEST_TERM_COLOR_EXEC=test_term_color
@@ -38,21 +40,24 @@ endif
 ifneq (,$(findstring $(CC),cl.exe))
 	TEST_BOOLEAN_OBJ=test_boolean.obj
 	TEST_INTEGER_OBJ=test_integer.obj
+	TEST_IO_OBJ=cio.obj test_cio.obj
 	TEST_MATH_OBJ=test_cmath.obj
 	TEST_STRING_OBJ=cstring.obj test_cstring.obj
 	TEST_TERM_COLOR_OBJ=test_term_color.obj
-	TEST_TIME_OBJ=test_ctime.obj clibs_time.obj
+	TEST_TIME_OBJ=clibs_time.obj test_ctime.obj
 else
 	TEST_BOOLEAN_OBJ=test_boolean.o
 	TEST_INTEGER_OBJ=test_integer.o
+	TEST_IO_OBJ=cio.o test_cio.o
 	TEST_MATH_OBJ=test_cmath.o
 	TEST_STRING_OBJ=cstring.o test_cstring.o
 	TEST_TERM_COLOR_OBJ=test_term_color.o
-	TEST_TIME_OBJ=test_ctime.o clibs_time.o
+	TEST_TIME_OBJ=clibs_time.o test_ctime.o
 endif
 
-TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_INTEGER_EXEC) $(TEST_MATH_EXEC) \
-	$(TEST_STRING_EXEC) $(TEST_TERM_COLOR_EXEC) $(TEST_TIME_EXEC)
+TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_INTEGER_EXEC) $(TEST_IO_EXEC) \
+	$(TEST_MATH_EXEC) $(TEST_STRING_EXEC) $(TEST_TERM_COLOR_EXEC) \
+	$(TEST_TIME_EXEC)
 
 .PHONY: all test clean
 
@@ -73,6 +78,7 @@ test: $(TEST_EXEC)
 ifeq ($(detected_OS),Windows)
 	.\$(TEST_BOOLEAN_EXEC)
 	.\$(TEST_INTEGER_EXEC)
+	.\$(TEST_IO_EXEC)
 	.\$(TEST_MATH_EXEC)
 	.\$(TEST_STRING_EXEC)
 	echo "Skip term color testing"
@@ -80,6 +86,7 @@ ifeq ($(detected_OS),Windows)
 else
 	./$(TEST_BOOLEAN_EXEC)
 	./$(TEST_INTEGER_EXEC)
+	./$(TEST_IO_EXEC)
 	./$(TEST_MATH_EXEC)
 	./$(TEST_STRING_EXEC)
 	./$(TEST_TERM_COLOR_EXEC)
@@ -98,6 +105,13 @@ ifneq (,$(findstring $(CC),cl.exe))
 	$(CC) /Fe: $(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
+endif  # cl.exe
+
+$(TEST_IO_EXEC): $(TEST_IO_OBJ)
+ifneq (,$(findstring $(CC),cl.exe))
+	$(CC) /Fe: $(TEST_IO_EXEC) $(TEST_IO_OBJ) $(CFLAGS)
+else
+	$(CC) -o $(TEST_IO_EXEC) $(TEST_IO_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
@@ -143,6 +157,6 @@ endif  # c89
 
 clean:
 	$(RM) $(TEST_EXEC) $(TEST_BOOLEAN_OBJ) $(TEST_INTEGER_OBJ) \
-		$(TEST_MATH_OBJ) $(TEST_STRING_OBJ) $(TEST_TERM_COLOR_OBJ) \
-		$(TEST_TIME_OBJ) \
+		$(TEST_IO_OBJ) $(TEST_MATH_OBJ) $(TEST_STRING_OBJ) \
+		$(TEST_TERM_COLOR_OBJ) $(TEST_TIME_OBJ) \
 		get_sizeof_data_type get_sizeof_data_type.exe _sizeof_data_type.h

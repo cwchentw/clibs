@@ -6,7 +6,8 @@ Utility functions for C strings.
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for cstring.\+h\+:\nopagebreak
+Include dependency graph for cstring.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -42,6 +43,8 @@ typedef unsigned char {\bfseries B\+O\+OL}
 \begin{DoxyCompactList}\small\item\em Check whether string {\itshape a} contains string {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}{string\+\_\+is\+\_\+space\+\_\+only}} (const char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Check whether string {\itshape s} composes of only spaces. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}{string\+\_\+allocate\+\_\+char}} (const char c)
+\begin{DoxyCompactList}\small\item\em Allocate a new string out of char {\itshape c}. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}{string\+\_\+allocate}} (const char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Allocate a new string out of string {\itshape s}. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{cstring_8h_a57dbcc036c590f2cb98571f619700597}{string\+\_\+allocate\+\_\+substring}} (const char $\ast$s, size\+\_\+t from, size\+\_\+t to)
@@ -98,6 +101,27 @@ Allocate a new string out of string {\itshape s}.
 
 \begin{DoxyParams}{Parameters}
 {\em s} & The source string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Free the memory of the returning string by yourself. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}\label{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}} 
+\index{cstring.h@{cstring.h}!string\_allocate\_char@{string\_allocate\_char}}
+\index{string\_allocate\_char@{string\_allocate\_char}!cstring.h@{cstring.h}}
+\doxysubsubsection{\texorpdfstring{string\_allocate\_char()}{string\_allocate\_char()}}
+{\footnotesize\ttfamily char$\ast$ string\+\_\+allocate\+\_\+char (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
+
+
+
+Allocate a new string out of char {\itshape c}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The source char. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

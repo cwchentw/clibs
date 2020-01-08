@@ -26,6 +26,18 @@ int main(void)
     TEST(!string_is_space_only(" !\n"));
 
     {
+        char c = 'c';
+
+        char *out = string_allocate_char(c);
+        if (!out)
+            goto ERROR_CSTRING;
+
+        TEST(string_is_equal(out, "c"));
+
+        free(out);
+    }
+
+    {
         char s[] = "The quick brown fox jumps over the lazy dog";
 
         char *out = string_allocate_substring(s, 0, 2);
