@@ -28,7 +28,7 @@
 #else
     #if __STDC_VERSION__ < 199901L
         #ifndef _BOOL_IS_DEFINED
-            typedef char BOOL;
+            typedef unsigned char BOOL;
             #define FALSE  0
             #define TRUE   1
             #define _BOOL_IS_DEFINED
@@ -49,13 +49,13 @@
 extern "C" {
 #endif
 
-/** @fn      string_is_equal(const char *a, const char *b)
+/** @def     string_is_equal(a, b)
  *  @brief   Check whether two strings are equal.
  *  @param   a The first string.
  *  @param   b The second string.
  *  @return  BOOL
  */
-BOOL string_is_equal(const char *a, const char *b);
+#define string_is_equal(a, b) (0 == strcmp((a), (b)))
 
 /** @fn      string_starts_with(const char *a, const char *b)
  *  @brief   Check whether string \a a starts with string \a b

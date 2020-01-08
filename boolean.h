@@ -27,7 +27,7 @@
 #else
     #if __STDC_VERSION__ < 199901L
         #ifndef _BOOL_IS_DEFINED
-            typedef char BOOL;
+            typedef unsigned char BOOL;
             #define FALSE  0
             #define TRUE   1
             #define _BOOL_IS_DEFINED

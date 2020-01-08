@@ -24,18 +24,18 @@ Include dependency graph for cstring.\+h\+:\nopagebreak
 \item 
 \mbox{\Hypertarget{cstring_8h_af7c650f18c4f6a93c33638cf9426b216}\label{cstring_8h_af7c650f18c4f6a93c33638cf9426b216}} 
 \#define {\bfseries \+\_\+\+B\+O\+O\+L\+\_\+\+I\+S\+\_\+\+D\+E\+F\+I\+N\+ED}
-\end{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}{string\+\_\+is\+\_\+equal}}(a,  b)~(0 == strcmp((a), (b)))
+\begin{DoxyCompactList}\small\item\em Check whether two strings are equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{cstring_8h_af492d2bddcb2befacb3aa03dcdf9aafd}\label{cstring_8h_af492d2bddcb2befacb3aa03dcdf9aafd}} 
-typedef char {\bfseries B\+O\+OL}
+\mbox{\Hypertarget{cstring_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}\label{cstring_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}} 
+typedef unsigned char {\bfseries B\+O\+OL}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{cstring_8h_aca96c88ab0b1f5a78953da011d066cd2}{string\+\_\+is\+\_\+equal}} (const char $\ast$a, const char $\ast$b)
-\begin{DoxyCompactList}\small\item\em Check whether two strings are equal. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}{string\+\_\+starts\+\_\+with}} (const char $\ast$a, const char $\ast$b)
 \begin{DoxyCompactList}\small\item\em Check whether string {\itshape a} starts with string {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}{string\+\_\+contains}} (const char $\ast$a, const char $\ast$b)
@@ -60,6 +60,29 @@ Michael Chen
 M\+IT
 \end{DoxyCopyright}
 {\bfseries{\mbox{\hyperlink{cstring_8h}{cstring.\+h}}}} and {\bfseries{cstring.\+c}} only support null-\/terminated {\ttfamily char} array. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}\label{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}} 
+\index{cstring.h@{cstring.h}!string\_is\_equal@{string\_is\_equal}}
+\index{string\_is\_equal@{string\_is\_equal}!cstring.h@{cstring.h}}
+\doxysubsubsection{\texorpdfstring{string\_is\_equal}{string\_is\_equal}}
+{\footnotesize\ttfamily \#define string\+\_\+is\+\_\+equal(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(0 == strcmp((a), (b)))}
+
+
+
+Check whether two strings are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first string. \\
+\hline
+{\em b} & The second string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL 
+\end{DoxyReturn}
+
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}\label{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}} 
@@ -123,26 +146,6 @@ Check whether string {\itshape a} contains string {\itshape b}.
 {\em a} & The source string. \\
 \hline
 {\em b} & The target string. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-B\+O\+OL 
-\end{DoxyReturn}
-\mbox{\Hypertarget{cstring_8h_aca96c88ab0b1f5a78953da011d066cd2}\label{cstring_8h_aca96c88ab0b1f5a78953da011d066cd2}} 
-\index{cstring.h@{cstring.h}!string\_is\_equal@{string\_is\_equal}}
-\index{string\_is\_equal@{string\_is\_equal}!cstring.h@{cstring.h}}
-\doxysubsubsection{\texorpdfstring{string\_is\_equal()}{string\_is\_equal()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} string\+\_\+is\+\_\+equal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
-
-
-
-Check whether two strings are equal. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em a} & The first string. \\
-\hline
-{\em b} & The second string. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

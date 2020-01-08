@@ -21,14 +21,6 @@
     }
 #endif
 
-BOOL string_is_equal(const char *a, const char *b)
-{
-    if (0 == strcmp(a, b))
-        return TRUE;
-
-    return FALSE;
-}
-
 BOOL string_starts_with(const char *a, const char *b)
 {
     size_t i = 0;
