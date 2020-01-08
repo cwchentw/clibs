@@ -25,7 +25,9 @@ clibs is still experimental and for personal use only. The API may change withou
 
 **clibs** is written in ANSI C (C89). Nevertheless, We tested **clibs** against C89, C99 and C11. Hence, you may use it for code in either ANSI C or modern C.
 
-We tested **clibs** against several Unix or Unix-like systems:
+We compile and run **clibs** with GCC, Clang and Visual C++.
+
+We test **clibs** against several Unix or Unix-like systems:
 
 * Ubuntu 18.04 LTS
 * CentOS 8
@@ -58,4 +60,4 @@ Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.ht
 
 ## Copyright
 
-Copyright (c) 2019 Michael Chen. Licensed under MIT.
+Copyright (c) 2019-2020 Michael Chen. Licensed under MIT.
