@@ -36,6 +36,12 @@ int main(void)
     TEST(EQUAL(1.0 / 3.0 + 1.0 / 3.0 + 1.0 / 3.0, 1.0));
     TEST(EQUAL(1.0 - 0.3 - 0.5 - 0.2, 0.0));
 
+    TEST(IS_EVEN(4));
+    TEST(!IS_EVEN(5));
+
+    TEST(!IS_ODD(4));
+    TEST(IS_ODD(5));
+
     if (!passed)
         return 1;
 

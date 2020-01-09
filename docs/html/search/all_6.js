@@ -8,5 +8,7 @@ var searchData=
   ['int64_5ft_19',['int64_t',['../integer_8h.html#a21214d6ef664ff09b89c1fd75fe0a042',1,'integer.h']]],
   ['int8_5fis_5fdefined_20',['INT8_IS_DEFINED',['../integer_8h.html#aa401da1cbe54e588db88e13ed05308ae',1,'integer.h']]],
   ['int8_5ft_21',['int8_t',['../integer_8h.html#a20c38cc5aac7cc6b0a3c6ab05428436d',1,'integer.h']]],
-  ['integer_2eh_22',['integer.h',['../integer_8h.html',1,'']]]
+  ['integer_2eh_22',['integer.h',['../integer_8h.html',1,'']]],
+  ['is_5feven_23',['IS_EVEN',['../clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20',1,'clibs_math.h']]],
+  ['is_5fodd_24',['IS_ODD',['../clibs__math_8h.html#a0fac5864e00584bf98923b4c2dc497f9',1,'clibs_math.h']]]
 ];

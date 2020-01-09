@@ -89,7 +89,15 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">                             ABS((a) - (b)) &lt;= 0.0000001))</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#ifndef IS_EVEN</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20">   57</a></span>&#160;<span class="preprocessor">    #define IS_EVEN(n) (0 == ((n) &amp; 1))</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#ifndef IS_ODD</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a0fac5864e00584bf98923b4c2dc497f9">   64</a></span>&#160;<span class="preprocessor">    #define IS_ODD(n) (1 == ((n) &amp; 1))</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
