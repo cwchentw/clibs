@@ -97,7 +97,11 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a0fac5864e00584bf98923b4c2dc497f9">   64</a></span>&#160;<span class="preprocessor">    #define IS_ODD(n) (1 == ((n) &amp; 1))</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifndef SWAP</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3">   73</a></span>&#160;<span class="preprocessor">    #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

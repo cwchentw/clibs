@@ -8,5 +8,6 @@ var searchData=
   ['string_5fis_5fequal_38',['string_is_equal',['../cstring_8h.html#a08a12340f679b8304cdb32f60e2b04b3',1,'cstring.h']]],
   ['string_5fis_5fspace_5fonly_39',['string_is_space_only',['../cstring_8h.html#ae7ebe8f808dbc71ded2f909b20362d3e',1,'cstring.c']]],
   ['string_5fstarts_5fwith_40',['string_starts_with',['../cstring_8h.html#ab54f92ad286b028ebf7c7355050cefcd',1,'cstring.c']]],
-  ['string_5fto_5fstream_41',['string_to_stream',['../cstring_8h.html#a8c07069d410eb4896af51d6b6a35bc56',1,'cstring.c']]]
+  ['string_5fto_5fstream_41',['string_to_stream',['../cstring_8h.html#a8c07069d410eb4896af51d6b6a35bc56',1,'cstring.c']]],
+  ['swap_42',['SWAP',['../clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3',1,'clibs_math.h']]]
 ];

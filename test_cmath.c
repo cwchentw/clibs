@@ -42,6 +42,16 @@ int main(void)
     TEST(!IS_ODD(4));
     TEST(IS_ODD(5));
 
+    {
+        unsigned a = 3;
+        unsigned b = 4;
+
+        SWAP(a, b);
+
+        TEST(4 == a);
+        TEST(3 == b);
+    }
+
     if (!passed)
         return 1;
 

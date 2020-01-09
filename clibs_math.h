@@ -64,4 +64,13 @@
     #define IS_ODD(n) (1 == ((n) & 1))
 #endif
 
+/** @def SWAP(a, b)
+ *  @brief Swap between \a a and \a b
+ * 
+ *  \a a and \a b are integers
+ */
+#ifndef SWAP
+    #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))
+#endif
+
 #endif  /* CLIBS_CMATH_H */
