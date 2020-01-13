@@ -4,7 +4,9 @@ else
     detected_OS := $(shell sh -c 'uname -s 2>/dev/null || echo not')
 endif
 
-ifneq (,$(findstring $(CC),cl.exe))
+CL := cl icl
+
+ifneq (,$(findstring $(CC),$(CL)))
 	RM=del /q /f
 endif
 
@@ -13,7 +15,7 @@ ifndef $(CSTD)
 	CSTD=c89
 endif
 
-ifneq (,$(findstring $(CC),cl.exe))
+ifneq (,$(findstring $(CC),$(CL)))
 	CFLAGS=/W4 /sdl
 else
 	CFLAGS=-Wall -Wextra -g -std=$(CSTD)
@@ -37,7 +39,7 @@ else
 	TEST_TIME_EXEC=test_ctime
 endif
 
-ifneq (,$(findstring $(CC),cl.exe))
+ifneq (,$(findstring $(CC),$(CL)))
 	TEST_BOOLEAN_OBJ=test_boolean.obj
 	TEST_INTEGER_OBJ=test_integer.obj
 	TEST_IO_OBJ=cio.obj test_cio.obj
@@ -62,7 +64,7 @@ TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_INTEGER_EXEC) $(TEST_IO_EXEC) \
 .PHONY: all test clean
 
 all: test
-ifneq (,$(findstring $(CC),cl.exe))
+ifneq (,$(findstring $(CC),$(CL)))
 	$(MAKE) test
 	$(MAKE) clean
 else
@@ -94,36 +96,36 @@ else
 endif
 
 $(TEST_BOOLEAN_EXEC): $(TEST_BOOLEAN_OBJ)
-ifneq (,$(findstring $(CC),cl.exe))
-	$(CC) /Fe: $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
+ifneq (,$(findstring $(CC),$(CL)))
+	$(CC) /Fe:$(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_BOOLEAN_EXEC) $(TEST_BOOLEAN_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_INTEGER_EXEC): $(TEST_INTEGER_OBJ)
-ifneq (,$(findstring $(CC),cl.exe))
-	$(CC) /Fe: $(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
+ifneq (,$(findstring $(CC),$(CL)))
+	$(CC) /Fe:$(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_INTEGER_EXEC) $(TEST_INTEGER_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_IO_EXEC): $(TEST_IO_OBJ)
-ifneq (,$(findstring $(CC),cl.exe))
-	$(CC) /Fe: $(TEST_IO_EXEC) $(TEST_IO_OBJ) $(CFLAGS)
+ifneq (,$(findstring $(CC),$(CL)))
+	$(CC) /Fe:$(TEST_IO_EXEC) $(TEST_IO_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_IO_EXEC) $(TEST_IO_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_MATH_EXEC): $(TEST_MATH_OBJ)
-ifneq (,$(findstring $(CC),cl.exe))
-	$(CC) /Fe: $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
+ifneq (,$(findstring $(CC),$(CL)))
+	$(CC) /Fe:$(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_MATH_EXEC) $(TEST_MATH_OBJ) $(CFLAGS)
 endif  # cl.exe
 
 $(TEST_STRING_EXEC): $(TEST_STRING_OBJ)
-ifneq (,$(findstring $(CC),cl.exe))
-	$(CC) /Fe: $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
+ifneq (,$(findstring $(CC),$(CL)))
+	$(CC) /Fe:$(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_STRING_EXEC) $(TEST_STRING_OBJ) $(CFLAGS)
 endif  # cl.exe
@@ -136,8 +138,8 @@ else
 endif  # Windows
 
 $(TEST_TIME_EXEC): $(TEST_TIME_OBJ)
-ifneq (,$(findstring $(CC),cl.exe))
-	$(CC) /Fe: $(TEST_TIME_EXEC) $(TEST_TIME_OBJ) $(CFLAGS)
+ifneq (,$(findstring $(CC),$(CL)))
+	$(CC) /Fe:$(TEST_TIME_EXEC) $(TEST_TIME_OBJ) $(CFLAGS)
 else
 	$(CC) -o $(TEST_TIME_EXEC) $(TEST_TIME_OBJ) $(CFLAGS)
 endif
