@@ -91,6 +91,17 @@ Macros</h2></td></tr>
 <tr class="memitem:a8eb7da27bde11ccd5bf0c204ad32fb89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89">EQUAL</a>(a,  b)</td></tr>
 <tr class="memdesc:a8eb7da27bde11ccd5bf0c204ad32fb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the equality between two floating-point numbers.  <a href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89">More...</a><br /></td></tr>
 <tr class="separator:a8eb7da27bde11ccd5bf0c204ad32fb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5407859c02b1b107d77a0b26ccfa20"><td class="memItemLeft" align="right" valign="top"><a id="aff5407859c02b1b107d77a0b26ccfa20"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20">IS_EVEN</a>(n)&#160;&#160;&#160;(0 == ((n) &amp; 1))</td></tr>
+<tr class="memdesc:aff5407859c02b1b107d77a0b26ccfa20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is even. <br /></td></tr>
+<tr class="separator:aff5407859c02b1b107d77a0b26ccfa20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fac5864e00584bf98923b4c2dc497f9"><td class="memItemLeft" align="right" valign="top"><a id="a0fac5864e00584bf98923b4c2dc497f9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a0fac5864e00584bf98923b4c2dc497f9">IS_ODD</a>(n)&#160;&#160;&#160;(1 == ((n) &amp; 1))</td></tr>
+<tr class="memdesc:a0fac5864e00584bf98923b4c2dc497f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is odd. <br /></td></tr>
+<tr class="separator:a0fac5864e00584bf98923b4c2dc497f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9153aee4bdb92701df902e06a74eb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3">SWAP</a>(a,  b)&#160;&#160;&#160;(((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))</td></tr>
+<tr class="memdesc:aac9153aee4bdb92701df902e06a74eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap between <em>a</em> and <em>b</em>.  <a href="clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3">More...</a><br /></td></tr>
+<tr class="separator:aac9153aee4bdb92701df902e06a74eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common math operations. </p>
@@ -135,6 +146,37 @@ Macros</h2></td></tr>
 </ul>
 <p>Formula to get the precision of each data type: </p><pre class="fragment">digit = bit * log(2) / log(10)
 </pre> 
+</div>
+</div>
+<a id="aac9153aee4bdb92701df902e06a74eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9153aee4bdb92701df902e06a74eb3">&#9670;&nbsp;</a></span>SWAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SWAP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swap between <em>a</em> and <em>b</em>. </p>
+<p><em>a</em> and <em>b</em> are integers </p>
+
 </div>
 </div>
 </div><!-- contents -->

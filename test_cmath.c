@@ -36,6 +36,22 @@ int main(void)
     TEST(EQUAL(1.0 / 3.0 + 1.0 / 3.0 + 1.0 / 3.0, 1.0));
     TEST(EQUAL(1.0 - 0.3 - 0.5 - 0.2, 0.0));
 
+    TEST(IS_EVEN(4));
+    TEST(!IS_EVEN(5));
+
+    TEST(!IS_ODD(4));
+    TEST(IS_ODD(5));
+
+    {
+        unsigned a = 3;
+        unsigned b = 4;
+
+        SWAP(a, b);
+
+        TEST(4 == a);
+        TEST(3 == b);
+    }
+
     if (!passed)
         return 1;
 

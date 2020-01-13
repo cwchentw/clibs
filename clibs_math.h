@@ -50,4 +50,27 @@
                              ABS((a) - (b)) <= 0.0000001))
 #endif
 
+/** @def IS_EVEN(n)
+ *  @brief Check whether \a n is even
+ */
+#ifndef IS_EVEN
+    #define IS_EVEN(n) (0 == ((n) & 1))
+#endif
+
+/** @def IS_ODD(n)
+ *  @brief Check whether \a n is odd
+ */
+#ifndef IS_ODD
+    #define IS_ODD(n) (1 == ((n) & 1))
+#endif
+
+/** @def SWAP(a, b)
+ *  @brief Swap between \a a and \a b
+ * 
+ *  \a a and \a b are integers
+ */
+#ifndef SWAP
+    #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))
+#endif
+
 #endif  /* CLIBS_CMATH_H */

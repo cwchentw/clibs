@@ -28,7 +28,7 @@
 #else
     #if __STDC_VERSION__ < 199901L
         #ifndef _BOOL_IS_DEFINED
-            typedef char BOOL;
+            typedef unsigned char BOOL;
             #define FALSE  0
             #define TRUE   1
             #define _BOOL_IS_DEFINED
@@ -49,13 +49,13 @@
 extern "C" {
 #endif
 
-/** @fn      string_is_equal(const char *a, const char *b)
+/** @def     string_is_equal(a, b)
  *  @brief   Check whether two strings are equal.
  *  @param   a The first string.
  *  @param   b The second string.
  *  @return  BOOL
  */
-BOOL string_is_equal(const char *a, const char *b);
+#define string_is_equal(a, b) (0 == strcmp((a), (b)))
 
 /** @fn      string_starts_with(const char *a, const char *b)
  *  @brief   Check whether string \a a starts with string \a b
@@ -81,6 +81,14 @@ BOOL string_contains(const char *a, const char *b);
  *  string_is_space_only will always skip end of line.
  */
 BOOL string_is_space_only(const char *s);
+
+/** @fn      string_allocate_char(const char c)
+ *  @brief   Allocate a new string out of char \a c
+ *  @param   c The source char.
+ *  @return  char *
+ *  @warning  Free the memory of the returning string by yourself.
+ */
+char * string_allocate_char(const char c);
 
 /** @fn      string_allocate(const char *s)
  *  @brief   Allocate a new string out of string \a s

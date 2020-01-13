@@ -60,4 +60,4 @@ Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.ht
 
 ## Copyright
 
-Copyright (c) 2019 Michael Chen. Licensed under MIT.
+Copyright (c) 2019-2020 Michael Chen. Licensed under MIT.

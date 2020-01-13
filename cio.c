@@ -74,17 +74,15 @@ char * stream_read_all(FILE *fp)
 
             /* Copy line to buffer. */
         #if _MSC_VER
-            strcat_s(buffer, buffer_size, line);
+            strcpy_s(buffer, buffer_size, line);
         #else
-            strcat(buffer, line);
+            strcpy(buffer+length, line);
         #endif
 
             length += strlen(line);
             buffer[length] = '\0';
         }
     }
-
-    rewind(fp);
 
     free(line);
 
@@ -96,8 +94,6 @@ ERROR_CIO_READ_ALL:
 
     if (buffer)
         free(buffer);
-
-    rewind(fp);
 
     return NULL;
 }
