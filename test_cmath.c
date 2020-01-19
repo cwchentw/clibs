@@ -27,14 +27,14 @@ int main(void)
     TEST(ABS(3.0) == 3.0);
     TEST(ABS(-3.0) == 3.0);
 
-    TEST(EQUAL(3.14f, 3.14f));
-    TEST(EQUAL(3.14159, 3.14159));
-    TEST(EQUAL(3.1415927L, 3.1415927L));
-    TEST(!EQUAL(3.14f, 3.15f));
-    TEST(!EQUAL(3.14159, 3.14160));
+    TEST(EQUAL(3.14f, 3.14f, 0.01));
+    TEST(EQUAL(3.14159, 3.14159, 0.00001));
+    TEST(EQUAL(3.1415927L, 3.1415927L, 0.0000001));
+    TEST(!EQUAL(3.14f, 3.15f, 0.005));
+    TEST(!EQUAL(3.14159, 3.14160, 0.000005));
 
-    TEST(EQUAL(1.0 / 3.0 + 1.0 / 3.0 + 1.0 / 3.0, 1.0));
-    TEST(EQUAL(1.0 - 0.3 - 0.5 - 0.2, 0.0));
+    TEST(EQUAL(1.0 / 3.0 + 1.0 / 3.0 + 1.0 / 3.0, 1.0, 0.05));
+    TEST(EQUAL(1.0 - 0.3 - 0.5 - 0.2, 0.0, 0.05));
 
     TEST(IS_EVEN(4));
     TEST(!IS_EVEN(5));
