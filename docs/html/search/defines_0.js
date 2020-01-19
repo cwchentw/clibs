@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['abs_142',['ABS',['../clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1',1,'clibs_math.h']]]
+  ['abs_143',['ABS',['../clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1',1,'clibs_math.h']]]
 ];

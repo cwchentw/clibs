@@ -38,4 +38,19 @@
     #endif
 #endif  /* DIRECTORY_SEPARATOR */
 
+/** @def SEARCH_PATH_SEPARATOR
+ *  @brief Search path separator of specific host.
+ * 
+ *  Currently, SEARCH_PATH_SEPARATOR works on Windows and Unix.
+ */
+#ifndef SEARCH_PATH_SEPARATOR
+    #ifdef _WIN32
+        #define SEARCH_PATH_SEPARATOR ";"
+    #elif __unix__ || __APPLE__
+        #define SEARCH_PATH_SEPARATOR ":"
+    #else
+        #error "Unsupported platform"
+    #endif
+#endif
+
 #endif  /* CLIBS_PLATFORM_H */
