@@ -27,15 +27,15 @@
     #define ABS(a) ((a) > 0.0 ? (a) : -(a))
 #endif
 
-/** @def EQUAL(a, b, epsilon)
+/** @def IS_EQUAL(a, b, epsilon)
  *  @brief Check the equality between two floating-point numbers
  *
  *  <b>EQUAL(a, b)</b> compares two floating-point numbers by the absolute value
  *  of the difference between \a a and \a b. The value should be smaller than
  *  \b epsilon
  */
-#ifndef EQUAL
-    #define EQUAL(a, b, epsilon) (ABS((a) - (b)) <= epsilon)
+#ifndef IS_EQUAL
+    #define IS_EQUAL(a, b, epsilon) (ABS((a) - (b)) <= epsilon)
 #endif
 
 /** @def IS_EVEN(n)

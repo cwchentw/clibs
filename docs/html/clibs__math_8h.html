@@ -88,9 +88,9 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>(a)&#160;&#160;&#160;((a) &gt; 0.0 ? (a) : -(a))</td></tr>
 <tr class="memdesc:ae2f08dc603ae93c402abd918ba4e23e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the absolute value of <em>a</em>. <br /></td></tr>
 <tr class="separator:ae2f08dc603ae93c402abd918ba4e23e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba775f84f3addcfe20e36d6d56a9ca3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aba775f84f3addcfe20e36d6d56a9ca3c">EQUAL</a>(a,  b,  epsilon)&#160;&#160;&#160;(<a class="el" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>((a) - (b)) &lt;= epsilon)</td></tr>
-<tr class="memdesc:aba775f84f3addcfe20e36d6d56a9ca3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the equality between two floating-point numbers.  <a href="clibs__math_8h.html#aba775f84f3addcfe20e36d6d56a9ca3c">More...</a><br /></td></tr>
-<tr class="separator:aba775f84f3addcfe20e36d6d56a9ca3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713015a8ec5a7abb7c741a7738037bb4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4">IS_EQUAL</a>(a,  b,  epsilon)&#160;&#160;&#160;(<a class="el" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>((a) - (b)) &lt;= epsilon)</td></tr>
+<tr class="memdesc:a713015a8ec5a7abb7c741a7738037bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the equality between two floating-point numbers.  <a href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4">More...</a><br /></td></tr>
+<tr class="separator:a713015a8ec5a7abb7c741a7738037bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff5407859c02b1b107d77a0b26ccfa20"><td class="memItemLeft" align="right" valign="top"><a id="aff5407859c02b1b107d77a0b26ccfa20"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20">IS_EVEN</a>(n)&#160;&#160;&#160;(0 == ((n) &amp; 1))</td></tr>
 <tr class="memdesc:aff5407859c02b1b107d77a0b26ccfa20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is even. <br /></td></tr>
@@ -108,14 +108,14 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Michael Chen </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aba775f84f3addcfe20e36d6d56a9ca3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba775f84f3addcfe20e36d6d56a9ca3c">&#9670;&nbsp;</a></span>EQUAL</h2>
+<a id="a713015a8ec5a7abb7c741a7738037bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713015a8ec5a7abb7c741a7738037bb4">&#9670;&nbsp;</a></span>IS_EQUAL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EQUAL</td>
+          <td class="memname">#define IS_EQUAL</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">a, </td>
@@ -141,7 +141,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check the equality between two floating-point numbers. </p>
-<p><b><a class="el" href="clibs__math_8h.html#aba775f84f3addcfe20e36d6d56a9ca3c" title="Check the equality between two floating-point numbers.">EQUAL(a, b)</a></b> compares two floating-point numbers by the absolute value of the difference between <em>a</em> and <em>b</em>. The value should be smaller than <b>epsilon</b> </p>
+<p><b>EQUAL(a, b)</b> compares two floating-point numbers by the absolute value of the difference between <em>a</em> and <em>b</em>. The value should be smaller than <b>epsilon</b> </p>
 
 </div>
 </div>
