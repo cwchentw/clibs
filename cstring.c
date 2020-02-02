@@ -129,7 +129,7 @@ char * string_allocate(const char *s)
 
 char * string_allocate_substring(const char *s, size_t from, size_t to)
 {
-    assert(from < to);
+    assert(from <= to);
 
     size_t len = strlen(s);
     assert(to <= len);
