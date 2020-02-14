@@ -32,8 +32,7 @@ We test **clibs** against several Unix or Unix-like systems:
 * Ubuntu 18.04 LTS
 * CentOS 8
 * openSUSE Leap 15.1
-* TrueOS, FreeBSD compatible
-* Solaris 11
+* TrueOS, which is FreeBSD compatible
 
 It should work on other Unix or Unix-like systems as well.
 
