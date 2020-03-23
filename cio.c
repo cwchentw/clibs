@@ -22,7 +22,9 @@
 char * stream_read_all(FILE *fp)
 {
     char *buffer = NULL;
+    char *more_buffer = NULL;
     char *line = NULL;
+    char *more_line = NULL;
 
     /* Allocate memory for buffer. */
     size_t buffer_size = 1024;  /* Arbitrary initial size. */
@@ -52,11 +54,32 @@ char * stream_read_all(FILE *fp)
         if (line_size == strlen(line)) {
             /* Reallocate line. */
             if ('\n' != line[strlen(line)-1]) {
+                /* Reallocate buffer. */
+                if (length + strlen(line) >= buffer_size) {
+                    while (length + strlen(line) >= buffer_size)
+                        buffer_size <<= 1;
+
+                    more_buffer = realloc(buffer, buffer_size);
+                    if (!more_buffer) {
+                        goto ERROR_CIO_READ_ALL;
+                    }
+
+                    buffer = more_buffer;
+                }
+
+                strcpy(buffer+length, line);
+
+                length += strlen(line);
+                buffer[length] = '\0';
+
                 line_size <<= 1;
-                if (!realloc(line, line_size)) {
+
+                more_line = realloc(line, line_size);
+                if (!more_line) {
                     goto ERROR_CIO_READ_ALL;     
                 }
-                
+
+                line = more_line;
             }
             else {
                 goto LOAD_LINE;
@@ -66,10 +89,15 @@ char * stream_read_all(FILE *fp)
     LOAD_LINE:
             /* Reallocate buffer. */
             if (length + strlen(line) >= buffer_size) {
-                buffer_size <<= 1;
-                if (!realloc(buffer, buffer_size)) {
+                while (length + strlen(line) >= buffer_size)
+                    buffer_size <<= 1;
+
+                more_buffer = realloc(buffer, buffer_size);
+                if (!more_buffer) {
                     goto ERROR_CIO_READ_ALL;
                 }
+
+                buffer = more_buffer;
             }
 
             /* Copy line to buffer. */
