@@ -15,7 +15,9 @@
 
 #ifndef PUTERR
     #define PUTERR(format, ...) { \
-        fprintf(stderr, format "%s", ##__VA_ARGS__, END_OF_LINE); \
+        fprintf(stderr, \
+            format "%s", ##__VA_ARGS__, \
+            END_OF_LINE); \
     }
 #endif
 
