@@ -16,7 +16,7 @@ ifndef $(CSTD)
 endif
 
 ifneq (,$(findstring $(CC),$(CL)))
-	CFLAGS=/W4 /sdl
+	CFLAGS=/W4 /sdl /D_CRT_SECURE_NO_WARNINGS
 else
 	CFLAGS=-Wall -Wextra -g -std=$(CSTD)
 endif

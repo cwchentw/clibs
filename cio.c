@@ -69,11 +69,7 @@ char * stream_read_all(FILE *fp)
                     buffer = more_buffer;
                 }
 
-            #if _MSC_VER
-                strcpy_s(buffer, buffer_size, line);
-            #else
                 strcpy(buffer+length, line);
-            #endif
 
                 length += strlen(line);
                 buffer[length] = '\0';
@@ -107,11 +103,7 @@ char * stream_read_all(FILE *fp)
             }
 
             /* Copy line to buffer. */
-        #if _MSC_VER
-            strcpy_s(buffer, buffer_size, line);
-        #else
             strcpy(buffer+length, line);
-        #endif
 
             length += strlen(line);
             buffer[length] = '\0';
