@@ -30,12 +30,12 @@
 /** @def IS_EQUAL(a, b, epsilon)
  *  @brief Check the equality between two floating-point numbers
  *
- *  <b>EQUAL(a, b)</b> compares two floating-point numbers by the absolute value
+ *  <b>IS_EQUAL(a, b, epsilon)</b> compares two floating-point numbers by the absolute value
  *  of the difference between \a a and \a b. The value should be smaller than
  *  \b epsilon
  */
 #ifndef IS_EQUAL
-    #define IS_EQUAL(a, b, epsilon) (ABS((a) - (b)) <= epsilon)
+    #define IS_EQUAL(a, b, epsilon) (ABS((a) - (b)) <= (epsilon))
 #endif
 
 /** @def IS_EVEN(n)
