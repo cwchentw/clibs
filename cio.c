@@ -6,7 +6,7 @@
 #ifndef END_OF_LINE
     #if _WIN32
         #define END_OF_LINE  "\r\n"
-    #elif __unix__ || __APPLE__
+    #elif __unix__  || __unix || unix || __APPLE__
         #define END_OF_LINE  "\n"
     #else
         #error "Unsupported"
@@ -29,7 +29,7 @@ char * stream_read_all(FILE *fp)
     char *more_line = NULL;
 
     /* Allocate memory for buffer. */
-    size_t buffer_size = 1024;  /* Arbitrary initial size. */
+    size_t buffer_size = 1024;  /* Arbitrary size. */
     buffer = (char *) malloc(buffer_size * sizeof(char));
     if (!buffer) {
         PUTERR("Failed to allocate memory for C string");
@@ -40,7 +40,7 @@ char * stream_read_all(FILE *fp)
     buffer[0] = '\0';
 
     /* Allocate memory for line. */
-    size_t line_size = 150;  /* Sensible initial size. */
+    size_t line_size = 150;  /* Arbitrary size. */
     line = (char *) malloc(line_size * sizeof(char));
     if (!line) {
         PUTERR("Failed to allocate memory for C string");
@@ -53,15 +53,17 @@ char * stream_read_all(FILE *fp)
     /* Read file stream line by line. */
     size_t length = 0;
     while (fgets(line, line_size, fp)) {
-        if (line_size == strlen(line)) {
-            /* Reallocate line. */
-            if ('\n' != line[strlen(line)-1]) {
-                /* Reallocate buffer. */
-                if (length + strlen(line) >= buffer_size) {
-                    while (length + strlen(line) >= buffer_size)
+        size_t sz = strlen(line);
+        if (line_size == sz) {
+            /* Reallocate the line. */
+            if ('\n' != line[sz-1]) {
+                /* Reallocate the buffer. */
+                if (length + sz >= buffer_size) {
+                    while (length + sz >= buffer_size)
                         buffer_size <<= 1;
 
-                    more_buffer = realloc(buffer, buffer_size);
+                    more_buffer = \
+                        realloc(buffer, buffer_size);
                     if (!more_buffer) {
                         goto ERROR_CIO_READ_ALL;
                     }
@@ -71,12 +73,13 @@ char * stream_read_all(FILE *fp)
 
                 strcpy(buffer+length, line);
 
-                length += strlen(line);
+                length += sz;
                 buffer[length] = '\0';
 
                 line_size <<= 1;
 
-                more_line = realloc(line, line_size);
+                more_line = \
+                    realloc(line, line_size);
                 if (!more_line) {
                     goto ERROR_CIO_READ_ALL;     
                 }
@@ -90,11 +93,12 @@ char * stream_read_all(FILE *fp)
         else {
     LOAD_LINE:
             /* Reallocate buffer. */
-            if (length + strlen(line) >= buffer_size) {
-                while (length + strlen(line) >= buffer_size)
+            if (length + sz >= buffer_size) {
+                while (length + sz >= buffer_size)
                     buffer_size <<= 1;
 
-                more_buffer = realloc(buffer, buffer_size);
+                more_buffer = \
+                    realloc(buffer, buffer_size);
                 if (!more_buffer) {
                     goto ERROR_CIO_READ_ALL;
                 }
@@ -103,13 +107,9 @@ char * stream_read_all(FILE *fp)
             }
 
             /* Copy line to buffer. */
-        #if _MSC_VER
-            strcpy_s(buffer, buffer_size, line);
-        #else
             strcpy(buffer+length, line);
-        #endif
 
-            length += strlen(line);
+            length += sz;
             buffer[length] = '\0';
         }
     }

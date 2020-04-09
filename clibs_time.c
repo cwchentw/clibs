@@ -29,5 +29,8 @@ struct tm time_create(
     t.tm_min = min;
     t.tm_sec = sec;
 
+    /* Normalize `t`. */
+    mktime(&t);
+    
     return t;
 }
