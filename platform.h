@@ -16,7 +16,7 @@
 #ifndef END_OF_LINE
     #ifdef _WIN32
         #define END_OF_LINE "\r\n"
-    #elif __unix__ || __APPLE__
+    #elif __unix__ || __unix || unix || __APPLE__
         #define END_OF_LINE "\n"
     #else
         #error "Unsupported platform"
@@ -31,7 +31,7 @@
 #ifndef DIRECTORY_SEPARATOR
     #ifdef _WIN32
         #define DIRECTORY_SEPARATOR "\\"
-    #elif __unix__ || __APPLE__
+    #elif __unix__ || __unix || unix || __APPLE__
         #define DIRECTORY_SEPARATOR "/"
     #else
         #error "Unsupported platform"
@@ -46,7 +46,7 @@
 #ifndef SEARCH_PATH_SEPARATOR
     #ifdef _WIN32
         #define SEARCH_PATH_SEPARATOR ";"
-    #elif __unix__ || __APPLE__
+    #elif __unix__ || __unix || unix || __APPLE__
         #define SEARCH_PATH_SEPARATOR ":"
     #else
         #error "Unsupported platform"
