@@ -38,6 +38,23 @@
     #define IS_EQUAL(a, b, epsilon) (ABS((a) - (b)) <= epsilon)
 #endif
 
+/** @def COMPARE(a, b, flag)
+ *  @brief Compare two numeric data
+ * 
+ *  \a flag should be an integer-compatible variable to hold the status of
+ *  the comparison between \a a and \a b
+ */
+#ifndef COMPARE
+    #define COMPARE(a, b, flag) { \
+        if ((a) > (b)) \
+            flag = 1; \
+        else if ((a) < (b)) \
+            flag = -1; \
+        else \
+            flag = 0; \
+    }
+#endif
+
 /** @def IS_EVEN(n)
  *  @brief Check whether \a n is even
  */
