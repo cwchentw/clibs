@@ -51,7 +51,7 @@ The macro definition seen in this document represent the platform data of Unix.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{        fprintf(stderr, \textcolor{stringliteral}{"(\%s:\%d) "} format \textcolor{stringliteral}{"\%s"}, \(\backslash\)}
 \DoxyCodeLine{            \_\_FILE\_\_, \_\_LINE\_\_, \#\#\_\_VA\_ARGS\_\_, \mbox{\hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}}); \(\backslash\)}
 \DoxyCodeLine{    \}}
@@ -69,7 +69,7 @@ Print formated debug message to {\bfseries{stderr}} with trailing E\+OL.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{        fprintf(stderr, format, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
 \DoxyCodeLine{    \}}
 
@@ -86,7 +86,7 @@ Print formated string to {\bfseries{stderr}} without trailing E\+OL.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{        fprintf(stdout, format, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
 \DoxyCodeLine{    \}}
 
@@ -103,7 +103,7 @@ Basically, {\bfseries{P\+R\+I\+NT}} is just a repackaged {\itshape printf} funct
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{        fprintf(stderr, format \textcolor{stringliteral}{"\%s"}, \#\#\_\_VA\_ARGS\_\_, \mbox{\hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}}); \(\backslash\)}
 \DoxyCodeLine{    \}}
 
@@ -120,7 +120,7 @@ The E\+OL will change according to the host environment. \mbox{\Hypertarget{prin
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{        fprintf(stdout, format \textcolor{stringliteral}{"\%s"}, \#\#\_\_VA\_ARGS\_\_, \mbox{\hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}}); \(\backslash\)}
 \DoxyCodeLine{    \}}
 

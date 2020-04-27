@@ -36,23 +36,9 @@ int main(void)
     TEST(IS_EQUAL(1.0 / 3.0 + 1.0 / 3.0 + 1.0 / 3.0, 1.0, 0.05));
     TEST(IS_EQUAL(1.0 - 0.3 - 0.5 - 0.2, 0.0, 0.05));
 
-    {
-        char flag;
-        COMPARE(5, 3, flag);
-        TEST(0 < flag);
-    }
-
-    {
-        char flag;
-        COMPARE(5, 5, flag);
-        TEST(0 == flag);
-    }
-
-    {
-        char flag;
-        COMPARE(3, 5, flag);
-        TEST(0 > flag);
-    }
+    TEST(0 < COMPARE(5, 3));
+    TEST(0 == COMPARE(5, 5));
+    TEST(0 > COMPARE(3, 5));
 
     TEST(IS_EVEN(4));
     TEST(!IS_EVEN(5));

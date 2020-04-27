@@ -19,7 +19,8 @@ Common math operations.
 \begin{DoxyCompactList}\small\item\em Get the absolute value of {\itshape a}. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+AL}}(a,  b,  epsilon)~(\mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}}((a) -\/ (b)) $<$= (epsilon))
 \begin{DoxyCompactList}\small\item\em Check the equality between two floating-\/point numbers. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{clibs__math_8h_ad4dfc2e9be328319ad30bb3d7f88336d}{C\+O\+M\+P\+A\+RE}}(a,  b,  flag)
+\mbox{\Hypertarget{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}\label{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}} 
+\#define \mbox{\hyperlink{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}{C\+O\+M\+P\+A\+RE}}(a,  b)~((a) $>$ (b) ? 1 \+: (a) == (b) ? 0 \+: -\/1)
 \begin{DoxyCompactList}\small\item\em Compare two numeric data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}\label{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}} 
 \#define \mbox{\hyperlink{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}{I\+S\+\_\+\+E\+V\+EN}}(n)~(0 == ((n) \& 1))
@@ -43,29 +44,7 @@ M\+IT
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{clibs__math_8h_ad4dfc2e9be328319ad30bb3d7f88336d}\label{clibs__math_8h_ad4dfc2e9be328319ad30bb3d7f88336d}} 
-\index{clibs\_math.h@{clibs\_math.h}!COMPARE@{COMPARE}}
-\index{COMPARE@{COMPARE}!clibs\_math.h@{clibs\_math.h}}
-\doxysubsubsection{\texorpdfstring{COMPARE}{COMPARE}}
-{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+RE(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{flag }\end{DoxyParamCaption})}
-
-{\bfseries Value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\{ \(\backslash\)}
-\DoxyCodeLine{        if ((a) > (b)) \(\backslash\)}
-\DoxyCodeLine{            flag = 1; \(\backslash\)}
-\DoxyCodeLine{        else \textcolor{keywordflow}{if} ((a) < (b)) \(\backslash\)}
-\DoxyCodeLine{            flag = -\/1; \(\backslash\)}
-\DoxyCodeLine{        else \(\backslash\)}
-\DoxyCodeLine{            flag = 0; \(\backslash\)}
-\DoxyCodeLine{    \}}
-
-\end{DoxyCode}
-
-
-Compare two numeric data. 
-
-{\itshape flag} should be an integer-\/compatible variable to hold the status of the comparison between {\itshape a} and {\itshape b} \mbox{\Hypertarget{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}\label{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}} 
+\mbox{\Hypertarget{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}\label{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}} 
 \index{clibs\_math.h@{clibs\_math.h}!IS\_EQUAL@{IS\_EQUAL}}
 \index{IS\_EQUAL@{IS\_EQUAL}!clibs\_math.h@{clibs\_math.h}}
 \doxysubsubsection{\texorpdfstring{IS\_EQUAL}{IS\_EQUAL}}
