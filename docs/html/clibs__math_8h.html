@@ -88,9 +88,13 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>(a)&#160;&#160;&#160;((a) &gt; 0.0 ? (a) : -(a))</td></tr>
 <tr class="memdesc:ae2f08dc603ae93c402abd918ba4e23e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the absolute value of <em>a</em>. <br /></td></tr>
 <tr class="separator:ae2f08dc603ae93c402abd918ba4e23e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb7da27bde11ccd5bf0c204ad32fb89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89">EQUAL</a>(a,  b)</td></tr>
-<tr class="memdesc:a8eb7da27bde11ccd5bf0c204ad32fb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the equality between two floating-point numbers.  <a href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89">More...</a><br /></td></tr>
-<tr class="separator:a8eb7da27bde11ccd5bf0c204ad32fb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713015a8ec5a7abb7c741a7738037bb4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4">IS_EQUAL</a>(a,  b,  epsilon)&#160;&#160;&#160;(<a class="el" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>((a) - (b)) &lt;= (epsilon))</td></tr>
+<tr class="memdesc:a713015a8ec5a7abb7c741a7738037bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the equality between two floating-point numbers.  <a href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4">More...</a><br /></td></tr>
+<tr class="separator:a713015a8ec5a7abb7c741a7738037bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c15196c8b70dad652315f5947796c6"><td class="memItemLeft" align="right" valign="top"><a id="a46c15196c8b70dad652315f5947796c6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a46c15196c8b70dad652315f5947796c6">COMPARE</a>(a,  b)&#160;&#160;&#160;((a) &gt; (b) ? 1 : (a) == (b) ? 0 : -1)</td></tr>
+<tr class="memdesc:a46c15196c8b70dad652315f5947796c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two numeric data. <br /></td></tr>
+<tr class="separator:a46c15196c8b70dad652315f5947796c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff5407859c02b1b107d77a0b26ccfa20"><td class="memItemLeft" align="right" valign="top"><a id="aff5407859c02b1b107d77a0b26ccfa20"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20">IS_EVEN</a>(n)&#160;&#160;&#160;(0 == ((n) &amp; 1))</td></tr>
 <tr class="memdesc:aff5407859c02b1b107d77a0b26ccfa20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is even. <br /></td></tr>
@@ -108,14 +112,14 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Michael Chen </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a8eb7da27bde11ccd5bf0c204ad32fb89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eb7da27bde11ccd5bf0c204ad32fb89">&#9670;&nbsp;</a></span>EQUAL</h2>
+<a id="a713015a8ec5a7abb7c741a7738037bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713015a8ec5a7abb7c741a7738037bb4">&#9670;&nbsp;</a></span>IS_EQUAL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EQUAL</td>
+          <td class="memname">#define IS_EQUAL</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">a, </td>
@@ -124,28 +128,25 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">b&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">epsilon&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>((a) - (b)) &lt;= (epsilon))</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>((a)) == 16 ? <a class="code" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>((a) - (b)) &lt;= 0.000000000000000000000001 : \</div>
-<div class="line">         (<span class="keyword">sizeof</span>((a)) == 8 ? <a class="code" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a>((a) - (b)) &lt;= 0.000000000000001 : \</div>
-<div class="line">                             ABS((a) - (b)) &lt;= 0.0000001))</div>
-</div><!-- fragment -->
+
 <p>Check the equality between two floating-point numbers. </p>
-<p><b><a class="el" href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89" title="Check the equality between two floating-point numbers.">EQUAL(a, b)</a></b> compares two floating-point numbers by the absolute value of the difference between them. The value should be small enough to be viewed as equal. <b><a class="el" href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89" title="Check the equality between two floating-point numbers.">EQUAL(a, b)</a></b> utilizes <b>sizeof</b> to get the width of the number to be compared so that it can compute a proper error value.</p>
-<ul>
-<li>float: 24 bit -&gt; 7 digits</li>
-<li>double: 53 bit -&gt; 15 digits</li>
-<li>long double: 80 bit -&gt; 24 digits</li>
-</ul>
-<p>Formula to get the precision of each data type: </p><pre class="fragment">digit = bit * log(2) / log(10)
-</pre> 
+<p><b><a class="el" href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4" title="Check the equality between two floating-point numbers.">IS_EQUAL(a, b, epsilon)</a></b> compares two floating-point numbers by the absolute value of the difference between <em>a</em> and <em>b</em>. The value should be smaller than <b>epsilon</b> </p>
+
 </div>
 </div>
 <a id="aac9153aee4bdb92701df902e06a74eb3"></a>
@@ -180,7 +181,6 @@ Macros</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclibs__math_8h_html_ae2f08dc603ae93c402abd918ba4e23e1"><div class="ttname"><a href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">ABS</a></div><div class="ttdeci">#define ABS(a)</div><div class="ttdoc">Get the absolute value of a.</div><div class="ttdef"><b>Definition:</b> clibs_math.h:27</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

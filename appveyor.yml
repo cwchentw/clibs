@@ -12,7 +12,7 @@ install:
 
 test_script:
 - cmd: call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-- cmd: make test CC=cl.exe
+- cmd: make test CC=cl
 - sh: if [ true = "$CI_LINUX" ]; then make test; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_boolean; fi
 - sh: if [ true = "$CI_LINUX" ]; then valgrind ./test_cio; fi

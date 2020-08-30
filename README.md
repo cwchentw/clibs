@@ -32,8 +32,7 @@ We test **clibs** against several Unix or Unix-like systems:
 * Ubuntu 18.04 LTS
 * CentOS 8
 * openSUSE Leap 15.1
-* TrueOS, FreeBSD compatible
-* Solaris 11
+* TrueOS, which is FreeBSD compatible
 
 It should work on other Unix or Unix-like systems as well.
 
@@ -48,6 +47,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 ## Available Utilities:
 
 * *boolean.h*: boolean type for C
+* *cio.h* and *cio.c*: basic input and output
 * *clibs_math.h*: basic math operations
 * *clibs_time.h* and *clibs_time.c*: basic time operations
 * *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)

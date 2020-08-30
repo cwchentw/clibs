@@ -82,26 +82,27 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#ae2f08dc603ae93c402abd918ba4e23e1">   27</a></span>&#160;<span class="preprocessor">    #define ABS(a) ((a) &gt; 0.0 ? (a) : -(a))</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifndef EQUAL</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89">   47</a></span>&#160;<span class="preprocessor">    #define EQUAL(a, b) \</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">        (sizeof((a)) == 16 ? ABS((a) - (b)) &lt;= 0.000000000000000000000001 : \</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">         (sizeof((a)) == 8 ? ABS((a) - (b)) &lt;= 0.000000000000001 : \</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">                             ABS((a) - (b)) &lt;= 0.0000001))</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#ifndef IS_EVEN</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20">   57</a></span>&#160;<span class="preprocessor">    #define IS_EVEN(n) (0 == ((n) &amp; 1))</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#ifndef IS_ODD</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a0fac5864e00584bf98923b4c2dc497f9">   64</a></span>&#160;<span class="preprocessor">    #define IS_ODD(n) (1 == ((n) &amp; 1))</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifndef SWAP</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3">   73</a></span>&#160;<span class="preprocessor">    #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef IS_EQUAL</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4">   38</a></span>&#160;<span class="preprocessor">    #define IS_EQUAL(a, b, epsilon) (ABS((a) - (b)) &lt;= (epsilon))</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifndef COMPARE</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a46c15196c8b70dad652315f5947796c6">   45</a></span>&#160;<span class="preprocessor">    #define COMPARE(a, b) ((a) &gt; (b) ? 1 : (a) == (b) ? 0 : -1)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#ifndef IS_EVEN</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#aff5407859c02b1b107d77a0b26ccfa20">   52</a></span>&#160;<span class="preprocessor">    #define IS_EVEN(n) (0 == ((n) &amp; 1))</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#ifndef IS_ODD</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#a0fac5864e00584bf98923b4c2dc497f9">   59</a></span>&#160;<span class="preprocessor">    #define IS_ODD(n) (1 == ((n) &amp; 1))</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifndef SWAP</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3">   68</a></span>&#160;<span class="preprocessor">    #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CLIBS_CMATH_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

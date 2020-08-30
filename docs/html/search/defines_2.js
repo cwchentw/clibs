@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['end_5fof_5fline_145',['END_OF_LINE',['../platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11',1,'platform.h']]],
-  ['equal_146',['EQUAL',['../clibs__math_8h.html#a8eb7da27bde11ccd5bf0c204ad32fb89',1,'clibs_math.h']]]
+  ['debug_5finfo_146',['DEBUG_INFO',['../print_8h.html#a994994514490b70ee6a5dd679f28acbc',1,'print.h']]],
+  ['directory_5fseparator_147',['DIRECTORY_SEPARATOR',['../platform_8h.html#af1e88bb4b1ff9546e6803eec85e0684c',1,'platform.h']]]
 ];
