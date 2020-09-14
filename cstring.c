@@ -150,6 +150,40 @@ char * string_allocate_substring(const char *s, size_t from, size_t to)
     return out;
 }
 
+char * string_concat(const char *a, const char *b)
+{
+    assert(a);
+    assert(b);
+
+    size_t sz_a = strlen(a);
+    size_t sz_b = strlen(b);
+
+    size_t sz = sz_a + sz_b + 1 /* Trailing zero. */;
+
+    char *out = (char *) malloc(sz * sizeof(char));
+    if (!out) {
+        DEBUG_INFO("Failed to allocate memory for C string");
+        DEBUG_INFO("Check available system memory");
+        return out;
+    }
+
+    {
+        size_t i;
+        for (i = 0; i < sz_a; ++i)
+            out[i] = a[i];
+    }
+
+    {
+        size_t i;
+        for (i = 0; i < sz_b; ++i)
+            out[i+sz_a] = b[i];
+    }
+
+    out[sz-1] = '\0'; /* Trailing zero. */
+
+    return out;
+}
+
 FILE * string_to_stream(char *s)
 {
 #ifdef _MSC_VER

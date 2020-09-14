@@ -85,6 +85,21 @@ int main(void)
         free(out);
     }
 
+    {
+        char *a = "Hello ";
+        char *b = "World";
+
+        char *out = string_concat(a, b);
+        if (!out) {
+            free(out);
+            goto ERROR_CSTRING;
+        }
+
+        TEST(string_is_equal(out, "Hello World"));
+
+        free(out);
+    }
+
 /*-------1---------2---------3---------4---------5---------6---------7---------8---------9*/
 /*3456789012345678901234567890123456789012345678901234567890123456789012345678901234567890*/
     {

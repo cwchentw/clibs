@@ -108,6 +108,15 @@ char * string_allocate(const char *s);
  */
 char * string_allocate_substring(const char *s, size_t from, size_t to);
 
+/** @fn       string_concat(const char *a, const char *b)
+ *  @brief    Concat two strings \a and \b
+ *  @param    a The source string.
+ *  @param    b The source string.
+ *  @return   char *
+ *  @warning  Free the memory of the returning string by yourself.
+ */
+char * string_concat(const char *a, const char *b);
+
 /** @fn       string_to_stream(char *s)
  *  @brief    Convert a string to a file stream.
  *  @param    s The source string.

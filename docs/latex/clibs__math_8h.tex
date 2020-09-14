@@ -1,38 +1,38 @@
-\hypertarget{clibs__math_8h}{}\doxysection{clibs\+\_\+math.\+h File Reference}
-\label{clibs__math_8h}\index{clibs\_math.h@{clibs\_math.h}}
+\hypertarget{clibs__math_8h}{}\section{clibs\+\_\+math.\+h File Reference}
+\label{clibs__math_8h}\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
 
 
 Common math operations.  
 
 
-\doxysubsection*{Macros}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}} 
-\#define \mbox{\hyperlink{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{M\+AX}}(a,  b)~((a) $>$ (b) ? (a) \+: (b))
+\#define \hyperlink{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{M\+AX}(a,  b)~((a) $>$ (b) ? (a) \+: (b))
 \begin{DoxyCompactList}\small\item\em Get the maximal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\label{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}} 
-\#define \mbox{\hyperlink{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
+\#define \hyperlink{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
 \begin{DoxyCompactList}\small\item\em Get the minimal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}\label{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}} 
-\#define \mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}}(a)~((a) $>$ 0.\+0 ? (a) \+: -\/(a))
+\#define \hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}(a)~((a) $>$ 0.\+0 ? (a) \+: -\/(a))
 \begin{DoxyCompactList}\small\item\em Get the absolute value of {\itshape a}. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+AL}}(a,  b,  epsilon)~(\mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}}((a) -\/ (b)) $<$= (epsilon))
+\#define \hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+AL}(a,  b,  epsilon)~(\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}((a) -\/ (b)) $<$= (epsilon))
 \begin{DoxyCompactList}\small\item\em Check the equality between two floating-\/point numbers. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}\label{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}} 
-\#define \mbox{\hyperlink{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}{C\+O\+M\+P\+A\+RE}}(a,  b)~((a) $>$ (b) ? 1 \+: (a) == (b) ? 0 \+: -\/1)
+\#define \hyperlink{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}{C\+O\+M\+P\+A\+RE}(a,  b)~((a) $>$ (b) ? 1 \+: (a) == (b) ? 0 \+: -\/1)
 \begin{DoxyCompactList}\small\item\em Compare two numeric data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}\label{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}} 
-\#define \mbox{\hyperlink{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}{I\+S\+\_\+\+E\+V\+EN}}(n)~(0 == ((n) \& 1))
+\#define \hyperlink{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}{I\+S\+\_\+\+E\+V\+EN}(n)~(0 == ((n) \& 1))
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is even. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}\label{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}} 
-\#define \mbox{\hyperlink{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}{I\+S\+\_\+\+O\+DD}}(n)~(1 == ((n) \& 1))
+\#define \hyperlink{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}{I\+S\+\_\+\+O\+DD}(n)~(1 == ((n) \& 1))
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is odd. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}{S\+W\+AP}}(a,  b)~(((a) $^\wedge$= (b)), ((b) $^\wedge$= (a)), ((a) $^\wedge$= (b)))
+\#define \hyperlink{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}{S\+W\+AP}(a,  b)~(((a) $^\wedge$= (b)), ((b) $^\wedge$= (a)), ((a) $^\wedge$= (b)))
 \begin{DoxyCompactList}\small\item\em Swap between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\subsection{Detailed Description}
 Common math operations. 
 
 \begin{DoxyAuthor}{Author}
@@ -43,21 +43,21 @@ M\+IT
 \end{DoxyCopyright}
 
 
-\doxysubsection{Macro Definition Documentation}
+\subsection{Macro Definition Documentation}
 \mbox{\Hypertarget{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}\label{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}} 
-\index{clibs\_math.h@{clibs\_math.h}!IS\_EQUAL@{IS\_EQUAL}}
-\index{IS\_EQUAL@{IS\_EQUAL}!clibs\_math.h@{clibs\_math.h}}
-\doxysubsubsection{\texorpdfstring{IS\_EQUAL}{IS\_EQUAL}}
-{\footnotesize\ttfamily \#define I\+S\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{epsilon }\end{DoxyParamCaption})~(\mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}}((a) -\/ (b)) $<$= (epsilon))}
+\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!I\+S\+\_\+\+E\+Q\+U\+AL@{I\+S\+\_\+\+E\+Q\+U\+AL}}
+\index{I\+S\+\_\+\+E\+Q\+U\+AL@{I\+S\+\_\+\+E\+Q\+U\+AL}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+E\+Q\+U\+AL}{IS\_EQUAL}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{epsilon }\end{DoxyParamCaption})~(\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}((a) -\/ (b)) $<$= (epsilon))}
 
 
 
 Check the equality between two floating-\/point numbers. 
 
-{\bfseries{\mbox{\hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+A\+L(a, b, epsilon)}}}} compares two floating-\/point numbers by the absolute value of the difference between {\itshape a} and {\itshape b}. The value should be smaller than {\bfseries{epsilon}} \mbox{\Hypertarget{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}\label{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}} 
-\index{clibs\_math.h@{clibs\_math.h}!SWAP@{SWAP}}
-\index{SWAP@{SWAP}!clibs\_math.h@{clibs\_math.h}}
-\doxysubsubsection{\texorpdfstring{SWAP}{SWAP}}
+{\bfseries \hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+A\+L(a, b, epsilon)}} compares two floating-\/point numbers by the absolute value of the difference between {\itshape a} and {\itshape b}. The value should be smaller than {\bfseries epsilon} \mbox{\Hypertarget{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}\label{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}} 
+\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!S\+W\+AP@{S\+W\+AP}}
+\index{S\+W\+AP@{S\+W\+AP}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{S\+W\+AP}{SWAP}}
 {\footnotesize\ttfamily \#define S\+W\+AP(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(((a) $^\wedge$= (b)), ((b) $^\wedge$= (a)), ((a) $^\wedge$= (b)))}
 
 
