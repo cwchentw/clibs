@@ -73,8 +73,6 @@ $(function() {
 Include dependency graph for print.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="print_8h__incl.png" border="0" usemap="#print_8h" alt=""/></div>
-<map name="print_8h" id="print_8h">
-</map>
 </div>
 </div>
 <p><a href="print_8h_source.html">Go to the source code of this file.</a></p>
@@ -131,7 +129,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, <span class="stringliteral">&quot;(%s:%d) &quot;</span> format <span class="stringliteral">&quot;%s&quot;</span>, \</div><div class="line">            __FILE__, __LINE__, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, <span class="stringliteral">&quot;(%s:%d) &quot;</span> format <span class="stringliteral">&quot;%s&quot;</span>, \</div><div class="line">            __FILE__, __LINE__, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:18</div></div>
 </div><!-- fragment -->
 <p>Print formated debug message to <b>stderr</b> with trailing EOL. </p>
 <p><b>DEBUG_INFO</b> works similarly to <b>PUTERR</b> but adds source file and line number. Hence, developers can track the location of the message more easily. </p>
@@ -225,7 +223,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stderr, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:18</div></div>
 </div><!-- fragment -->
 <p>Print formated string to <b>stderr</b> with trailing EOL. </p>
 <p>The EOL will change according to the host environment. </p>
@@ -257,7 +255,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stdout, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        fprintf(stdout, format <span class="stringliteral">&quot;%s&quot;</span>, ##__VA_ARGS__, <a class="code" href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a>); \</div><div class="line">    }</div><div class="ttc" id="platform_8h_html_aa3d2b101ea5e31185ae18e499d30ed11"><div class="ttname"><a href="platform_8h.html#aa3d2b101ea5e31185ae18e499d30ed11">END_OF_LINE</a></div><div class="ttdeci">#define END_OF_LINE</div><div class="ttdoc">End of line of specific host. </div><div class="ttdef"><b>Definition:</b> platform.h:18</div></div>
 </div><!-- fragment -->
 <p>Print formated string to <b>stdout</b> with trailing EOL. </p>
 <p>The EOL will change according to the host environment. </p>

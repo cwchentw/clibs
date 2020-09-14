@@ -4,13 +4,7 @@
 #include "cio.h"
 
 #ifndef END_OF_LINE
-    #if _WIN32
-        #define END_OF_LINE  "\r\n"
-    #elif __unix__  || __unix || unix || __APPLE__
-        #define END_OF_LINE  "\n"
-    #else
-        #error "Unsupported"
-    #endif
+    #define END_OF_LINE  "\n"
 #endif
 
 #ifndef PUTERR

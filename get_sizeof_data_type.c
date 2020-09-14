@@ -1,15 +1,9 @@
 #include <stdio.h>
 
-#if _WIN32
-    #define END_OF_LINE  "\r\n"
-#elif __unix__ || __unix || unix || __APPLE__
-    #define END_OF_LINE  "\n"
-#else
-    #error "Unsupported"
-#endif
-
+#define END_OF_LINE  "\n"
 #define SIZE_OF_CHAR  8
 #define HEADER_FILE "_sizeof_data_type.h"
+
 
 int main(void)
 {

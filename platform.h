@@ -11,16 +11,11 @@
 /** @def END_OF_LINE
  *  @brief End of line of specific host.
  *
- *  Currently, EOL_OF_LINE works on Windows and Unix.
+ *  C will handle platform-specific end of line automatically. Hence, we always set
+ *   END_OF_LINE the same value.
  */
 #ifndef END_OF_LINE
-    #ifdef _WIN32
-        #define END_OF_LINE "\r\n"
-    #elif __unix__ || __unix || unix || __APPLE__
         #define END_OF_LINE "\n"
-    #else
-        #error "Unsupported platform"
-    #endif
 #endif  /* END_OF_LINE */
 
 /** @def DIRECTORY_SEPARATOR
