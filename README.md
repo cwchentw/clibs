@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build status](https://ci.appveyor.com/api/projects/status/69a3u5o6wm3itj8w?svg=true)](https://ci.appveyor.com/project/cwchentw/clibs)
 
-Tiny but handy utility libraries for C.
+Self-contained Utilities for C.
 
 Visit the website of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
 
@@ -10,20 +10,18 @@ Vist the repository of **clibs** [here](https://github.com/cwchentw/clibs/).
 
 ## Warning
 
-DON'T USE IT IN PRODUCTION ENVIRONMENT.
-
-clibs is still experimental and for personal use only. The API may change without warning.
+clibs is still experimental and mostly for personal use. The API may change without warning.
 
 ## What is clibs anyway?
 
-**clibs** are common utilities (types, typedefs, macros, functions) used across C programs. They are mostly domain neutral, able to be applied to various situations.
+**clibs** are utility code (types, typedefs, macros, functions) used across C programs. They are self-contained and domain neutral, able to be applied to various situations.
 
 ## System Requirements
 
 * A C compiler that supports ANSI C
 * GNU Make (only for testing)
 
-**clibs** is written in ANSI C (C89). Nevertheless, We tested **clibs** against C89, C99 and C11. Hence, you may use it for code in either ANSI C or modern C.
+**clibs** is written in ANSI C (C89). Nevertheless, We tested **clibs** against C89, C99 and C11. Hence, you may use it for code in either classic C or modern C.
 
 We compile and run **clibs** with GCC, Clang, Visual C++ and Intel C++ Compiler.
 
@@ -40,7 +38,7 @@ In addition, we test **clibs** on a Windows container provided by [AppVeyor](htt
 
 ## How to Use?
 
-The libraries in **clibs** are self-contained, distributed in either single header or single header plus single source combo. Just copy what you need to your own C project.
+The utilities in **clibs** are self-contained, distributed as either single header or single header plus single source combo. Just copy what you need to your own C project.
 
 test_\*.c are test programs. You don't need them to use **clibs**.
 
@@ -60,4 +58,4 @@ Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.ht
 
 ## Copyright
 
-Copyright (c) 2019-2020 Michael Chen. Licensed under MIT.
+Copyright (c) 2019-2020 Michael Chen. All code is licensed under MIT unless mentioned otherwise.
