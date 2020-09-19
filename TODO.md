@@ -6,4 +6,4 @@
   * `base_name` function to get base name of a file path
   * `dir_name` function to get directory name of a file path
   * `ext_name` function to get file extension of a file path
-* Refactor `EQUAL(a, b)` to handle rare conditions
+* Add `SQUARE(n)` macro
