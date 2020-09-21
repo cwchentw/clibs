@@ -75,7 +75,7 @@ char * stream_read_all(FILE *fp)
                 more_line = \
                     realloc(line, line_size);
                 if (!more_line) {
-                    goto ERROR_CIO_READ_ALL;     
+                    goto ERROR_CIO_READ_ALL;
                 }
 
                 line = more_line;
