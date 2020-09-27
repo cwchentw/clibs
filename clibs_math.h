@@ -102,7 +102,7 @@
  *  @brief Check whether \a n is a negative infinity number
  */
 #ifndef IS_NEG_INF
-    #define IS_NEG_INF(n) ((n) < FLT_MIN)
+    #define IS_NEG_INF(n) (-(n) > FLT_MAX)
 #endif
 
 /** @def NaN
