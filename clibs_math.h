@@ -81,35 +81,60 @@
  *  @brief An infinity number
  */
 #ifndef INF
-    #define INF (1.0 / 0.0)
+    #ifdef _MSC_VER
+        #include <math.h>
+        #define INF (-logf(0.0))
+    #else
+        #define INF (1.0 / 0.0)
+    #endif
 #endif
 
 /** @def IS_INF(n)
  *  @brief Check whether \a n is an infinity number
  */
 #ifndef IS_INF
-    #define IS_INF(n) ((n) > FLT_MAX)
+    #ifdef _MSC_VER
+        #include <math.h>
+        #define IS_INF(n) (!_finite(n))
+    #else
+        #define IS_INF(n) ((n) > FLT_MAX)
+    #endif
 #endif
 
 /** @def NEG_INF
  *  @brief A negative infinity number
  */
 #ifndef NEG_INF
-    #define NEG_INF (-1.0 / 0.0)
+    #ifdef _MSC_VER
+        #include <math.h>
+        #define NEG_INF (logf(0.0))
+    #else
+        #define NEG_INF (-1.0 / 0.0)
+    #endif
 #endif
 
 /** @def IS_NEG_INF(n)
  *  @brief Check whether \a n is a negative infinity number
  */
 #ifndef IS_NEG_INF
-    #define IS_NEG_INF(n) (-(n) > FLT_MAX)
+    #ifdef _MSC_VER
+        #include <math.h>
+        #define IS_NEG_INF(n) (!_finite(n) && (n) < 0)
+    #else
+        #define IS_NEG_INF(n) (-(n) > FLT_MAX)
+    #endif
 #endif
 
 /** @def NaN
  *  @brief A NaN (not a number)
  */
 #ifndef NaN
-    #define NaN (0.0 / 0.0)
+    #ifdef _MSC_VER
+        #include <math.h>
+        #define NaN (logf(0.0) - logf(0.0))
+    #else
+        #define NaN (0.0 / 0.0)
+    #endif
 #endif
 
 /** @def IS_NaN(n)
