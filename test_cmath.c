@@ -4,6 +4,10 @@
 #else
     #include "boolean.h"
 #endif
+
+#include <float.h>
+#include <stdlib.h>
+#include <time.h>
 #include "clibs_math.h"
 #include "print.h"
 
@@ -55,6 +59,17 @@ int main(void)
         TEST(4 == a);
         TEST(3 == b);
     }
+
+    {
+        srand((unsigned) time(NULL));
+        int n = RANDINT(1, 10);
+
+        TEST(1 <= n && n <= 10);
+    }
+
+    TEST(IS_INF(INF + INF));
+    TEST(IS_NEG_INF(NEG_INF + NEG_INF));
+    TEST(IS_NaN(INF + NEG_INF));
 
     if (!passed)
         return 1;

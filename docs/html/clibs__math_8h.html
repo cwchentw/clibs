@@ -103,6 +103,32 @@ Macros</h2></td></tr>
 <tr class="memitem:aac9153aee4bdb92701df902e06a74eb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aac9153aee4bdb92701df902e06a74eb3">SWAP</a>(a,  b)&#160;&#160;&#160;(((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))</td></tr>
 <tr class="memdesc:aac9153aee4bdb92701df902e06a74eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap between <em>a</em> and <em>b</em>.  <a href="#aac9153aee4bdb92701df902e06a74eb3">More...</a><br /></td></tr>
 <tr class="separator:aac9153aee4bdb92701df902e06a74eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa58b52936b1e6849f17d7e0d74be5655"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#aa58b52936b1e6849f17d7e0d74be5655">RANDINT</a>(min,  max)&#160;&#160;&#160;((min) + rand() % ((max) - (min) + 1))</td></tr>
+<tr class="memdesc:aa58b52936b1e6849f17d7e0d74be5655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a random integer bewteen <em>min</em> and <em>max</em>.  <a href="#aa58b52936b1e6849f17d7e0d74be5655">More...</a><br /></td></tr>
+<tr class="separator:aa58b52936b1e6849f17d7e0d74be5655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c2040f25d8e3a7b9e1c2024c618cb6"><td class="memItemLeft" align="right" valign="top"><a id="a12c2040f25d8e3a7b9e1c2024c618cb6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a12c2040f25d8e3a7b9e1c2024c618cb6">INF</a>&#160;&#160;&#160;(1.0 / 0.0)</td></tr>
+<tr class="memdesc:a12c2040f25d8e3a7b9e1c2024c618cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">An infinity number. <br /></td></tr>
+<tr class="separator:a12c2040f25d8e3a7b9e1c2024c618cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2797dcf5a03248edef913c12f97e5a01"><td class="memItemLeft" align="right" valign="top"><a id="a2797dcf5a03248edef913c12f97e5a01"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a2797dcf5a03248edef913c12f97e5a01">IS_INF</a>(n)&#160;&#160;&#160;((n) &gt; FLT_MAX)</td></tr>
+<tr class="memdesc:a2797dcf5a03248edef913c12f97e5a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is an infinity number. <br /></td></tr>
+<tr class="separator:a2797dcf5a03248edef913c12f97e5a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e3e165debaf418b6b285ff7538d3f3"><td class="memItemLeft" align="right" valign="top"><a id="a98e3e165debaf418b6b285ff7538d3f3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a98e3e165debaf418b6b285ff7538d3f3">NEG_INF</a>&#160;&#160;&#160;(-1.0 / 0.0)</td></tr>
+<tr class="memdesc:a98e3e165debaf418b6b285ff7538d3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A negative infinity number. <br /></td></tr>
+<tr class="separator:a98e3e165debaf418b6b285ff7538d3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbe942aca2284e44ac30b580b92f125"><td class="memItemLeft" align="right" valign="top"><a id="a4fbe942aca2284e44ac30b580b92f125"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a4fbe942aca2284e44ac30b580b92f125">IS_NEG_INF</a>(n)&#160;&#160;&#160;((n) &lt; FLT_MIN)</td></tr>
+<tr class="memdesc:a4fbe942aca2284e44ac30b580b92f125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is a negative infinity number. <br /></td></tr>
+<tr class="separator:a4fbe942aca2284e44ac30b580b92f125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953f667fb27fb68dd74a487d002b19b5"><td class="memItemLeft" align="right" valign="top"><a id="a953f667fb27fb68dd74a487d002b19b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a953f667fb27fb68dd74a487d002b19b5">NaN</a>&#160;&#160;&#160;(0.0 / 0.0)</td></tr>
+<tr class="memdesc:a953f667fb27fb68dd74a487d002b19b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A NaN (not a number) <br /></td></tr>
+<tr class="separator:a953f667fb27fb68dd74a487d002b19b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141da3829a5ad971f4eecd057ac5f1ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__math_8h.html#a141da3829a5ad971f4eecd057ac5f1ce">IS_NaN</a>(n)</td></tr>
+<tr class="memdesc:a141da3829a5ad971f4eecd057ac5f1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <em>n</em> is NaN (not a number)  <a href="#a141da3829a5ad971f4eecd057ac5f1ce">More...</a><br /></td></tr>
+<tr class="separator:a141da3829a5ad971f4eecd057ac5f1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common math operations. </p>
@@ -143,6 +169,57 @@ Macros</h2></td></tr>
 
 <p>Check the equality between two floating-point numbers. </p>
 <p><b><a class="el" href="clibs__math_8h.html#a713015a8ec5a7abb7c741a7738037bb4" title="Check the equality between two floating-point numbers. ">IS_EQUAL(a, b, epsilon)</a></b> compares two floating-point numbers by the absolute value of the difference between <em>a</em> and <em>b</em>. The value should be smaller than <b>epsilon</b> </p>
+
+</div>
+</div>
+<a id="a141da3829a5ad971f4eecd057ac5f1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141da3829a5ad971f4eecd057ac5f1ce">&#9670;&nbsp;</a></span>IS_NaN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_NaN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((n) &gt; (n)  ? 0 : \</div><div class="line">         (n) == (n) ? 0 : \</div><div class="line">         (n) &lt; (n)  ? 0 : 1)</div></div><!-- fragment -->
+<p>Check whether <em>n</em> is NaN (not a number) </p>
+
+</div>
+</div>
+<a id="aa58b52936b1e6849f17d7e0d74be5655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa58b52936b1e6849f17d7e0d74be5655">&#9670;&nbsp;</a></span>RANDINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RANDINT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">min, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">max&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((min) + rand() % ((max) - (min) + 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a random integer bewteen <em>min</em> and <em>max</em>. </p>
+<p>Set a random seed by yourself. </p>
 
 </div>
 </div>

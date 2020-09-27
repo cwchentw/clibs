@@ -68,4 +68,58 @@
     #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))
 #endif
 
+/** @def RANDINT(min, max)
+ *  @brief Get a random integer bewteen \a min and \a max
+ * 
+ *  Set a random seed by yourself.
+ */
+#ifndef RANDINT
+    #define RANDINT(min, max) ((min) + rand() % ((max) - (min) + 1)) 
+#endif
+
+/** @def INF
+ *  @brief An infinity number
+ */
+#ifndef INF
+    #define INF (1.0 / 0.0)
+#endif
+
+/** @def IS_INF(n)
+ *  @brief Check whether \a n is an infinity number
+ */
+#ifndef IS_INF
+    #define IS_INF(n) ((n) > FLT_MAX)
+#endif
+
+/** @def NEG_INF
+ *  @brief A negative infinity number
+ */
+#ifndef NEG_INF
+    #define NEG_INF (-1.0 / 0.0)
+#endif
+
+/** @def IS_NEG_INF(n)
+ *  @brief Check whether \a n is a negative infinity number
+ */
+#ifndef IS_NEG_INF
+    #define IS_NEG_INF(n) ((n) < FLT_MIN)
+#endif
+
+/** @def NaN
+ *  @brief A NaN (not a number)
+ */
+#ifndef NaN
+    #define NaN (0.0 / 0.0)
+#endif
+
+/** @def IS_NaN(n)
+ *  @brief Check whether \a n is NaN (not a number)
+ */
+#ifndef IS_NaN
+    #define IS_NaN(n) \
+        ((n) > (n)  ? 0 : \
+         (n) == (n) ? 0 : \
+         (n) < (n)  ? 0 : 1)
+#endif
+
 #endif  /* CLIBS_CMATH_H */
