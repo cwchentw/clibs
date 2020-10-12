@@ -1,45 +1,48 @@
-\hypertarget{clibs__time_8h}{}\section{clibs\+\_\+time.\+h File Reference}
-\label{clibs__time_8h}\index{clibs\+\_\+time.\+h@{clibs\+\_\+time.\+h}}
+\hypertarget{clibs__time_8h}{\section{clibs\-\_\-time.\-h File Reference}
+\label{clibs__time_8h}\index{clibs\-\_\-time.\-h@{clibs\-\_\-time.\-h}}
+}
 
 
 Common time operations.  
 
 
-{\ttfamily \#include $<$time.\+h$>$}\newline
-Include dependency graph for clibs\+\_\+time.\+h\+:\nopagebreak
+{\ttfamily \#include $<$time.\-h$>$}\\*
+Include dependency graph for clibs\-\_\-time.\-h\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=156pt]{clibs__time_8h__incl}
+\includegraphics[width=148pt]{clibs__time_8h__incl}
 \end{center}
 \end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct tm \hyperlink{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}{date\+\_\+create} (int year, int month, int day)
+struct tm \hyperlink{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}{date\-\_\-create} (int year, int month, int day)
 \begin{DoxyCompactList}\small\item\em Create a date object. \end{DoxyCompactList}\item 
-struct tm \hyperlink{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}{time\+\_\+create} (int year, int month, int day, int hour, int min, int sec)
+struct tm \hyperlink{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}{time\-\_\-create} (int year, int month, int day, int hour, int min, int sec)
 \begin{DoxyCompactList}\small\item\em Create a time object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Common time operations. 
-
-\begin{DoxyAuthor}{Author}
+Common time operations. \begin{DoxyAuthor}{Author}
 Michael Chen 
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-M\+IT 
+M\-I\-T 
 \end{DoxyCopyright}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}\label{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}} 
-\index{clibs\+\_\+time.\+h@{clibs\+\_\+time.\+h}!date\+\_\+create@{date\+\_\+create}}
-\index{date\+\_\+create@{date\+\_\+create}!clibs\+\_\+time.\+h@{clibs\+\_\+time.\+h}}
-\subsubsection{\texorpdfstring{date\+\_\+create()}{date\_create()}}
-{\footnotesize\ttfamily struct tm date\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day }\end{DoxyParamCaption})}
-
+\hypertarget{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}{\index{clibs\-\_\-time.\-h@{clibs\-\_\-time.\-h}!date\-\_\-create@{date\-\_\-create}}
+\index{date\-\_\-create@{date\-\_\-create}!clibs_time.h@{clibs\-\_\-time.\-h}}
+\subsubsection[{date\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}struct tm date\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}}\label{clibs__time_8h_aad8adbc23ac66ccf954bcd462bf1fa03}
 
 
 Create a date object. 
@@ -56,12 +59,18 @@ Create a date object.
 \begin{DoxyReturn}{Returns}
 struct tm
 \end{DoxyReturn}
-Time is kept at 9\+:00 AM. \mbox{\Hypertarget{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}\label{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}} 
-\index{clibs\+\_\+time.\+h@{clibs\+\_\+time.\+h}!time\+\_\+create@{time\+\_\+create}}
-\index{time\+\_\+create@{time\+\_\+create}!clibs\+\_\+time.\+h@{clibs\+\_\+time.\+h}}
-\subsubsection{\texorpdfstring{time\+\_\+create()}{time\_create()}}
-{\footnotesize\ttfamily struct tm time\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day,  }\item[{int}]{hour,  }\item[{int}]{min,  }\item[{int}]{sec }\end{DoxyParamCaption})}
-
+Time is kept at 9\-:00 A\-M. \hypertarget{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}{\index{clibs\-\_\-time.\-h@{clibs\-\_\-time.\-h}!time\-\_\-create@{time\-\_\-create}}
+\index{time\-\_\-create@{time\-\_\-create}!clibs_time.h@{clibs\-\_\-time.\-h}}
+\subsubsection[{time\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}struct tm time\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day, }
+\item[{int}]{hour, }
+\item[{int}]{min, }
+\item[{int}]{sec}
+\end{DoxyParamCaption}
+)}}\label{clibs__time_8h_a7a8ff1bc3274e8a77fb73b5800d211e7}
 
 
 Create a time object. 

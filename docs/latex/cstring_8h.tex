@@ -1,77 +1,79 @@
-\hypertarget{cstring_8h}{}\section{cstring.\+h File Reference}
-\label{cstring_8h}\index{cstring.\+h@{cstring.\+h}}
+\hypertarget{cstring_8h}{\section{cstring.\-h File Reference}
+\label{cstring_8h}\index{cstring.\-h@{cstring.\-h}}
+}
 
 
 Utility functions for C strings.  
 
 
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for cstring.\+h\+:\nopagebreak
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+Include dependency graph for cstring.\-h\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=139pt]{cstring_8h__incl}
+\includegraphics[width=134pt]{cstring_8h__incl}
 \end{center}
 \end{figure}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{cstring_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{cstring_8h_aa93f0eb578d23995850d61f7d61c55c1}} 
-\#define {\bfseries F\+A\+L\+SE}~0
+\hypertarget{cstring_8h_aa93f0eb578d23995850d61f7d61c55c1}{\#define {\bfseries F\-A\-L\-S\-E}~0}\label{cstring_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
 \item 
-\mbox{\Hypertarget{cstring_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{cstring_8h_aa8cecfc5c5c054d2875c03e77b7be15d}} 
-\#define {\bfseries T\+R\+UE}~1
+\hypertarget{cstring_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{\#define {\bfseries T\-R\-U\-E}~1}\label{cstring_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
 \item 
-\mbox{\Hypertarget{cstring_8h_af7c650f18c4f6a93c33638cf9426b216}\label{cstring_8h_af7c650f18c4f6a93c33638cf9426b216}} 
-\#define {\bfseries \+\_\+\+B\+O\+O\+L\+\_\+\+I\+S\+\_\+\+D\+E\+F\+I\+N\+ED}
+\hypertarget{cstring_8h_af7c650f18c4f6a93c33638cf9426b216}{\#define {\bfseries \-\_\-\-B\-O\-O\-L\-\_\-\-I\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D}}\label{cstring_8h_af7c650f18c4f6a93c33638cf9426b216}
+
 \item 
-\#define \hyperlink{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}{string\+\_\+is\+\_\+equal}(a,  b)~(0 == strcmp((a), (b)))
+\#define \hyperlink{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}{string\-\_\-is\-\_\-equal}(a, b)~(0 == strcmp((a), (b)))
 \begin{DoxyCompactList}\small\item\em Check whether two strings are equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{cstring_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}\label{cstring_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}} 
-typedef unsigned char {\bfseries B\+O\+OL}
+\hypertarget{cstring_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{typedef unsigned char {\bfseries B\-O\-O\-L}}\label{cstring_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}
+
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}{string\+\_\+starts\+\_\+with} (const char $\ast$a, const char $\ast$b)
+\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} \hyperlink{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}{string\-\_\-starts\-\_\-with} (const char $\ast$a, const char $\ast$b)
 \begin{DoxyCompactList}\small\item\em Check whether string {\itshape a} starts with string {\itshape b}. \end{DoxyCompactList}\item 
-\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}{string\+\_\+contains} (const char $\ast$a, const char $\ast$b)
+\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} \hyperlink{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}{string\-\_\-contains} (const char $\ast$a, const char $\ast$b)
 \begin{DoxyCompactList}\small\item\em Check whether string {\itshape a} contains string {\itshape b}. \end{DoxyCompactList}\item 
-\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}{string\+\_\+is\+\_\+space\+\_\+only} (const char $\ast$s)
+\hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} \hyperlink{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}{string\-\_\-is\-\_\-space\-\_\-only} (const char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Check whether string {\itshape s} composes of only spaces. \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}{string\+\_\+allocate\+\_\+char} (const char c)
+char $\ast$ \hyperlink{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}{string\-\_\-allocate\-\_\-char} (const char c)
 \begin{DoxyCompactList}\small\item\em Allocate a new string out of char {\itshape c}. \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}{string\+\_\+allocate} (const char $\ast$s)
+char $\ast$ \hyperlink{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}{string\-\_\-allocate} (const char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Allocate a new string out of string {\itshape s}. \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{cstring_8h_a57dbcc036c590f2cb98571f619700597}{string\+\_\+allocate\+\_\+substring} (const char $\ast$s, size\+\_\+t from, size\+\_\+t to)
+char $\ast$ \hyperlink{cstring_8h_a57dbcc036c590f2cb98571f619700597}{string\-\_\-allocate\-\_\-substring} (const char $\ast$s, size\-\_\-t from, size\-\_\-t to)
 \begin{DoxyCompactList}\small\item\em Allocate a new substring out of string {\itshape s} from {\itshape from} to {\itshape to}. \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{cstring_8h_a191f42f7c85bd94d5d8759278e87e181}{string\+\_\+concat} (const char $\ast$a, const char $\ast$b)
+char $\ast$ \hyperlink{cstring_8h_a191f42f7c85bd94d5d8759278e87e181}{string\-\_\-concat} (const char $\ast$a, const char $\ast$b)
 \begin{DoxyCompactList}\small\item\em Concat two strings {\itshape and} {\bfseries }. \end{DoxyCompactList}\item 
-F\+I\+LE $\ast$ \hyperlink{cstring_8h_a8c07069d410eb4896af51d6b6a35bc56}{string\+\_\+to\+\_\+stream} (char $\ast$s)
+F\-I\-L\-E $\ast$ \hyperlink{cstring_8h_a8c07069d410eb4896af51d6b6a35bc56}{string\-\_\-to\-\_\-stream} (char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Convert a string to a file stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Utility functions for C strings. 
-
-\begin{DoxyAuthor}{Author}
+Utility functions for C strings. \begin{DoxyAuthor}{Author}
 Michael Chen 
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-M\+IT
+M\-I\-T
 \end{DoxyCopyright}
-{\bfseries \hyperlink{cstring_8h}{cstring.\+h}} and {\bfseries cstring.\+c} only support null-\/terminated {\ttfamily char} array. 
+{\bfseries \hyperlink{cstring_8h}{cstring.\-h}} and {\bfseries cstring.\-c} only support null-\/terminated {\ttfamily char} array. 
 
 \subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}\label{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+is\+\_\+equal@{string\+\_\+is\+\_\+equal}}
-\index{string\+\_\+is\+\_\+equal@{string\+\_\+is\+\_\+equal}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+is\+\_\+equal}{string\_is\_equal}}
-{\footnotesize\ttfamily \#define string\+\_\+is\+\_\+equal(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(0 == strcmp((a), (b)))}
-
+\hypertarget{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-is\-\_\-equal@{string\-\_\-is\-\_\-equal}}
+\index{string\-\_\-is\-\_\-equal@{string\-\_\-is\-\_\-equal}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-is\-\_\-equal}]{\setlength{\rightskip}{0pt plus 5cm}\#define string\-\_\-is\-\_\-equal(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(0 == strcmp((a), (b)))}}\label{cstring_8h_a08a12340f679b8304cdb32f60e2b04b3}
 
 
 Check whether two strings are equal. 
@@ -84,17 +86,18 @@ Check whether two strings are equal.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-B\+O\+OL 
+B\-O\-O\-L 
 \end{DoxyReturn}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}\label{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+allocate@{string\+\_\+allocate}}
-\index{string\+\_\+allocate@{string\+\_\+allocate}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+allocate()}{string\_allocate()}}
-{\footnotesize\ttfamily char$\ast$ string\+\_\+allocate (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-allocate@{string\-\_\-allocate}}
+\index{string\-\_\-allocate@{string\-\_\-allocate}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-allocate}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ string\-\_\-allocate (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_ae5545ccfb4a0e724d8c51bb09dd59975}
 
 
 Allocate a new string out of string {\itshape s}. 
@@ -110,12 +113,13 @@ char $\ast$
 \begin{DoxyWarning}{Warning}
 Free the memory of the returning string by yourself. 
 \end{DoxyWarning}
-\mbox{\Hypertarget{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}\label{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+allocate\+\_\+char@{string\+\_\+allocate\+\_\+char}}
-\index{string\+\_\+allocate\+\_\+char@{string\+\_\+allocate\+\_\+char}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+allocate\+\_\+char()}{string\_allocate\_char()}}
-{\footnotesize\ttfamily char$\ast$ string\+\_\+allocate\+\_\+char (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-allocate\-\_\-char@{string\-\_\-allocate\-\_\-char}}
+\index{string\-\_\-allocate\-\_\-char@{string\-\_\-allocate\-\_\-char}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-allocate\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ string\-\_\-allocate\-\_\-char (
+\begin{DoxyParamCaption}
+\item[{const char}]{c}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_a9a463747db86418c4c88bf2efafa74b8}
 
 
 Allocate a new string out of char {\itshape c}. 
@@ -131,12 +135,15 @@ char $\ast$
 \begin{DoxyWarning}{Warning}
 Free the memory of the returning string by yourself. 
 \end{DoxyWarning}
-\mbox{\Hypertarget{cstring_8h_a57dbcc036c590f2cb98571f619700597}\label{cstring_8h_a57dbcc036c590f2cb98571f619700597}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+allocate\+\_\+substring@{string\+\_\+allocate\+\_\+substring}}
-\index{string\+\_\+allocate\+\_\+substring@{string\+\_\+allocate\+\_\+substring}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+allocate\+\_\+substring()}{string\_allocate\_substring()}}
-{\footnotesize\ttfamily char$\ast$ string\+\_\+allocate\+\_\+substring (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{from,  }\item[{size\+\_\+t}]{to }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_a57dbcc036c590f2cb98571f619700597}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-allocate\-\_\-substring@{string\-\_\-allocate\-\_\-substring}}
+\index{string\-\_\-allocate\-\_\-substring@{string\-\_\-allocate\-\_\-substring}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-allocate\-\_\-substring}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ string\-\_\-allocate\-\_\-substring (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{size\-\_\-t}]{from, }
+\item[{size\-\_\-t}]{to}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_a57dbcc036c590f2cb98571f619700597}
 
 
 Allocate a new substring out of string {\itshape s} from {\itshape from} to {\itshape to}. 
@@ -156,12 +163,14 @@ char $\ast$
 \begin{DoxyWarning}{Warning}
 Free the memory of the returning string by yourself. 
 \end{DoxyWarning}
-\mbox{\Hypertarget{cstring_8h_a191f42f7c85bd94d5d8759278e87e181}\label{cstring_8h_a191f42f7c85bd94d5d8759278e87e181}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+concat@{string\+\_\+concat}}
-\index{string\+\_\+concat@{string\+\_\+concat}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+concat()}{string\_concat()}}
-{\footnotesize\ttfamily char$\ast$ string\+\_\+concat (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_a191f42f7c85bd94d5d8759278e87e181}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-concat@{string\-\_\-concat}}
+\index{string\-\_\-concat@{string\-\_\-concat}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-concat}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ string\-\_\-concat (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a, }
+\item[{const char $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_a191f42f7c85bd94d5d8759278e87e181}
 
 
 Concat two strings {\itshape and} {\bfseries }. 
@@ -179,12 +188,14 @@ char $\ast$
 \begin{DoxyWarning}{Warning}
 Free the memory of the returning string by yourself. 
 \end{DoxyWarning}
-\mbox{\Hypertarget{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}\label{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+contains@{string\+\_\+contains}}
-\index{string\+\_\+contains@{string\+\_\+contains}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+contains()}{string\_contains()}}
-{\footnotesize\ttfamily \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+contains (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-contains@{string\-\_\-contains}}
+\index{string\-\_\-contains@{string\-\_\-contains}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-contains}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} string\-\_\-contains (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a, }
+\item[{const char $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}
 
 
 Check whether string {\itshape a} contains string {\itshape b}. 
@@ -197,14 +208,15 @@ Check whether string {\itshape a} contains string {\itshape b}.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-B\+O\+OL 
+B\-O\-O\-L 
 \end{DoxyReturn}
-\mbox{\Hypertarget{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}\label{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+is\+\_\+space\+\_\+only@{string\+\_\+is\+\_\+space\+\_\+only}}
-\index{string\+\_\+is\+\_\+space\+\_\+only@{string\+\_\+is\+\_\+space\+\_\+only}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+is\+\_\+space\+\_\+only()}{string\_is\_space\_only()}}
-{\footnotesize\ttfamily \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+is\+\_\+space\+\_\+only (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-is\-\_\-space\-\_\-only@{string\-\_\-is\-\_\-space\-\_\-only}}
+\index{string\-\_\-is\-\_\-space\-\_\-only@{string\-\_\-is\-\_\-space\-\_\-only}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-is\-\_\-space\-\_\-only}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} string\-\_\-is\-\_\-space\-\_\-only (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}
 
 
 Check whether string {\itshape s} composes of only spaces. 
@@ -215,14 +227,16 @@ Check whether string {\itshape s} composes of only spaces.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-B\+O\+OL
+B\-O\-O\-L
 \end{DoxyReturn}
-string\+\_\+is\+\_\+space\+\_\+only will always skip end of line. \mbox{\Hypertarget{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}\label{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+starts\+\_\+with@{string\+\_\+starts\+\_\+with}}
-\index{string\+\_\+starts\+\_\+with@{string\+\_\+starts\+\_\+with}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+starts\+\_\+with()}{string\_starts\_with()}}
-{\footnotesize\ttfamily \hyperlink{boolean_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} string\+\_\+starts\+\_\+with (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
-
+string\-\_\-is\-\_\-space\-\_\-only will always skip end of line. \hypertarget{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-starts\-\_\-with@{string\-\_\-starts\-\_\-with}}
+\index{string\-\_\-starts\-\_\-with@{string\-\_\-starts\-\_\-with}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-starts\-\_\-with}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} string\-\_\-starts\-\_\-with (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a, }
+\item[{const char $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}
 
 
 Check whether string {\itshape a} starts with string {\itshape b}. 
@@ -235,14 +249,15 @@ Check whether string {\itshape a} starts with string {\itshape b}.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-B\+O\+OL 
+B\-O\-O\-L 
 \end{DoxyReturn}
-\mbox{\Hypertarget{cstring_8h_a8c07069d410eb4896af51d6b6a35bc56}\label{cstring_8h_a8c07069d410eb4896af51d6b6a35bc56}} 
-\index{cstring.\+h@{cstring.\+h}!string\+\_\+to\+\_\+stream@{string\+\_\+to\+\_\+stream}}
-\index{string\+\_\+to\+\_\+stream@{string\+\_\+to\+\_\+stream}!cstring.\+h@{cstring.\+h}}
-\subsubsection{\texorpdfstring{string\+\_\+to\+\_\+stream()}{string\_to\_stream()}}
-{\footnotesize\ttfamily F\+I\+LE$\ast$ string\+\_\+to\+\_\+stream (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
-
+\hypertarget{cstring_8h_a8c07069d410eb4896af51d6b6a35bc56}{\index{cstring.\-h@{cstring.\-h}!string\-\_\-to\-\_\-stream@{string\-\_\-to\-\_\-stream}}
+\index{string\-\_\-to\-\_\-stream@{string\-\_\-to\-\_\-stream}!cstring.h@{cstring.\-h}}
+\subsubsection[{string\-\_\-to\-\_\-stream}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ string\-\_\-to\-\_\-stream (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{cstring_8h_a8c07069d410eb4896af51d6b6a35bc56}
 
 
 Convert a string to a file stream. 
@@ -253,9 +268,9 @@ Convert a string to a file stream.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-F\+I\+LE $\ast$ 
+F\-I\-L\-E $\ast$ 
 \end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
 Close the file stream by yourself.
 \end{DoxyWarning}
-Internally, the returning file stream is a temporary file. Due to the limitation imposed by the {\itshape stdio.\+h} on Windows, this function may fail. 
+Internally, the returning file stream is a temporary file. Due to the limitation imposed by the {\itshape stdio.\-h} on Windows, this function may fail. 
