@@ -46,6 +46,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 
 * *boolean.h*: boolean type for C
 * *cio.h* and *cio.c*: basic input and output
+* *clibs_control_structure.h*: common control structures
 * *clibs_math.h*: basic math operations
 * *clibs_time.h* and *clibs_time.c*: basic time operations
 * *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
@@ -58,4 +59,4 @@ Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.ht
 
 ## Copyright
 
-Copyright (c) 2019-2020 Michael Chen. All code is licensed under MIT unless mentioned otherwise.
+Copyright (c) 2019-2021 Michael Chen. All code is licensed under MIT unless mentioned otherwise.
