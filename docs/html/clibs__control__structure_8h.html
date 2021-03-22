@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>clibs: boolean.h File Reference</title>
+<title>clibs: clibs_control_structure.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,45 +63,72 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">boolean.h File Reference</div>  </div>
+<div class="title">clibs_control_structure.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Boolean type for C.  
+<p>Common control structures.  
 <a href="#details">More...</a></p>
 
-<p><a href="boolean_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="clibs__control__structure_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top"><a id="aa93f0eb578d23995850d61f7d61c55c1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boolean_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:aa93f0eb578d23995850d61f7d61c55c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">False in boolean type. <br /></td></tr>
-<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top"><a id="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boolean_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True in boolean type. <br /></td></tr>
-<tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7c650f18c4f6a93c33638cf9426b216"><td class="memItemLeft" align="right" valign="top"><a id="af7c650f18c4f6a93c33638cf9426b216"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>_BOOL_IS_DEFINED</b></td></tr>
-<tr class="separator:af7c650f18c4f6a93c33638cf9426b216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a3e5b8192e7d9ffaf3542f1210aec18dd"><td class="memItemLeft" align="right" valign="top"><a id="a3e5b8192e7d9ffaf3542f1210aec18dd"></a>
-typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boolean_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a></td></tr>
-<tr class="memdesc:a3e5b8192e7d9ffaf3542f1210aec18dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom boolean type. <br /></td></tr>
-<tr class="separator:a3e5b8192e7d9ffaf3542f1210aec18dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42cf0857c6351075065a97c9f19099c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clibs__control__structure_8h.html#a42cf0857c6351075065a97c9f19099c7">TIMES</a>(count,  block)</td></tr>
+<tr class="memdesc:a42cf0857c6351075065a97c9f19099c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat a block of code some time(s)  <a href="clibs__control__structure_8h.html#a42cf0857c6351075065a97c9f19099c7">More...</a><br /></td></tr>
+<tr class="separator:a42cf0857c6351075065a97c9f19099c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Boolean type for C. </p>
+<div class="textblock"><p>Common control structures. </p>
 <dl class="section author"><dt>Author</dt><dd>Michael Chen </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT</dd></dl>
-<p>Win32 API provides its own <b>BOOL</b> type. Hence, this header is useless in Win32 API programming. </p>
-</div></div><!-- contents -->
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a42cf0857c6351075065a97c9f19099c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42cf0857c6351075065a97c9f19099c7">&#9670;&nbsp;</a></span>TIMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">count, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">block&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    { \</div>
+<div class="line">    size_t i; \</div>
+<div class="line">    for (i = 0; i &lt; (count); ++i) { \</div>
+<div class="line">        (block); \</div>
+<div class="line">    } \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Repeat a block of code some time(s) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>Counter </td></tr>
+    <tr><td class="paramname">block</td><td>A block of code </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

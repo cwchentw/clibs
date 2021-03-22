@@ -1,68 +1,70 @@
-\href{https://opensource.org/licenses/MIT}{\tt !\mbox{[}License\-: M\-I\-T\mbox{]}(https\-://img.\-shields.\-io/badge/\-License-\/\-M\-I\-T-\/yellow.\-svg)} \href{https://ci.appveyor.com/project/cwchentw/clibs}{\tt !\mbox{[}Build status\mbox{]}(https\-://ci.\-appveyor.\-com/api/projects/status/69a3u5o6wm3itj8w?svg=true)}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ \href{https://opensource.org/licenses/MIT}{\texttt{ }} \href{https://ci.appveyor.com/project/cwchentw/clibs}{\texttt{ }}
 
 Self-\/contained Utilities for C.
 
-Visit the website of {\bfseries clibs} \href{https://cwchentw.github.io/clibs/html/index.html}{\tt here}.
+Visit the website of {\bfseries{clibs}} \href{https://cwchentw.github.io/clibs/html/index.html}{\texttt{ here}}.
 
-Vist the repository of {\bfseries clibs} \href{https://github.com/cwchentw/clibs/}{\tt here}.
+Vist the repository of {\bfseries{clibs}} \href{https://github.com/cwchentw/clibs/}{\texttt{ here}}.
 
-\subsection*{Warning}
+\doxysection*{Warning}
 
-clibs is still experimental and mostly for personal use. The A\-P\-I may change without warning.
+clibs is still experimental and mostly for personal use. The A\+PI may change without warning.
 
-\subsection*{What is clibs anyway?}
+\doxysection*{What is clibs anyway?}
 
-{\bfseries clibs} are utility code (types, typedefs, macros, functions) used across C programs. They are self-\/contained and domain neutral, able to be applied to various situations.
+{\bfseries{clibs}} are utility code (types, typedefs, macros, functions) used across C programs. They are self-\/contained and domain neutral, able to be applied to various situations.
 
-\subsection*{System Requirements}
+\doxysection*{System Requirements}
 
 
 \begin{DoxyItemize}
-\item A C compiler that supports A\-N\-S\-I C
-\item G\-N\-U Make (only for testing)
+\item A C compiler that supports A\+N\+SI C
+\item G\+NU Make (only for testing)
 \end{DoxyItemize}
 
-{\bfseries clibs} is written in A\-N\-S\-I C (C89). Nevertheless, We tested {\bfseries clibs} against C89, C99 and C11. Hence, you may use it for code in either classic C or modern C.
+{\bfseries{clibs}} is written in A\+N\+SI C (C89). Nevertheless, We tested {\bfseries{clibs}} against C89, C99 and C11. Hence, you may use it for code in either classic C or modern C.
 
-We compile and run {\bfseries clibs} with G\-C\-C, Clang, Visual C++ and Intel C++ Compiler.
+We compile and run {\bfseries{clibs}} with G\+CC, Clang, Visual C++ and Intel C++ Compiler.
 
-We test {\bfseries clibs} against several Unix or Unix-\/like systems\-:
+We test {\bfseries{clibs}} against several Unix or Unix-\/like systems\+:
 
 
 \begin{DoxyItemize}
-\item Ubuntu 18.\-04 L\-T\-S
-\item Cent\-O\-S 8
-\item open\-S\-U\-S\-E Leap 15.\-1
-\item True\-O\-S, which is Free\-B\-S\-D compatible
+\item Ubuntu 18.\+04 L\+TS
+\item Cent\+OS 8
+\item open\+S\+U\+SE Leap 15.\+1
+\item True\+OS, which is Free\+B\+SD compatible
 \end{DoxyItemize}
 
 It should work on other Unix or Unix-\/like systems as well.
 
-In addition, we test {\bfseries clibs} on a Windows container provided by \href{https://www.appveyor.com/}{\tt App\-Veyor}. Hence, {\bfseries clibs} should work on Windows as well.
+In addition, we test {\bfseries{clibs}} on a Windows container provided by \href{https://www.appveyor.com/}{\texttt{ App\+Veyor}}. Hence, {\bfseries{clibs}} should work on Windows as well.
 
-\subsection*{How to Use?}
+\doxysection*{How to Use?}
 
-The utilities in {\bfseries clibs} are self-\/contained, distributed as either single header or single header plus single source combo. Just copy what you need to your own C project.
+The utilities in {\bfseries{clibs}} are self-\/contained, distributed as either single header or single header plus single source combo. Just copy what you need to your own C project.
 
-test\-\_\-$\ast$.c are test programs. You don't need them to use {\bfseries clibs}.
+test\+\_\+$\ast$.c are test programs. You don\textquotesingle{}t need them to use {\bfseries{clibs}}.
 
-\subsection*{Available Utilities\-:}
+\doxysection*{Available Utilities\+:}
 
 
 \begin{DoxyItemize}
-\item {\itshape \hyperlink{boolean_8h}{boolean.\-h}}\-: boolean type for C
-\item {\itshape \hyperlink{cio_8h}{cio.\-h}} and {\itshape cio.\-c}\-: basic input and output
-\item {\itshape \hyperlink{clibs__math_8h}{clibs\-\_\-math.\-h}}\-: basic math operations
-\item {\itshape \hyperlink{clibs__time_8h}{clibs\-\_\-time.\-h}} and {\itshape clibs\-\_\-time.\-c}\-: basic time operations
-\item {\itshape \hyperlink{cstring_8h}{cstring.\-h}} and {\itshape cstring.\-c}\-: utility functions for C strings (null-\/terminated {\ttfamily char} arrays)
-\item {\itshape \hyperlink{integer_8h}{integer.\-h}}\-: fixed-\/width integer type for C ({\itshape experimental})
-\item {\itshape \hyperlink{platform_8h}{platform.\-h}}\-: platform-\/specific data
-\item {\itshape \hyperlink{print_8h}{print.\-h}}\-: console printing related function-\/like macros
-\item {\itshape \hyperlink{term__color_8h}{term\-\_\-color.\-h}}\-: console color related macros
+\item {\itshape \mbox{\hyperlink{boolean_8h}{boolean.\+h}}}\+: boolean type for C
+\item {\itshape \mbox{\hyperlink{cio_8h}{cio.\+h}}} and {\itshape cio.\+c}\+: basic input and output
+\item {\itshape \mbox{\hyperlink{clibs__math_8h}{clibs\+\_\+math.\+h}}}\+: basic math operations
+\item {\itshape \mbox{\hyperlink{clibs__time_8h}{clibs\+\_\+time.\+h}}} and {\itshape clibs\+\_\+time.\+c}\+: basic time operations
+\item {\itshape \mbox{\hyperlink{cstring_8h}{cstring.\+h}}} and {\itshape cstring.\+c}\+: utility functions for C strings (null-\/terminated {\ttfamily char} arrays)
+\item {\itshape \mbox{\hyperlink{integer_8h}{integer.\+h}}}\+: fixed-\/width integer type for C ({\itshape experimental})
+\item {\itshape \mbox{\hyperlink{platform_8h}{platform.\+h}}}\+: platform-\/specific data
+\item {\itshape \mbox{\hyperlink{print_8h}{print.\+h}}}\+: console printing related function-\/like macros
+\item {\itshape \mbox{\hyperlink{term__color_8h}{term\+\_\+color.\+h}}}\+: console color related macros
 \end{DoxyItemize}
 
-Check the A\-P\-I of {\bfseries clibs} \href{https://cwchentw.github.io/clibs/html/index.html}{\tt here}.
+Check the A\+PI of {\bfseries{clibs}} \href{https://cwchentw.github.io/clibs/html/index.html}{\texttt{ here}}.
 
-\subsection*{Copyright}
+\doxysection*{Copyright}
 
-Copyright (c) 2019-\/2020 Michael Chen. All code is licensed under M\-I\-T unless mentioned otherwise. 
+Copyright (c) 2019-\/2020 Michael Chen. All code is licensed under M\+IT unless mentioned otherwise. 
