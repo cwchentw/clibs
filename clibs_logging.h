@@ -17,7 +17,7 @@
 #define CLIBS_LOG_LEVEL_NONE  0
 
 /** @def CLIBS_LOG_LEVEL
- *  @brief The logging level of the application.
+ *  @brief The logging level of an application.
  *
  *  Available logging levels: <tt>DEBUG</tt>, <tt>INFO</tt>, <tt>WARN</tt>, <tt>ERROR</tt> and <tt>FATAL</tt>.
  *  Logging levels are defined by macro variables of the same names. 
@@ -44,7 +44,7 @@
  *  @brief   <tt>DEBUG</tt>-level log
  *  @param   format The formated string.
  *
- *  The logs are available only when \c CLIBS_LOG_LEVEL is at <tt>DEUBG</tt>.
+ *  The logs are available only when \c CLIBS_LOG_LEVEL is at <tt>DEBUG</tt>.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_DEBUG
     #define CLIBS_LOG_DEBUG(format, ...) { \
