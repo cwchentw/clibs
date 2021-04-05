@@ -47,6 +47,7 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *boolean.h*: boolean type for C
 * *cio.h* and *cio.c*: basic input and output
 * *clibs_control_structure.h*: common control structures
+* *clibs_logging.h*: logging for C
 * *clibs_math.h*: basic math operations
 * *clibs_time.h* and *clibs_time.c*: basic time operations
 * *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
