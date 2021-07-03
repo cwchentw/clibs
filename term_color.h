@@ -1,6 +1,6 @@
 /** @file       term_color.h
  *  @brief      Add colors, either foreground or background, on console environment.
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  *
  * Windows is not supported.

@@ -1,6 +1,6 @@
 /** @file       boolean.h
  *  @brief      Boolean type for C
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  *
  *  Win32 API provides its own \b BOOL type. Hence, this header is useless in Win32 API programming.

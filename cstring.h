@@ -1,6 +1,6 @@
 /** @file       cstring.h
  *  @brief      Utility functions for C strings.
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  *
  *  \b cstring.h and \b cstring.c only support null-terminated \c char array.

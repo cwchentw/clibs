@@ -1,6 +1,6 @@
 /** @file       clibs_control_structure.h
  *  @brief      Common control structures.
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  */
 #ifndef CLIBS_CONTROL_STRUCTURE_H

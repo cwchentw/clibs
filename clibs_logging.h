@@ -1,6 +1,6 @@
 /** @file       clibs_logging.h
  *  @brief      Logging-related macros.
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  */
 #ifndef CLIBS_LOGGING_H

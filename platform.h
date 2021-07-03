@@ -1,6 +1,6 @@
 /** @file       platform.h
  *  @brief      Platform-specific data
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  *
  *  The macro definitions seen in this document represent the platform data of Unix.

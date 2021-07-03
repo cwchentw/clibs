@@ -1,6 +1,6 @@
 /** @file       clibs_math.h
  *  @brief      Common math operations.
- *  @author     Michael Chen
+ *  @author     Michelle Chen
  *  @copyright  MIT
  */
 #ifndef CLIBS_CMATH_H
