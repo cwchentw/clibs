@@ -1,5 +1,5 @@
 /** @file       boolean.h
- *  @brief      Boolean type for C
+ *  @brief      Custom Boolean type for C
  *  @author     Michelle Chen
  *  @copyright  MIT
  *
@@ -17,7 +17,14 @@
  *  @def    TRUE
  *  @brief  True in boolean type
  */
+#if _WIN32
+    /* Windows API provides its own BOOL type.
+    
+       TRUE and FALSE is availabe as well. */
+    #include <windows.h>
+#else
 #ifdef __cplusplus
+    /* C++ provides native bool type. */
     #ifndef _BOOL_IS_DEFINED
         typedef bool BOOL;
         #define FALSE  false
@@ -26,6 +33,7 @@
     #endif  /* BOOL */
 #else
     #if __STDC_VERSION__ < 199901L
+        /* Home-made BOOL type for ANSI C. */
         #ifndef _BOOL_IS_DEFINED
             typedef unsigned char BOOL;
             #define FALSE  0
@@ -33,6 +41,7 @@
             #define _BOOL_IS_DEFINED
         #endif  /* BOOL */
     #else
+        /* `bool` type is available after C99. */
         #ifndef _BOOL_IS_DEFINED
             #include <stdbool.h>
             typedef bool BOOL;
@@ -42,5 +51,6 @@
         #endif  /* BOOL */
     #endif  /* C89 */
 #endif  /* __cplusplus */
+#endif  /* Windows. */
 
 #endif  /* CLIBS_BOOLEAN_H */
