@@ -1,6 +1,6 @@
 /** @file       print.h
  *  @brief      Console printing related macros
- *  @author     Michelle Chen
+ *  @author     OpenTechCoder
  *  @copyright  MIT
  *
  * The macro definition seen in this document represent the platform data of Unix.

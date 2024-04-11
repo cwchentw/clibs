@@ -1,6 +1,6 @@
 /** @file       clibs_time.h
  *  @brief      Common time operations.
- *  @author     Michelle Chen
+ *  @author     OpenTechCoder
  *  @copyright  MIT
  */
 #ifndef CLIBS_TIME_H

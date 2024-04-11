@@ -60,4 +60,4 @@ Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.ht
 
 ## Copyright
 
-Copyright (c) 2019-2021 Michelle Chen. All code is licensed under MIT unless mentioned otherwise.
+Copyright (c) 2019-2021 OpenTechCoder. All code is licensed under MIT unless mentioned otherwise.
