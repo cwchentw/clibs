@@ -1,6 +1,6 @@
 /** @file       clibs_logging.h
  *  @brief      Logging-related macros.
- *  @author     OpenTechCoder
+ *  @author     ByteBard
  *  @copyright  MIT
  */
 #ifndef CLIBS_LOGGING_H

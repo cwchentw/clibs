@@ -1,6 +1,6 @@
 /** @file       integer.h
  *  @brief      Fixed-width integer type for C.
- *  @author     OpenTechCoder
+ *  @author     ByteBard
  *  @copyright  MIT
  *
  *  To use this header for C89 code, compile and run \a get_sizeof_data_type.c

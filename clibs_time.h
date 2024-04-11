@@ -1,6 +1,6 @@
 /** @file       clibs_time.h
  *  @brief      Common time operations.
- *  @author     OpenTechCoder
+ *  @author     ByteBard
  *  @copyright  MIT
  */
 #ifndef CLIBS_TIME_H

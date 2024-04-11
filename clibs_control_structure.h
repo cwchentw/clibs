@@ -1,6 +1,6 @@
 /** @file       clibs_control_structure.h
  *  @brief      Common control structures.
- *  @author     OpenTechCoder
+ *  @author     ByteBard
  *  @copyright  MIT
  */
 #ifndef CLIBS_CONTROL_STRUCTURE_H

@@ -1,6 +1,6 @@
 /** @file       cio.h
  *  @brief      Basic input and output for C
- *  @author     OpenTechCoder
+ *  @author     ByteBard
  *  @copyright  MIT
  */
 #ifndef CLIBS_CIO_H
