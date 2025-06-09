@@ -1,63 +1,90 @@
 # clibs
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build status](https://ci.appveyor.com/api/projects/status/69a3u5o6wm3itj8w?svg=true)](https://ci.appveyor.com/project/cwchentw/clibs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build status](https://ci.appveyor.com/api/projects/status/69a3u5o6wm3itj8w?svg=true)](https://ci.appveyor.com/project/cwchentw/clibs)
 
-Self-contained Utilities for C.
+Self-contained utilities for C.
 
-Visit the website of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
+Visit the **clibs** website [here](https://cwchentw.github.io/clibs/html/index.html).  
+Visit the **clibs** repository [here](https://github.com/cwchentw/clibs/).
 
-Vist the repository of **clibs** [here](https://github.com/cwchentw/clibs/).
+---
 
-## Warning
+## ⚠️ Warning
 
-clibs is still experimental and mostly for personal use. The API may change without warning.
+**clibs** is still experimental and primarily intended for personal use.  
+The API may change without notice.
 
-## What is clibs anyway?
+---
 
-**clibs** are utility code (types, typedefs, macros, functions) used across C programs. They are self-contained and domain neutral, able to be applied to various situations.
+## ❓ What is clibs?
 
-## System Requirements
+**clibs** is a collection of utility code (types, typedefs, macros, functions) used across C programs.  
+It is self-contained and domain-neutral, designed to be applicable in various contexts.
 
-* A C compiler that supports ANSI C
-* GNU Make (only for testing)
+---
 
-**clibs** is written in ANSI C (C89). Nevertheless, We tested **clibs** against C89, C99 and C11. Hence, you may use it for code in either classic C or modern C.
+## 🖥️ System Requirements
 
-We compile and run **clibs** with GCC, Clang, Visual C++ and Intel C++ Compiler.
+- A C compiler that supports ANSI C
+- GNU Make (for testing only)
 
-We test **clibs** against several Unix or Unix-like systems:
+**clibs** is written in ANSI C (C89). However, we have tested it with C89, C99, and C11.  
+You can use it with either classic or modern C codebases.
 
-* Ubuntu 20.04 LTS
-* Rocky Linux 8.5
-* openSUSE Leap 15.3
-* FreeBSD 13.0
+We have successfully compiled and run **clibs** with:
 
-It should work on other Unix or Unix-like systems as well.
+- GCC
+- Clang
+- Visual C++
+- Intel C++ Compiler
 
-In addition, we test **clibs** on a Windows container provided by [AppVeyor](https://www.appveyor.com/). Hence, **clibs** should work on Windows as well.
+We also test **clibs** on the following Unix or Unix-like systems:
 
-## How to Use?
+- Ubuntu 20.04 LTS
+- Rocky Linux 8.5
+- openSUSE Leap 15.3
+- FreeBSD 13.0
 
-The utilities in **clibs** are self-contained, distributed as either single header or single header plus single source combo. Just copy what you need to your own C project.
+It should also work on other Unix-like systems.
 
-test_\*.c are test programs. You don't need them to use **clibs**.
+Additionally, we test **clibs** on Windows using [AppVeyor](https://www.appveyor.com/),  
+so it should be compatible with Windows as well.
 
-## Available Utilities:
+---
 
-* *boolean.h*: boolean type for C
-* *cio.h* and *cio.c*: basic input and output
-* *clibs_control_structure.h*: common control structures
-* *clibs_logging.h*: logging for C
-* *clibs_math.h*: basic math operations
-* *clibs_print.h* and *clibs_print.c*: console printing related function-like macros
-* *clibs_time.h* and *clibs_time.c*: basic time operations
-* *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
-* *integer.h*: fixed-width integer type for C (*experimental*)
-* *platform.h*: platform-specific data
-* *term_color.h*: console color related macros
+## 📦 How to Use
 
-Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
+The utilities in **clibs** are self-contained, provided either as:
 
-## Copyright
+- single-header files, or
+- single-header + single-source file combos.
 
-Copyright (c) 2019-2021 ByteBard. All code is licensed under MIT unless mentioned otherwise.
+Just copy the components you need into your C project.
+
+Files starting with `test_*.c` are for testing purposes and are **not required** for using **clibs**.
+
+---
+
+## 🧰 Available Utilities
+
+- **boolean.h** – Boolean type for C
+- **cio.h**, **cio.c** – Basic input/output
+- **clibs_control_structure.h** – Common control structures
+- **clibs_logging.h** – Logging for C
+- **clibs_math.h** – Basic math operations
+- **clibs_print.h**, **clibs_print.c** – Console printing function-like macros
+- **clibs_time.h**, **clibs_time.c** – Time utility functions
+- **cstring.h**, **cstring.c** – Utility functions for C strings (`char` arrays)
+- **integer.h** – Fixed-width integer types (*experimental*)
+- **platform.h** – Platform-specific data
+- **term_color.h** – Console color macros
+
+Browse the **clibs** API documentation [here](https://cwchentw.github.io/clibs/html/index.html).
+
+---
+
+## 📝 License
+
+Copyright © 2019–2021 ByteBard  
+All code is licensed under the MIT License unless otherwise specified.
