@@ -1,120 +1,137 @@
-/** @file       clibs_logging.h
- *  @brief      Logging-related macros.
- *  @author     ByteBard
- *  @copyright  MIT
+/**
+ * @file    clibs_logging.h
+ * @brief   Thread-local lightweight logging macros for C.
+ * 
+ * This logger provides per-thread output support without locking,
+ * and logs messages to stderr by default unless redirected.
+ * 
+ * Logging level is determined at compile-time via macros like DEBUG, INFO, etc.
+ * Output macros are printf-style and safely fallback to stderr.
+ * 
+ * @author  ByteBard
+ * @copyright MIT
  */
+
 #ifndef CLIBS_LOGGING_H
 #define CLIBS_LOGGING_H
 
 #include <stdio.h>
-#include <stdlib.h>
 
+/**
+ * @defgroup CLIBS_LOG_LEVELS Logging Level Definitions
+ * @{
+ */
 #define CLIBS_LOG_LEVEL_DEBUG 5
 #define CLIBS_LOG_LEVEL_INFO  4
 #define CLIBS_LOG_LEVEL_WARN  3
 #define CLIBS_LOG_LEVEL_ERROR 2
 #define CLIBS_LOG_LEVEL_FATAL 1
 #define CLIBS_LOG_LEVEL_NONE  0
+/** @} */
 
-/** @def CLIBS_LOG_LEVEL
- *  @brief The logging level of an application.
+/**
+ * @def CLIBS_LOG_LEVEL
+ * @brief Logging verbosity level for compile-time filtering.
  *
- *  Available logging levels: <tt>DEBUG</tt>, <tt>INFO</tt>, <tt>WARN</tt>, <tt>ERROR</tt> and <tt>FATAL</tt>.
- *  Logging levels are defined by macro variables of the same names. 
+ * Set one of DEBUG / INFO / WARN / ERROR / FATAL before including this header.
  */
-#if DEBUG
+#if defined(DEBUG)
     #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_DEBUG
-#elif INFO
+#elif defined(INFO)
     #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_INFO
-#elif WARN
+#elif defined(WARN)
     #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_WARN
-#elif ERROR
+#elif defined(ERROR)
     #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_ERROR
-#elif FATAL
+#elif defined(FATAL)
     #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_FATAL
 #else
     #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_NONE
 #endif
 
-#ifndef END_OF_LINE
-    #define END_OF_LINE  "\n"
-#endif
-
-/** @def     CLIBS_LOG_DEBUG(format, ...)
- *  @brief   <tt>DEBUG</tt>-level log
- *  @param   format The formated string.
+/**
+ * @brief Sets thread-local output streams.
  *
- *  The logs are available only when \c CLIBS_LOG_LEVEL is at <tt>DEBUG</tt>.
+ * @param out  Output stream for general messages (default: stdout).
+ * @param err  Output stream for log messages (default: stderr).
+ */
+void clibs_set_output(FILE *out, FILE *err);
+
+/**
+ * @brief Returns the current thread-local output stream (fallback: stdout).
+ *
+ * @return FILE* output stream for general messages.
+ */
+FILE *clibs_get_out(void);
+
+/**
+ * @brief Returns the current thread-local error stream (fallback: stderr).
+ *
+ * @return FILE* output stream for log messages.
+ */
+FILE *clibs_get_err(void);
+
+/**
+ * @def CLIBS_LOG_DEBUG
+ * @brief Logs a debug message if level is DEBUG or higher.
+ * @param fmt printf-style format string.
+ * @param ... optional arguments.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_DEBUG
-    #define CLIBS_LOG_DEBUG(format, ...) { \
-        fprintf(stderr, "[DEBUG] (%s:%d) " format "%s", \
-            __FILE__, __LINE__, ##__VA_ARGS__, END_OF_LINE); \
-    }
+# define CLIBS_LOG_DEBUG(fmt, ...) \
+    do { fprintf(clibs_get_err(), "[DEBUG] (%s:%d) " fmt "\n", __FILE__, __LINE__, ##__VA_ARGS__); } while (0)
 #else
-    #define CLIBS_LOG_DEBUG(format, ...)
+# define CLIBS_LOG_DEBUG(fmt, ...) do {} while (0)
 #endif
 
-/** @def     CLIBS_LOG_INFO(format, ...)
- *  @brief   <tt>INFO</tt>-level log
- *  @param   format The formated string.
- *
- *  The logs are available only when \c CLIBS_LOG_LEVEL is at \c INFO or above.
+/**
+ * @def CLIBS_LOG_INFO
+ * @brief Logs an info message if level is INFO or higher.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_INFO
-    #define CLIBS_LOG_INFO(format, ...) { \
-        fprintf(stderr, "[INFO] " format "%s", \
-            ##__VA_ARGS__, END_OF_LINE); \
-    }
+# define CLIBS_LOG_INFO(fmt, ...) \
+    do { fprintf(clibs_get_err(), "[INFO] " fmt "\n", ##__VA_ARGS__); } while (0)
 #else
-    #define CLIBS_LOG_INFO(format, ...)
+# define CLIBS_LOG_INFO(fmt, ...) do {} while (0)
 #endif
 
-/** @def     CLIBS_LOG_WARN(format, ...)
- *  @brief   <tt>WARN</tt>-level log
- *  @param   format The formated string.
- *
- *  The logs are available only when \c CLIBS_LOG_LEVEL is at \c WARN or above.
+/**
+ * @def CLIBS_LOG_WARN
+ * @brief Logs a warning message if level is WARN or higher.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_WARN
-    #define CLIBS_LOG_WARN(format, ...) { \
-        fprintf(stderr, "[WARN] " format "%s", \
-            ##__VA_ARGS__, END_OF_LINE); \
-    }
+# define CLIBS_LOG_WARN(fmt, ...) \
+    do { fprintf(clibs_get_err(), "[WARN] " fmt "\n", ##__VA_ARGS__); } while (0)
 #else
-    #define CLIBS_LOG_WARN(format, ...)
+# define CLIBS_LOG_WARN(fmt, ...) do {} while (0)
 #endif
 
-/** @def     CLIBS_LOG_ERROR(format, ...)
- *  @brief   <tt>ERROR</tt>-level log
- *  @param   format The formated string.
- *
- *  The logs are available only when \c CLIBS_LOG_LEVEL is at \c ERROR or above.
+/**
+ * @def CLIBS_LOG_ERROR
+ * @brief Logs an error message and exits if level is ERROR or higher.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_ERROR
-    #define CLIBS_LOG_ERROR(format, ...) { \
-        fprintf(stderr, "[ERROR] " format "%s", \
-            ##__VA_ARGS__, END_OF_LINE); \
+# define CLIBS_LOG_ERROR(fmt, ...) \
+    do { \
+        fprintf(clibs_get_err(), "[ERROR] " fmt "\n", ##__VA_ARGS__); \
         exit(1); \
-    }
+    } while (0)
 #else
-    #define CLIBS_LOG_ERROR(format, ...)
+# define CLIBS_LOG_ERROR(fmt, ...) do {} while (0)
 #endif
 
-/** @def     CLIBS_LOG_FATAL(format, ...)
- *  @brief   <tt>FATAL</tt>-level log
- *  @param   format The formated string.
- *
- *  The logs are available only when \c CLIBS_LOG_LEVEL is at \c FATAL or above.
+/**
+ * @def CLIBS_LOG_FATAL
+ * @brief Logs a fatal message and aborts if level is FATAL or higher.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_FATAL
-    #define CLIBS_LOG_FATAL(format, ...) { \
-        fprintf(stderr, "[FATAL] " format "%s", \
-            ##__VA_ARGS__, END_OF_LINE); \
+# define CLIBS_LOG_FATAL(fmt, ...) \
+    do { \
+        fprintf(clibs_get_err(), "[FATAL] " fmt "\n", ##__VA_ARGS__); \
         abort(); \
-    }
+    } while (0)
 #else
-    #define CLIBS_LOG_FATAL(format, ...)
+# define CLIBS_LOG_FATAL(fmt, ...) do {} while (0)
 #endif
 
-#endif  /* CLIBS_LOGGING_H */
+#endif /* CLIBS_LOGGING_H */
