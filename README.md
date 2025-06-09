@@ -49,11 +49,11 @@ test_\*.c are test programs. You don't need them to use **clibs**.
 * *clibs_control_structure.h*: common control structures
 * *clibs_logging.h*: logging for C
 * *clibs_math.h*: basic math operations
+* *clibs_print.h* and *clibs_print.c*: console printing related function-like macros
 * *clibs_time.h* and *clibs_time.c*: basic time operations
 * *cstring.h* and *cstring.c*: utility functions for C strings (null-terminated `char` arrays)
 * *integer.h*: fixed-width integer type for C (*experimental*)
 * *platform.h*: platform-specific data
-* *print.h*: console printing related function-like macros
 * *term_color.h*: console color related macros
 
 Check the API of **clibs** [here](https://cwchentw.github.io/clibs/html/index.html).
