@@ -1,14 +1,21 @@
-/** @file       print.c
- *  @brief      Implementation for thread-safe print redirection
- *  @author     ByteBard
- *  @copyright  MIT
+/**
+ * @file    print.c
+ * @brief   Implementation of thread-local output streams for print macros.
  */
 
 #include "print.h"
 
-/* Thread-local output streams */
-THREAD_LOCAL FILE *clibs_out = NULL;
-THREAD_LOCAL FILE *clibs_err = NULL;
+#if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
+    #define THREAD_LOCAL _Thread_local
+#elif defined(__cplusplus)
+    #define THREAD_LOCAL thread_local
+#else
+    #define THREAD_LOCAL __thread
+#endif
+
+/* internal thread-local streams */
+static THREAD_LOCAL FILE *clibs_out = NULL;
+static THREAD_LOCAL FILE *clibs_err = NULL;
 
 void clibs_set_output(FILE *out, FILE *err) {
     clibs_out = out;
