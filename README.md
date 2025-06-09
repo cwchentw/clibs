@@ -73,11 +73,11 @@ Files starting with `test_*.c` are for testing purposes and are **not required**
 - **clibs_control_structure.h** – Common control structures
 - **clibs_logging.h** – Logging for C
 - **clibs_math.h** – Basic math operations
-- **clibs_print.h**, **clibs_print.c** – Console printing function-like macros
 - **clibs_time.h**, **clibs_time.c** – Time utility functions
 - **cstring.h**, **cstring.c** – Utility functions for C strings (`char` arrays)
 - **integer.h** – Fixed-width integer types (*experimental*)
 - **platform.h** – Platform-specific data
+- **print.h**, **print.c** – Console printing function-like macros
 - **term_color.h** – Console color macros
 
 Browse the **clibs** API documentation [here](https://cwchentw.github.io/clibs/html/index.html).
