@@ -104,9 +104,9 @@ int main(void)
 /*3456789012345678901234567890123456789012345678901234567890123456789012345678901234567890*/
     {
         char s[] = \
-"C is a general-purpose, procedural computer programming language " END_OF_LINE
-"supporting structured programming, lexical variable scope, and " END_OF_LINE
-"recursion, while a static type system prevents unintended operations." END_OF_LINE;
+"C is a general-purpose, procedural computer programming language \n"
+"supporting structured programming, lexical variable scope, and \n"
+"recursion, while a static type system prevents unintended operations.\n";
 
         FILE *fp = string_to_stream(s);
         if (!fp)

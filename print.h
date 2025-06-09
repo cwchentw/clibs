@@ -17,7 +17,7 @@
 extern "C" {
 #endif
 
-// Cross-platform thread-local definition
+/* Cross-platform thread-local definition */
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
     #define THREAD_LOCAL _Thread_local
 #elif defined(__cplusplus)
@@ -26,18 +26,18 @@ extern "C" {
     #define THREAD_LOCAL __thread
 #endif
 
-// Per-thread output targets
+/* Per-thread output targets */
 extern THREAD_LOCAL FILE *clibs_out;
 extern THREAD_LOCAL FILE *clibs_err;
 
-// Set thread-local output streams
+/* Set thread-local output streams */
 void clibs_set_output(FILE *out, FILE *err);
 
-// Get current output targets with fallback to stdout/stderr
+/* Get current output targets with fallback to stdout/stderr */
 FILE *clibs_get_out(void);
 FILE *clibs_get_err(void);
 
-// Macros
+/* Macros */
 #ifndef PRINT
 #define PRINT(fmt, ...) \
     do { fprintf(clibs_get_out(), fmt, ##__VA_ARGS__); } while (0)

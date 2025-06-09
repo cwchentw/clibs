@@ -1,56 +1,42 @@
 /** @file       boolean.h
- *  @brief      Custom Boolean type for C
+ *  @brief      Custom Boolean type for C (portable & self-contained)
  *  @author     ByteBard
  *  @copyright  MIT
  *
- *  Win32 API provides its own \b BOOL type. Hence, this header is useless in Win32 API programming.
+ *  Note: Win32 API provides its own BOOL type. This header is not intended for use in Win32 API programming.
  */
+
 #ifndef CLIBS_BOOLEAN_H
 #define CLIBS_BOOLEAN_H
 
-/** @typedef  BOOL
- *  @brief    Custom boolean type
- *
- *  @def    FALSE
- *  @brief  False in boolean type
- *
- *  @def    TRUE
- *  @brief  True in boolean type
- */
-#if _WIN32
-    /* Windows API provides its own BOOL type.
-    
-       TRUE and FALSE is availabe as well. */
+#if defined(_WIN32)
+    /* On Windows, use the native Win32 BOOL */
     #include <windows.h>
-#else
-#ifdef __cplusplus
-    /* C++ provides native bool type. */
-    #ifndef _BOOL_IS_DEFINED
-        typedef bool BOOL;
-        #define FALSE  false
-        #define TRUE   true
-        #define _BOOL_IS_DEFINED
-    #endif  /* BOOL */
-#else
-    #if __STDC_VERSION__ < 199901L
-        /* Home-made BOOL type for ANSI C. */
-        #ifndef _BOOL_IS_DEFINED
-            typedef unsigned char BOOL;
-            #define FALSE  0
-            #define TRUE   1
-            #define _BOOL_IS_DEFINED
-        #endif  /* BOOL */
-    #else
-        /* `bool` type is available after C99. */
-        #ifndef _BOOL_IS_DEFINED
+
+#else  /* Not Windows */
+
+    #ifndef CLIBS_BOOL_DEFINED
+
+        #if defined(__cplusplus)
+            typedef bool BOOL;
+            #define TRUE  true
+            #define FALSE false
+
+        #elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
             #include <stdbool.h>
             typedef bool BOOL;
-            #define FALSE  false
-            #define TRUE   true
-            #define _BOOL_IS_DEFINED
-        #endif  /* BOOL */
-    #endif  /* C89 */
-#endif  /* __cplusplus */
-#endif  /* Windows. */
+            #define TRUE  true
+            #define FALSE false
+
+        #else
+            typedef unsigned char BOOL;
+            #define TRUE  1
+            #define FALSE 0
+        #endif
+
+        #define CLIBS_BOOL_DEFINED
+    #endif  /* CLIBS_BOOL_DEFINED */
+
+#endif  /* _WIN32 */
 
 #endif  /* CLIBS_BOOLEAN_H */

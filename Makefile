@@ -21,6 +21,26 @@ else
 	CFLAGS=-Wall -Wextra -g -std=$(CSTD)
 endif
 
+ifneq (,$(findstring $(CC),$(CL)))
+	PRINT_OBJ=print.obj
+	TEST_BOOLEAN_OBJ=test_boolean.obj $(PRINT_OBJ)
+	TEST_INTEGER_OBJ=test_integer.obj
+	TEST_IO_OBJ=cio.obj test_cio.obj $(PRINT_OBJ)
+	TEST_MATH_OBJ=test_cmath.obj $(PRINT_OBJ)
+	TEST_STRING_OBJ=cstring.obj test_cstring.obj $(PRINT_OBJ)
+	TEST_TERM_COLOR_OBJ=test_term_color.obj $(PRINT_OBJ)
+	TEST_TIME_OBJ=clibs_time.obj test_ctime.obj $(PRINT_OBJ)
+else
+	PRINT_OBJ=print.o
+	TEST_BOOLEAN_OBJ=test_boolean.o $(PRINT_OBJ)
+	TEST_INTEGER_OBJ=test_integer.o
+	TEST_IO_OBJ=cio.o test_cio.o $(PRINT_OBJ)
+	TEST_MATH_OBJ=test_cmath.o $(PRINT_OBJ)
+	TEST_STRING_OBJ=cstring.o test_cstring.o $(PRINT_OBJ)
+	TEST_TERM_COLOR_OBJ=test_term_color.o $(PRINT_OBJ)
+	TEST_TIME_OBJ=clibs_time.o test_ctime.o $(PRINT_OBJ)
+endif
+
 ifeq ($(detected_OS),Windows)
 	TEST_BOOLEAN_EXEC=test_boolean.exe
 	TEST_INTEGER_EXEC=test_integer.exe
@@ -37,24 +57,6 @@ else
 	TEST_STRING_EXEC=test_cstring
 	TEST_TERM_COLOR_EXEC=test_term_color
 	TEST_TIME_EXEC=test_ctime
-endif
-
-ifneq (,$(findstring $(CC),$(CL)))
-	TEST_BOOLEAN_OBJ=test_boolean.obj
-	TEST_INTEGER_OBJ=test_integer.obj
-	TEST_IO_OBJ=cio.obj test_cio.obj
-	TEST_MATH_OBJ=test_cmath.obj
-	TEST_STRING_OBJ=cstring.obj test_cstring.obj
-	TEST_TERM_COLOR_OBJ=test_term_color.obj
-	TEST_TIME_OBJ=clibs_time.obj test_ctime.obj
-else
-	TEST_BOOLEAN_OBJ=test_boolean.o
-	TEST_INTEGER_OBJ=test_integer.o
-	TEST_IO_OBJ=cio.o test_cio.o
-	TEST_MATH_OBJ=test_cmath.o
-	TEST_STRING_OBJ=cstring.o test_cstring.o
-	TEST_TERM_COLOR_OBJ=test_term_color.o
-	TEST_TIME_OBJ=clibs_time.o test_ctime.o
 endif
 
 TEST_EXEC=$(TEST_BOOLEAN_EXEC) $(TEST_INTEGER_EXEC) $(TEST_IO_EXEC) \
@@ -160,5 +162,5 @@ endif  # c89
 clean:
 	$(RM) $(TEST_EXEC) $(TEST_BOOLEAN_OBJ) $(TEST_INTEGER_OBJ) \
 		$(TEST_IO_OBJ) $(TEST_MATH_OBJ) $(TEST_STRING_OBJ) \
-		$(TEST_TERM_COLOR_OBJ) $(TEST_TIME_OBJ) \
+		$(TEST_TERM_COLOR_OBJ) $(TEST_TIME_OBJ) $(PRINT_OBJ) \
 		get_sizeof_data_type get_sizeof_data_type.exe _sizeof_data_type.h

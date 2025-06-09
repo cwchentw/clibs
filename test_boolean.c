@@ -1,40 +1,34 @@
-#if _MSC_VER
-    #define WIN32_LEAN_AND_MEAN
-    #include <windows.h>
-#else
-    #include "boolean.h"
-#endif
-#include "print.h"
+#include "boolean.h"
+#include "print.h"  /* For DEBUG_INFO */
 
-#define TEST(cond) { \
-    if (!(cond)) { \
-        DEBUG_INFO("Wrong boolean relation"); \
-        passed = FALSE; \
-    } \
-}
+/* Simple test macro with debug info */
+#define TEST(cond) \
+    do { \
+        if (!(cond)) { \
+            DEBUG_INFO("Boolean test failed: " #cond); \
+            passed = FALSE; \
+        } \
+    } while (0)
 
 int main(void)
 {
     BOOL passed = TRUE;
 
-    /* Test AND */
+    /* --- AND logic --- */
     TEST((TRUE && TRUE) == TRUE);
     TEST((TRUE && FALSE) == FALSE);
     TEST((FALSE && TRUE) == FALSE);
     TEST((FALSE && FALSE) == FALSE);
 
-    /* Test OR */
+    /* --- OR logic --- */
     TEST((TRUE || TRUE) == TRUE);
     TEST((TRUE || FALSE) == TRUE);
     TEST((FALSE || TRUE) == TRUE);
     TEST((FALSE || FALSE) == FALSE);
 
-    /* Test NOT */
+    /* --- NOT logic --- */
     TEST((!TRUE) == FALSE);
     TEST((!FALSE) == TRUE);
 
-    if (!passed)
-        return 1;
-
-    return 0;
+    return passed ? 0 : 1;
 }
