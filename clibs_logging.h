@@ -1,13 +1,22 @@
 /**
  * @file    clibs_logging.h
  * @brief   Thread-local lightweight logging macros for C.
- * 
- * This logger provides per-thread output support without locking,
- * and logs messages to stderr by default unless redirected.
- * 
- * Logging level is determined at compile-time via macros like DEBUG, INFO, etc.
- * Output macros are printf-style and safely fallback to stderr.
- * 
+ *
+ * This module provides lightweight, compile-time filtered logging macros
+ * for C programs. Log output is written to the current thread-local error
+ * stream returned by clibs_get_err(), with fallback to stderr.
+ *
+ * Users may set CLIBS_LOG_LEVEL before including this header:
+ *
+ *   #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_DEBUG
+ *   #include "clibs_logging.h"
+ *
+ * If CLIBS_LOG_LEVEL is not defined, logging is disabled by default.
+ *
+ * This header intentionally does not enforce any build flag convention
+ * such as DEBUG or NDEBUG, and it does not terminate the process in any
+ * logging macro. Process control remains the caller's responsibility.
+ *
  * @author  ByteBard
  * @copyright MIT
  */
@@ -17,121 +26,136 @@
 
 #include <stdio.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
- * @defgroup CLIBS_LOG_LEVELS Logging Level Definitions
+ * @defgroup CLIBS_LOG_LEVELS Logging level definitions
+ * @brief Compile-time logging verbosity levels.
  * @{
  */
-#define CLIBS_LOG_LEVEL_DEBUG 5
-#define CLIBS_LOG_LEVEL_INFO  4
-#define CLIBS_LOG_LEVEL_WARN  3
-#define CLIBS_LOG_LEVEL_ERROR 2
-#define CLIBS_LOG_LEVEL_FATAL 1
-#define CLIBS_LOG_LEVEL_NONE  0
+#define CLIBS_LOG_LEVEL_NONE   0
+#define CLIBS_LOG_LEVEL_FATAL  1
+#define CLIBS_LOG_LEVEL_ERROR  2
+#define CLIBS_LOG_LEVEL_WARN   3
+#define CLIBS_LOG_LEVEL_INFO   4
+#define CLIBS_LOG_LEVEL_DEBUG  5
 /** @} */
 
 /**
  * @def CLIBS_LOG_LEVEL
- * @brief Logging verbosity level for compile-time filtering.
+ * @brief Compile-time logging verbosity level.
  *
- * Set one of DEBUG / INFO / WARN / ERROR / FATAL before including this header.
+ * Define this macro before including this header, for example:
+ *
+ *   #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_DEBUG
+ *
+ * If not defined, CLIBS_LOG_LEVEL defaults to CLIBS_LOG_LEVEL_NONE.
  */
-#if defined(DEBUG)
-    #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_DEBUG
-#elif defined(INFO)
-    #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_INFO
-#elif defined(WARN)
-    #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_WARN
-#elif defined(ERROR)
-    #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_ERROR
-#elif defined(FATAL)
-    #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_FATAL
-#else
-    #define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_NONE
+#ifndef CLIBS_LOG_LEVEL
+#define CLIBS_LOG_LEVEL CLIBS_LOG_LEVEL_NONE
 #endif
 
 /**
  * @brief Sets thread-local output streams.
  *
- * @param out  Output stream for general messages (default: stdout).
- * @param err  Output stream for log messages (default: stderr).
+ * @param out  Output stream for general messages (default fallback: stdout).
+ * @param err  Output stream for log messages (default fallback: stderr).
  */
 void clibs_set_output(FILE *out, FILE *err);
 
 /**
- * @brief Returns the current thread-local output stream (fallback: stdout).
+ * @brief Returns the current thread-local output stream.
  *
- * @return FILE* output stream for general messages.
+ * Falls back to stdout if no thread-local output stream is set.
+ *
+ * @return FILE* current output stream.
  */
 FILE *clibs_get_out(void);
 
 /**
- * @brief Returns the current thread-local error stream (fallback: stderr).
+ * @brief Returns the current thread-local error stream.
  *
- * @return FILE* output stream for log messages.
+ * Falls back to stderr if no thread-local error stream is set.
+ *
+ * @return FILE* current error stream.
  */
 FILE *clibs_get_err(void);
 
 /**
  * @def CLIBS_LOG_DEBUG
- * @brief Logs a debug message if level is DEBUG or higher.
- * @param fmt printf-style format string.
- * @param ... optional arguments.
+ * @brief Logs a debug message with file and line information.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_DEBUG
-# define CLIBS_LOG_DEBUG(fmt, ...) \
-    do { fprintf(clibs_get_err(), "[DEBUG] (%s:%d) " fmt "\n", __FILE__, __LINE__, ##__VA_ARGS__); } while (0)
+#define CLIBS_LOG_DEBUG(fmt, ...)                                           \
+    do {                                                                    \
+        fprintf(clibs_get_err(), "[DEBUG] (%s:%d) " fmt "\n",               \
+                __FILE__, __LINE__, ##__VA_ARGS__);                         \
+    } while (0)
 #else
-# define CLIBS_LOG_DEBUG(fmt, ...) do {} while (0)
+#define CLIBS_LOG_DEBUG(...) ((void)0)
 #endif
 
 /**
  * @def CLIBS_LOG_INFO
- * @brief Logs an info message if level is INFO or higher.
+ * @brief Logs an informational message.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_INFO
-# define CLIBS_LOG_INFO(fmt, ...) \
-    do { fprintf(clibs_get_err(), "[INFO] " fmt "\n", ##__VA_ARGS__); } while (0)
+#define CLIBS_LOG_INFO(fmt, ...)                                            \
+    do {                                                                    \
+        fprintf(clibs_get_err(), "[INFO] " fmt "\n", ##__VA_ARGS__);        \
+    } while (0)
 #else
-# define CLIBS_LOG_INFO(fmt, ...) do {} while (0)
+#define CLIBS_LOG_INFO(...) ((void)0)
 #endif
 
 /**
  * @def CLIBS_LOG_WARN
- * @brief Logs a warning message if level is WARN or higher.
+ * @brief Logs a warning message.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_WARN
-# define CLIBS_LOG_WARN(fmt, ...) \
-    do { fprintf(clibs_get_err(), "[WARN] " fmt "\n", ##__VA_ARGS__); } while (0)
+#define CLIBS_LOG_WARN(fmt, ...)                                            \
+    do {                                                                    \
+        fprintf(clibs_get_err(), "[WARN] " fmt "\n", ##__VA_ARGS__);        \
+    } while (0)
 #else
-# define CLIBS_LOG_WARN(fmt, ...) do {} while (0)
+#define CLIBS_LOG_WARN(...) ((void)0)
 #endif
 
 /**
  * @def CLIBS_LOG_ERROR
- * @brief Logs an error message and exits if level is ERROR or higher.
+ * @brief Logs an error message.
+ *
+ * This macro only logs. It does not terminate the process.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_ERROR
-# define CLIBS_LOG_ERROR(fmt, ...) \
-    do { \
-        fprintf(clibs_get_err(), "[ERROR] " fmt "\n", ##__VA_ARGS__); \
-        exit(1); \
+#define CLIBS_LOG_ERROR(fmt, ...)                                           \
+    do {                                                                    \
+        fprintf(clibs_get_err(), "[ERROR] " fmt "\n", ##__VA_ARGS__);       \
     } while (0)
 #else
-# define CLIBS_LOG_ERROR(fmt, ...) do {} while (0)
+#define CLIBS_LOG_ERROR(...) ((void)0)
 #endif
 
 /**
  * @def CLIBS_LOG_FATAL
- * @brief Logs a fatal message and aborts if level is FATAL or higher.
+ * @brief Logs a fatal message with file and line information.
+ *
+ * This macro only logs. It does not abort the process.
  */
 #if CLIBS_LOG_LEVEL >= CLIBS_LOG_LEVEL_FATAL
-# define CLIBS_LOG_FATAL(fmt, ...) \
-    do { \
-        fprintf(clibs_get_err(), "[FATAL] " fmt "\n", ##__VA_ARGS__); \
-        abort(); \
+#define CLIBS_LOG_FATAL(fmt, ...)                                           \
+    do {                                                                    \
+        fprintf(clibs_get_err(), "[FATAL] (%s:%d) " fmt "\n",               \
+                __FILE__, __LINE__, ##__VA_ARGS__);                         \
     } while (0)
 #else
-# define CLIBS_LOG_FATAL(fmt, ...) do {} while (0)
+#define CLIBS_LOG_FATAL(...) ((void)0)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* CLIBS_LOGGING_H */
