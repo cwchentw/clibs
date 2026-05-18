@@ -1,110 +1,240 @@
-\hypertarget{clibs__math_8h}{}\section{clibs\+\_\+math.\+h File Reference}
-\label{clibs__math_8h}\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
+\doxysection{clibs\+\_\+math.\+h File Reference}
+\hypertarget{clibs__math_8h}{}\label{clibs__math_8h}\index{clibs\_math.h@{clibs\_math.h}}
 
 
 Common math operations.  
 
 
-\subsection*{Macros}
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}} 
-\#define \hyperlink{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{M\+AX}(a,  b)~((a) $>$ (b) ? (a) \+: (b))
+\#define \mbox{\hyperlink{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}}(a,  b)
 \begin{DoxyCompactList}\small\item\em Get the maximal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\label{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}} 
-\#define \hyperlink{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
+\#define \mbox{\hyperlink{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(a,  b)
 \begin{DoxyCompactList}\small\item\em Get the minimal value between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}\label{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}} 
-\#define \hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}(a)~((a) $>$ 0.\+0 ? (a) \+: -\/(a))
+\#define \mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}}(a)
 \begin{DoxyCompactList}\small\item\em Get the absolute value of {\itshape a}. \end{DoxyCompactList}\item 
-\#define \hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+AL}(a,  b,  epsilon)~(\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}((a) -\/ (b)) $<$= (epsilon))
+\#define \mbox{\hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{IS\+\_\+\+EQUAL}}(a,  b,  epsilon)
 \begin{DoxyCompactList}\small\item\em Check the equality between two floating-\/point numbers. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}\label{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}} 
-\#define \hyperlink{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}{C\+O\+M\+P\+A\+RE}(a,  b)~((a) $>$ (b) ? 1 \+: (a) == (b) ? 0 \+: -\/1)
+\#define \mbox{\hyperlink{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}{COMPARE}}(a,  b)
 \begin{DoxyCompactList}\small\item\em Compare two numeric data. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}\label{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}} 
-\#define \hyperlink{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}{I\+S\+\_\+\+E\+V\+EN}(n)~(!((n) \& 1))
+\#define \mbox{\hyperlink{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}{IS\+\_\+\+EVEN}}(n)
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is even. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}\label{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}} 
-\#define \hyperlink{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}{I\+S\+\_\+\+O\+DD}(n)~((n) \& 1)
+\#define \mbox{\hyperlink{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}{IS\+\_\+\+ODD}}(n)
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is odd. \end{DoxyCompactList}\item 
-\#define \hyperlink{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}{S\+W\+AP}(a,  b)~(((a) $^\wedge$= (b)), ((b) $^\wedge$= (a)), ((a) $^\wedge$= (b)))
+\#define \mbox{\hyperlink{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}{SWAP}}(a,  b)
 \begin{DoxyCompactList}\small\item\em Swap between {\itshape a} and {\itshape b}. \end{DoxyCompactList}\item 
-\#define \hyperlink{clibs__math_8h_aa58b52936b1e6849f17d7e0d74be5655}{R\+A\+N\+D\+I\+NT}(min,  max)~((min) + rand() \% ((max) -\/ (min) + 1))
+\#define \mbox{\hyperlink{clibs__math_8h_aa58b52936b1e6849f17d7e0d74be5655}{RANDINT}}(min,  max)
 \begin{DoxyCompactList}\small\item\em Get a random integer bewteen {\itshape min} and {\itshape max}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}\label{clibs__math_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}} 
-\#define \hyperlink{clibs__math_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{I\+NF}~(1.\+0 / 0.\+0)
+\Hypertarget{clibs__math_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}\label{clibs__math_8h_a12c2040f25d8e3a7b9e1c2024c618cb6} 
+\#define {\bfseries INF}~(1.\+0 / 0.\+0)
 \begin{DoxyCompactList}\small\item\em An infinity number. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a2797dcf5a03248edef913c12f97e5a01}\label{clibs__math_8h_a2797dcf5a03248edef913c12f97e5a01}} 
-\#define \hyperlink{clibs__math_8h_a2797dcf5a03248edef913c12f97e5a01}{I\+S\+\_\+\+I\+NF}(n)~((n) $>$ F\+L\+T\+\_\+\+M\+AX)
+\#define \mbox{\hyperlink{clibs__math_8h_a2797dcf5a03248edef913c12f97e5a01}{IS\+\_\+\+INF}}(n)
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is an infinity number. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a98e3e165debaf418b6b285ff7538d3f3}\label{clibs__math_8h_a98e3e165debaf418b6b285ff7538d3f3}} 
-\#define \hyperlink{clibs__math_8h_a98e3e165debaf418b6b285ff7538d3f3}{N\+E\+G\+\_\+\+I\+NF}~(-\/1.\+0 / 0.\+0)
+\Hypertarget{clibs__math_8h_a98e3e165debaf418b6b285ff7538d3f3}\label{clibs__math_8h_a98e3e165debaf418b6b285ff7538d3f3} 
+\#define {\bfseries NEG\+\_\+\+INF}~(-\/1.\+0 / 0.\+0)
 \begin{DoxyCompactList}\small\item\em A negative infinity number. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a4fbe942aca2284e44ac30b580b92f125}\label{clibs__math_8h_a4fbe942aca2284e44ac30b580b92f125}} 
-\#define \hyperlink{clibs__math_8h_a4fbe942aca2284e44ac30b580b92f125}{I\+S\+\_\+\+N\+E\+G\+\_\+\+I\+NF}(n)~(-\/(n) $>$ F\+L\+T\+\_\+\+M\+AX)
+\#define \mbox{\hyperlink{clibs__math_8h_a4fbe942aca2284e44ac30b580b92f125}{IS\+\_\+\+NEG\+\_\+\+INF}}(n)
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is a negative infinity number. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{clibs__math_8h_a953f667fb27fb68dd74a487d002b19b5}\label{clibs__math_8h_a953f667fb27fb68dd74a487d002b19b5}} 
-\#define \hyperlink{clibs__math_8h_a953f667fb27fb68dd74a487d002b19b5}{NaN}~(0.\+0 / 0.\+0)
+\Hypertarget{clibs__math_8h_a953f667fb27fb68dd74a487d002b19b5}\label{clibs__math_8h_a953f667fb27fb68dd74a487d002b19b5} 
+\#define {\bfseries NaN}~(0.\+0 / 0.\+0)
 \begin{DoxyCompactList}\small\item\em A NaN (not a number) \end{DoxyCompactList}\item 
-\#define \hyperlink{clibs__math_8h_a141da3829a5ad971f4eecd057ac5f1ce}{I\+S\+\_\+\+NaN}(n)
+\#define \mbox{\hyperlink{clibs__math_8h_a141da3829a5ad971f4eecd057ac5f1ce}{IS\+\_\+\+NaN}}(n)
 \begin{DoxyCompactList}\small\item\em Check whether {\itshape n} is NaN (not a number) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Common math operations. 
 
 \begin{DoxyAuthor}{Author}
-ByteBard 
+Byte\+Bard 
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-M\+IT 
+MIT 
 \end{DoxyCopyright}
 
 
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}\label{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}} 
-\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!I\+S\+\_\+\+E\+Q\+U\+AL@{I\+S\+\_\+\+E\+Q\+U\+AL}}
-\index{I\+S\+\_\+\+E\+Q\+U\+AL@{I\+S\+\_\+\+E\+Q\+U\+AL}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
-\subsubsection{\texorpdfstring{I\+S\+\_\+\+E\+Q\+U\+AL}{IS\_EQUAL}}
-{\footnotesize\ttfamily \#define I\+S\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{epsilon }\end{DoxyParamCaption})~(\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{A\+BS}((a) -\/ (b)) $<$= (epsilon))}
+\label{doc-define-members}
+\Hypertarget{clibs__math_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}\index{clibs\_math.h@{clibs\_math.h}!ABS@{ABS}}
+\index{ABS@{ABS}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{ABS}{ABS}}
+{\footnotesize\ttfamily \label{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1} 
+\#define ABS(\begin{DoxyParamCaption}\item[{}]{a}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ >\ 0.0\ ?\ (a)\ :\ -\/(a))}
+
+\end{DoxyCode}
+
+
+Get the absolute value of {\itshape a}. 
+
+\Hypertarget{clibs__math_8h_a46c15196c8b70dad652315f5947796c6}\index{clibs\_math.h@{clibs\_math.h}!COMPARE@{COMPARE}}
+\index{COMPARE@{COMPARE}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{COMPARE}{COMPARE}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a46c15196c8b70dad652315f5947796c6} 
+\#define COMPARE(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ >\ (b)\ ?\ 1\ :\ (a)\ ==\ (b)\ ?\ 0\ :\ -\/1)}
+
+\end{DoxyCode}
+
+
+Compare two numeric data. 
+
+\Hypertarget{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}\index{clibs\_math.h@{clibs\_math.h}!IS\_EQUAL@{IS\_EQUAL}}
+\index{IS\_EQUAL@{IS\_EQUAL}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{IS\_EQUAL}{IS\_EQUAL}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4} 
+\#define IS\+\_\+\+EQUAL(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{epsilon}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\mbox{\hyperlink{clibs__math_8h_ae2f08dc603ae93c402abd918ba4e23e1}{ABS}}((a)\ -\/\ (b))\ <=\ (epsilon))}
+
+\end{DoxyCode}
 
 
 Check the equality between two floating-\/point numbers. 
 
-{\bfseries \hyperlink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{I\+S\+\_\+\+E\+Q\+U\+A\+L(a, b, epsilon)}} compares two floating-\/point numbers by the absolute value of the difference between {\itshape a} and {\itshape b}. The value should be smaller than {\bfseries epsilon} \mbox{\Hypertarget{clibs__math_8h_a141da3829a5ad971f4eecd057ac5f1ce}\label{clibs__math_8h_a141da3829a5ad971f4eecd057ac5f1ce}} 
-\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!I\+S\+\_\+\+NaN@{I\+S\+\_\+\+NaN}}
-\index{I\+S\+\_\+\+NaN@{I\+S\+\_\+\+NaN}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
-\subsubsection{\texorpdfstring{I\+S\+\_\+\+NaN}{IS\_NaN}}
-{\footnotesize\ttfamily \#define I\+S\+\_\+\+NaN(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+{\bfseries{\doxylink{clibs__math_8h_a713015a8ec5a7abb7c741a7738037bb4}{IS\+\_\+\+EQUAL(a, b, epsilon)}}} compares two floating-\/point numbers by the absolute value of the difference between {\itshape a} and {\itshape b}. The value should be smaller than {\bfseries{epsilon}} \Hypertarget{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20}\index{clibs\_math.h@{clibs\_math.h}!IS\_EVEN@{IS\_EVEN}}
+\index{IS\_EVEN@{IS\_EVEN}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{IS\_EVEN}{IS\_EVEN}}
+{\footnotesize\ttfamily \label{clibs__math_8h_aff5407859c02b1b107d77a0b26ccfa20} 
+\#define IS\+\_\+\+EVEN(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-((n) > (n)  ? 0 : \(\backslash\)
-         (n) == (n) ? 0 : \(\backslash\)
-         (n) < (n)  ? 0 : 1)
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(!((n)\ \&\ 1))}
+
+\end{DoxyCode}
+
+
+Check whether {\itshape n} is even. 
+
+\Hypertarget{clibs__math_8h_a2797dcf5a03248edef913c12f97e5a01}\index{clibs\_math.h@{clibs\_math.h}!IS\_INF@{IS\_INF}}
+\index{IS\_INF@{IS\_INF}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{IS\_INF}{IS\_INF}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a2797dcf5a03248edef913c12f97e5a01} 
+\#define IS\+\_\+\+INF(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((n)\ >\ FLT\_MAX)}
+
+\end{DoxyCode}
+
+
+Check whether {\itshape n} is an infinity number. 
+
+\Hypertarget{clibs__math_8h_a141da3829a5ad971f4eecd057ac5f1ce}\index{clibs\_math.h@{clibs\_math.h}!IS\_NaN@{IS\_NaN}}
+\index{IS\_NaN@{IS\_NaN}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{IS\_NaN}{IS\_NaN}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a141da3829a5ad971f4eecd057ac5f1ce} 
+\#define IS\+\_\+\+NaN(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ((n)\ >\ (n)\ \ ?\ 0\ :\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ (n)\ ==\ (n)\ ?\ 0\ :\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ (n)\ <\ (n)\ \ ?\ 0\ :\ 1)}
+
 \end{DoxyCode}
 
 
 Check whether {\itshape n} is NaN (not a number) 
 
-\mbox{\Hypertarget{clibs__math_8h_aa58b52936b1e6849f17d7e0d74be5655}\label{clibs__math_8h_aa58b52936b1e6849f17d7e0d74be5655}} 
-\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!R\+A\+N\+D\+I\+NT@{R\+A\+N\+D\+I\+NT}}
-\index{R\+A\+N\+D\+I\+NT@{R\+A\+N\+D\+I\+NT}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
-\subsubsection{\texorpdfstring{R\+A\+N\+D\+I\+NT}{RANDINT}}
-{\footnotesize\ttfamily \#define R\+A\+N\+D\+I\+NT(\begin{DoxyParamCaption}\item[{}]{min,  }\item[{}]{max }\end{DoxyParamCaption})~((min) + rand() \% ((max) -\/ (min) + 1))}
+\Hypertarget{clibs__math_8h_a4fbe942aca2284e44ac30b580b92f125}\index{clibs\_math.h@{clibs\_math.h}!IS\_NEG\_INF@{IS\_NEG\_INF}}
+\index{IS\_NEG\_INF@{IS\_NEG\_INF}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{IS\_NEG\_INF}{IS\_NEG\_INF}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a4fbe942aca2284e44ac30b580b92f125} 
+\#define IS\+\_\+\+NEG\+\_\+\+INF(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(-\/(n)\ >\ FLT\_MAX)}
+
+\end{DoxyCode}
+
+
+Check whether {\itshape n} is a negative infinity number. 
+
+\Hypertarget{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9}\index{clibs\_math.h@{clibs\_math.h}!IS\_ODD@{IS\_ODD}}
+\index{IS\_ODD@{IS\_ODD}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{IS\_ODD}{IS\_ODD}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a0fac5864e00584bf98923b4c2dc497f9} 
+\#define IS\+\_\+\+ODD(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((n)\ \&\ 1)}
+
+\end{DoxyCode}
+
+
+Check whether {\itshape n} is odd. 
+
+\Hypertarget{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\index{clibs\_math.h@{clibs\_math.h}!MAX@{MAX}}
+\index{MAX@{MAX}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \label{clibs__math_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f} 
+\#define MAX(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ >\ (b)\ ?\ (a)\ :\ (b))}
+
+\end{DoxyCode}
+
+
+Get the maximal value between {\itshape a} and {\itshape b}. 
+
+\Hypertarget{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\index{clibs\_math.h@{clibs\_math.h}!MIN@{MIN}}
+\index{MIN@{MIN}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \label{clibs__math_8h_a3acffbd305ee72dcd4593c0d8af64a4f} 
+\#define MIN(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ <\ (b)\ ?\ (a)\ :\ (b))}
+
+\end{DoxyCode}
+
+
+Get the minimal value between {\itshape a} and {\itshape b}. 
+
+\Hypertarget{clibs__math_8h_aa58b52936b1e6849f17d7e0d74be5655}\index{clibs\_math.h@{clibs\_math.h}!RANDINT@{RANDINT}}
+\index{RANDINT@{RANDINT}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{RANDINT}{RANDINT}}
+{\footnotesize\ttfamily \label{clibs__math_8h_aa58b52936b1e6849f17d7e0d74be5655} 
+\#define RANDINT(\begin{DoxyParamCaption}\item[{}]{min}{, }\item[{}]{max}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((min)\ +\ rand()\ \%\ ((max)\ -\/\ (min)\ +\ 1))}
+
+\end{DoxyCode}
 
 
 Get a random integer bewteen {\itshape min} and {\itshape max}. 
 
-Set a random seed by yourself. \mbox{\Hypertarget{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}\label{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}} 
-\index{clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}!S\+W\+AP@{S\+W\+AP}}
-\index{S\+W\+AP@{S\+W\+AP}!clibs\+\_\+math.\+h@{clibs\+\_\+math.\+h}}
-\subsubsection{\texorpdfstring{S\+W\+AP}{SWAP}}
-{\footnotesize\ttfamily \#define S\+W\+AP(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(((a) $^\wedge$= (b)), ((b) $^\wedge$= (a)), ((a) $^\wedge$= (b)))}
+Set a random seed by yourself. \Hypertarget{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3}\index{clibs\_math.h@{clibs\_math.h}!SWAP@{SWAP}}
+\index{SWAP@{SWAP}!clibs\_math.h@{clibs\_math.h}}
+\doxysubsubsection{\texorpdfstring{SWAP}{SWAP}}
+{\footnotesize\ttfamily \label{clibs__math_8h_aac9153aee4bdb92701df902e06a74eb3} 
+\#define SWAP(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((a)\ \string^=\ (b)),\ ((b)\ \string^=\ (a)),\ ((a)\ \string^=\ (b)))}
+
+\end{DoxyCode}
 
 
 Swap between {\itshape a} and {\itshape b}. 

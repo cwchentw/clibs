@@ -75,6 +75,7 @@ Files starting with `test_*.c` are for testing purposes and are **not required**
 - **clibs_math.h** – Basic math operations
 - **clibs_time.h**, **clibs_time.c** – Time utility functions
 - **cstring.h**, **cstring.c** – Utility functions for C strings (`char` arrays)
+- **hash_table.h**, **hash_table.c** - Constant C string hash table
 - **integer.h** – Fixed-width integer types (*experimental*)
 - **platform.h** – Platform-specific data
 - **print.h**, **print.c** – Console printing function-like macros

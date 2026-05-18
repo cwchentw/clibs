@@ -1,70 +1,115 @@
-\href{https://opensource.org/licenses/MIT}{\tt } \href{https://ci.appveyor.com/project/cwchentw/clibs}{\tt }
-
-Self-\/contained Utilities for C.
-
-Visit the website of {\bfseries clibs} \href{https://cwchentw.github.io/clibs/html/index.html}{\tt here}.
-
-Vist the repository of {\bfseries clibs} \href{https://github.com/cwchentw/clibs/}{\tt here}.
-
-\subsection*{Warning}
-
-clibs is still experimental and mostly for personal use. The A\+PI may change without warning.
-
-\subsection*{What is clibs anyway?}
-
-{\bfseries clibs} are utility code (types, typedefs, macros, functions) used across C programs. They are self-\/contained and domain neutral, able to be applied to various situations.
-
-\subsection*{System Requirements}
+\chapter{clibs }
+\hypertarget{index}{}\label{index}\index{clibs@{clibs}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
 
 
-\begin{DoxyItemize}
-\item A C compiler that supports A\+N\+SI C
-\item G\+NU Make (only for testing)
-\end{DoxyItemize}
+\href{https://opensource.org/licenses/MIT}{\texttt{}} \href{https://ci.appveyor.com/project/cwchentw/clibs}{\texttt{}}
 
-{\bfseries clibs} is written in A\+N\+SI C (C89). Nevertheless, We tested {\bfseries clibs} against C89, C99 and C11. Hence, you may use it for code in either classic C or modern C.
+Self-\/contained utilities for C.
 
-We compile and run {\bfseries clibs} with G\+CC, Clang, Visual C++ and Intel C++ Compiler.
+Visit the {\bfseries{clibs}} website \href{https://cwchentw.github.io/clibs/html/index.html}{\texttt{here}}. ~\newline
+ Visit the {\bfseries{clibs}} repository \href{https://github.com/cwchentw/clibs/}{\texttt{here}}.
 
-We test {\bfseries clibs} against several Unix or Unix-\/like systems\+:
+\DoxyHorRuler{0}
 
 
-\begin{DoxyItemize}
-\item Ubuntu 18.\+04 L\+TS
-\item Cent\+OS 8
-\item open\+S\+U\+SE Leap 15.\+1
-\item True\+OS, which is Free\+B\+SD compatible
-\end{DoxyItemize}
+\doxysection*{⚠️ Warning}
 
-It should work on other Unix or Unix-\/like systems as well.
+{\bfseries{clibs}} is still experimental and primarily intended for personal use. ~\newline
+ The API may change without notice.
 
-In addition, we test {\bfseries clibs} on a Windows container provided by \href{https://www.appveyor.com/}{\tt App\+Veyor}. Hence, {\bfseries clibs} should work on Windows as well.
+\DoxyHorRuler{0}
 
-\subsection*{How to Use?}
 
-The utilities in {\bfseries clibs} are self-\/contained, distributed as either single header or single header plus single source combo. Just copy what you need to your own C project.
+\doxysection*{❓ What is clibs?}
 
-test\+\_\+$\ast$.c are test programs. You don\textquotesingle{}t need them to use {\bfseries clibs}.
+{\bfseries{clibs}} is a collection of utility code (types, typedefs, macros, functions) used across C programs. ~\newline
+ It is self-\/contained and domain-\/neutral, designed to be applicable in various contexts.
 
-\subsection*{Available Utilities\+:}
+\DoxyHorRuler{0}
+
+
+\doxysection*{🖥️ System Requirements}
 
 
 \begin{DoxyItemize}
-\item {\itshape \hyperlink{boolean_8h}{boolean.\+h}}\+: boolean type for C
-\item {\itshape \hyperlink{cio_8h}{cio.\+h}} and {\itshape cio.\+c}\+: basic input and output
-\item {\itshape \hyperlink{clibs__control__structure_8h}{clibs\+\_\+control\+\_\+structure.\+h}}\+: common control structures
-\item {\itshape \hyperlink{clibs__logging_8h}{clibs\+\_\+logging.\+h}}\+: logging for C
-\item {\itshape \hyperlink{clibs__math_8h}{clibs\+\_\+math.\+h}}\+: basic math operations
-\item {\itshape \hyperlink{clibs__time_8h}{clibs\+\_\+time.\+h}} and {\itshape clibs\+\_\+time.\+c}\+: basic time operations
-\item {\itshape \hyperlink{cstring_8h}{cstring.\+h}} and {\itshape cstring.\+c}\+: utility functions for C strings (null-\/terminated {\ttfamily char} arrays)
-\item {\itshape \hyperlink{integer_8h}{integer.\+h}}\+: fixed-\/width integer type for C ({\itshape experimental})
-\item {\itshape \hyperlink{platform_8h}{platform.\+h}}\+: platform-\/specific data
-\item {\itshape \hyperlink{print_8h}{print.\+h}}\+: console printing related function-\/like macros
-\item {\itshape \hyperlink{term__color_8h}{term\+\_\+color.\+h}}\+: console color related macros
+\item A C compiler that supports ANSI C
+\item GNU Make (for testing only)
 \end{DoxyItemize}
 
-Check the A\+PI of {\bfseries clibs} \href{https://cwchentw.github.io/clibs/html/index.html}{\tt here}.
+{\bfseries{clibs}} is written in ANSI C (C89). However, we have tested it with C89, C99, and C11. ~\newline
+ You can use it with either classic or modern C codebases.
 
-\subsection*{Copyright}
+We have successfully compiled and run {\bfseries{clibs}} with\+:
 
-Copyright (c) 2019-\/2021 ByteBard. All code is licensed under M\+IT unless mentioned otherwise. 
+
+\begin{DoxyItemize}
+\item GCC
+\item Clang
+\item Visual C++
+\item Intel C++ Compiler
+\end{DoxyItemize}
+
+We also test {\bfseries{clibs}} on the following Unix or Unix-\/like systems\+:
+
+
+\begin{DoxyItemize}
+\item Ubuntu 20.\+04 LTS
+\item Rocky Linux 8.\+5
+\item open\+SUSE Leap 15.\+3
+\item Free\+BSD 13.\+0
+\end{DoxyItemize}
+
+It should also work on other Unix-\/like systems.
+
+Additionally, we test {\bfseries{clibs}} on Windows using \href{https://www.appveyor.com/}{\texttt{App\+Veyor}}, ~\newline
+ so it should be compatible with Windows as well.
+
+\DoxyHorRuler{0}
+
+
+\doxysection*{📦 How to Use}
+
+The utilities in {\bfseries{clibs}} are self-\/contained, provided either as\+:
+
+
+\begin{DoxyItemize}
+\item single-\/header files, or
+\item single-\/header + single-\/source file combos.
+\end{DoxyItemize}
+
+Just copy the components you need into your C project.
+
+Files starting with {\ttfamily test\+\_\+\texorpdfstring{$\ast$}{*}.c} are for testing purposes and are {\bfseries{not required}} for using {\bfseries{clibs}}.
+
+\DoxyHorRuler{0}
+
+
+\doxysection*{🧰 Available Utilities}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{boolean_8h}{boolean.\+h}}} – Boolean type for C
+\item {\bfseries{\doxylink{cio_8h}{cio.\+h}}}, {\bfseries{cio.\+c}} – Basic input/output
+\item {\bfseries{\doxylink{clibs__control__structure_8h}{clibs\+\_\+control\+\_\+structure.\+h}}} – Common control structures
+\item {\bfseries{\doxylink{clibs__logging_8h}{clibs\+\_\+logging.\+h}}} – Logging for C
+\item {\bfseries{\doxylink{clibs__math_8h}{clibs\+\_\+math.\+h}}} – Basic math operations
+\item {\bfseries{\doxylink{clibs__time_8h}{clibs\+\_\+time.\+h}}}, {\bfseries{clibs\+\_\+time.\+c}} – Time utility functions
+\item {\bfseries{\doxylink{cstring_8h}{cstring.\+h}}}, {\bfseries{cstring.\+c}} – Utility functions for C strings ({\ttfamily char} arrays)
+\item {\bfseries{\doxylink{hash__table_8h}{hash\+\_\+table.\+h}}}, {\bfseries{hash\+\_\+table.\+c}} -\/ Constant C string hash table
+\item {\bfseries{\doxylink{integer_8h_source}{integer.\+h}}} – Fixed-\/width integer types ({\itshape experimental})
+\item {\bfseries{\doxylink{platform_8h}{platform.\+h}}} – Platform-\/specific data
+\item {\bfseries{\doxylink{print_8h}{print.\+h}}}, {\bfseries{\doxylink{print_8c}{print.\+c}}} – Console printing function-\/like macros
+\item {\bfseries{\doxylink{term__color_8h}{term\+\_\+color.\+h}}} – Console color macros
+\end{DoxyItemize}
+
+Browse the {\bfseries{clibs}} API documentation \href{https://cwchentw.github.io/clibs/html/index.html}{\texttt{here}}.
+
+\DoxyHorRuler{0}
+
+
+\doxysection*{📝 License}
+
+Copyright © 2019–2021 Byte\+Bard ~\newline
+ All code is licensed under the MIT License unless otherwise specified. 

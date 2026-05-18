@@ -1,0 +1,34 @@
+\doxysection{platform.\+h}
+\hypertarget{platform_8h_source}{}\label{platform_8h_source}\mbox{\hyperlink{platform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_PLATFORM\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CLIBS\_PLATFORM\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ END\_OF\_LINE}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ END\_OF\_LINE\ "{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ END\_OF\_LINE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ DIRECTORY\_SEPARATOR}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_WIN32}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ DIRECTORY\_SEPARATOR\ "{}\(\backslash\)\(\backslash\)"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ \#elif\ \_\_unix\_\_\ ||\ \_\_unix\ ||\ unix\ ||\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ DIRECTORY\_SEPARATOR\ "{}/"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#error\ "{}Unsupported\ platform"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ DIRECTORY\_SEPARATOR\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ SEARCH\_PATH\_SEPARATOR}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_WIN32}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SEARCH\_PATH\_SEPARATOR\ "{};"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \#elif\ \_\_unix\_\_\ ||\ \_\_unix\ ||\ unix\ ||\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SEARCH\_PATH\_SEPARATOR\ "{}:"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#error\ "{}Unsupported\ platform"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ CLIBS\_PLATFORM\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

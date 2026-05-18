@@ -1,0 +1,43 @@
+\doxysection{print.\+h}
+\hypertarget{print_8h_source}{}\label{print_8h_source}\mbox{\hyperlink{print_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_PRINT\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ CLIBS\_PRINT\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{print_8h_add840e1fbcb31676e7d8d8b544c4d60b}{clibs\_set\_output}}(FILE\ *out,\ FILE\ *err);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ FILE\ *\mbox{\hyperlink{print_8h_a1c948e401597ea65df8bd06fe2103b40}{clibs\_get\_out}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ FILE\ *\mbox{\hyperlink{print_8h_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\_get\_err}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ PRINT(fmt,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ fprintf(clibs\_get\_out(),\ fmt,\ \#\#\_\_VA\_ARGS\_\_);\ \}\ while\ (0)}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ PERROR(fmt,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ fprintf(clibs\_get\_err(),\ fmt,\ \#\#\_\_VA\_ARGS\_\_);\ \}\ while\ (0)}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ PUTS(fmt,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ fprintf(clibs\_get\_out(),\ fmt\ "{}\(\backslash\)n"{},\ \#\#\_\_VA\_ARGS\_\_);\ \}\ while\ (0)}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ PUTERR(fmt,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ fprintf(clibs\_get\_err(),\ fmt\ "{}\(\backslash\)n"{},\ \#\#\_\_VA\_ARGS\_\_);\ \}\ while\ (0)}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ DEBUG\_INFO(fmt,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ fprintf(clibs\_get\_err(),\ "{}(\%s:\%d)\ "{}\ fmt\ "{}\(\backslash\)n"{},\ \(\backslash\)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#\#\_\_VA\_ARGS\_\_);\ \}\ while\ (0)}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CLIBS\_PRINT\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

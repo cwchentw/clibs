@@ -1,0 +1,49 @@
+\doxysection{cio.\+h File Reference}
+\hypertarget{cio_8h}{}\label{cio_8h}\index{cio.h@{cio.h}}
+
+
+Basic input and output for C.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for cio.\+h\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cio_8h_a6c77ab821f5f25beca0db8cad1db4f63}{stream\+\_\+read\+\_\+all}} (FILE \texorpdfstring{$\ast$}{*}fp)
+\begin{DoxyCompactList}\small\item\em Read all the content of {\itshape fp} into C string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic input and output for C. 
+
+\begin{DoxyAuthor}{Author}
+Byte\+Bard 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+MIT 
+\end{DoxyCopyright}
+
+
+\label{doc-func-members}
+\Hypertarget{cio_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{cio_8h_a6c77ab821f5f25beca0db8cad1db4f63}\index{cio.h@{cio.h}!stream\_read\_all@{stream\_read\_all}}
+\index{stream\_read\_all@{stream\_read\_all}!cio.h@{cio.h}}
+\doxysubsubsection{\texorpdfstring{stream\_read\_all()}{stream\_read\_all()}}
+{\footnotesize\ttfamily \label{cio_8h_a6c77ab821f5f25beca0db8cad1db4f63} 
+char \texorpdfstring{$\ast$}{*} stream\+\_\+read\+\_\+all (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{}\end{DoxyParamCaption})}
+
+
+
+Read all the content of {\itshape fp} into C string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & a i/o stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char \texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}

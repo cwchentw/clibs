@@ -1,52 +1,70 @@
-\hypertarget{clibs__control__structure_8h}{}\section{clibs\+\_\+control\+\_\+structure.\+h File Reference}
-\label{clibs__control__structure_8h}\index{clibs\+\_\+control\+\_\+structure.\+h@{clibs\+\_\+control\+\_\+structure.\+h}}
+\doxysection{clibs\+\_\+control\+\_\+structure.\+h File Reference}
+\hypertarget{clibs__control__structure_8h}{}\label{clibs__control__structure_8h}\index{clibs\_control\_structure.h@{clibs\_control\_structure.h}}
 
 
 Common control structures.  
 
 
-\subsection*{Macros}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for clibs\+\_\+control\+\_\+structure.\+h\+:
+% FIG 0
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{clibs__control__structure_8h_a42cf0857c6351075065a97c9f19099c7}{T\+I\+M\+ES}(count,  block)
-\begin{DoxyCompactList}\small\item\em Repeat a block of code some time(s) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{clibs__control__structure_8h_a42cf0857c6351075065a97c9f19099c7}{TIMES}}(count,  block)
+\begin{DoxyCompactList}\small\item\em Repeat a block of code a given number of times. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Common control structures. 
 
 \begin{DoxyAuthor}{Author}
-ByteBard 
+Byte\+Bard 
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-M\+IT 
+MIT
 \end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+This header demonstrates that language-\/like control structures can technically be implemented using macros in C.
+\end{DoxyNote}
+However, this pattern can easily lead to code that is difficult to read, debug, and maintain. Because of this risk, we will NOT introduce any additional "{}language block"{} style macros in this project.
+
+This macro exists purely as a technical demonstration of what is possible in C, not as a recommended pattern for general use.
+
+\begin{DoxyWarning}{Warning}
+Avoid using this macro in production code. Control-\/flow macros can easily evolve into a macro-\/based DSL and make the codebase harder to understand. 
+\end{DoxyWarning}
 
 
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{clibs__control__structure_8h_a42cf0857c6351075065a97c9f19099c7}\label{clibs__control__structure_8h_a42cf0857c6351075065a97c9f19099c7}} 
-\index{clibs\+\_\+control\+\_\+structure.\+h@{clibs\+\_\+control\+\_\+structure.\+h}!T\+I\+M\+ES@{T\+I\+M\+ES}}
-\index{T\+I\+M\+ES@{T\+I\+M\+ES}!clibs\+\_\+control\+\_\+structure.\+h@{clibs\+\_\+control\+\_\+structure.\+h}}
-\subsubsection{\texorpdfstring{T\+I\+M\+ES}{TIMES}}
-{\footnotesize\ttfamily \#define T\+I\+M\+ES(\begin{DoxyParamCaption}\item[{}]{count,  }\item[{}]{block }\end{DoxyParamCaption})}
+\label{doc-define-members}
+\Hypertarget{clibs__control__structure_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{clibs__control__structure_8h_a42cf0857c6351075065a97c9f19099c7}\index{clibs\_control\_structure.h@{clibs\_control\_structure.h}!TIMES@{TIMES}}
+\index{TIMES@{TIMES}!clibs\_control\_structure.h@{clibs\_control\_structure.h}}
+\doxysubsubsection{\texorpdfstring{TIMES}{TIMES}}
+{\footnotesize\ttfamily \label{clibs__control__structure_8h_a42cf0857c6351075065a97c9f19099c7} 
+\#define TIMES(\begin{DoxyParamCaption}\item[{}]{count}{, }\item[{}]{block}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-    size\_t i; \(\backslash\)
-    for (i = 0; i < (count); ++i) \{ \(\backslash\)
-        (block); \(\backslash\)
-    \} \(\backslash\)
-\}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ for\ (\textcolor{keywordtype}{size\_t}\ \_clibs\_times\_i\ =\ 0;\ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \_clibs\_times\_i\ <\ (count);\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ ++\_clibs\_times\_i)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ block;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (0)}
+
 \end{DoxyCode}
 
 
-Repeat a block of code some time(s) 
+Repeat a block of code a given number of times. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em count} & Counter \\
+{\em count} & Number of repetitions \\
 \hline
-{\em block} & A block of code \\
+{\em block} & Code block to execute \\
 \hline
 \end{DoxyParams}

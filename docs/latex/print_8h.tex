@@ -1,128 +1,193 @@
-\hypertarget{print_8h}{}\section{print.\+h File Reference}
-\label{print_8h}\index{print.\+h@{print.\+h}}
+\doxysection{print.\+h File Reference}
+\hypertarget{print_8h}{}\label{print_8h}\index{print.h@{print.h}}
 
 
-Console printing related macros.  
+Thread-\/aware printing macros with redirect support.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 Include dependency graph for print.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=130pt]{print_8h__incl}
-\end{center}
-\end{figure}
-\subsection*{Macros}
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{print_8h_aa3d2b101ea5e31185ae18e499d30ed11}\label{print_8h_aa3d2b101ea5e31185ae18e499d30ed11}} 
-\#define {\bfseries E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+NE}~\char`\"{}\textbackslash{}n\char`\"{}
+\#define \mbox{\hyperlink{print_8h_ab854488bd762fe2fd3293666ae7253ee}{PRINT}}(fmt, ...)
+\begin{DoxyCompactList}\small\item\em Print to output stream (like printf). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_af4815d46d1f11e8d8026997aad210fcf}{PERROR}}(fmt, ...)
+\begin{DoxyCompactList}\small\item\em Print to error stream (like fprintf(stderr,...)). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_aad4e0dacf39e17968976f9b555235078}{PUTS}}(fmt, ...)
+\begin{DoxyCompactList}\small\item\em Print one line to output stream, with newline. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_a71a25b72a64d46c50adefa93b22778f6}{PUTERR}}(fmt, ...)
+\begin{DoxyCompactList}\small\item\em Print one line to error stream, with newline. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{print_8h_a622294e3e1b45ac441e1ae9e4d1b0f1b}{DEBUG\+\_\+\+INFO}}(fmt, ...)
+\begin{DoxyCompactList}\small\item\em Print debug message with file and line info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{print_8h_af990e936c83edcff058ae8ec5864adec}{P\+R\+I\+NT}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stdout} without trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_a36f6a6453e7533808c32a37f455068a0}{P\+E\+R\+R\+OR}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stderr} without trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_ad5ec9098821844c0c27cd849fc930c90}{P\+U\+TS}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stdout} with trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_a84559fc324a4622242ee818f9025141f}{P\+U\+T\+E\+RR}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated string to {\bfseries stderr} with trailing E\+OL. \end{DoxyCompactList}\item 
-\#define \hyperlink{print_8h_a994994514490b70ee6a5dd679f28acbc}{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}(format, ...)
-\begin{DoxyCompactList}\small\item\em Print formated debug message to {\bfseries stderr} with trailing E\+OL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{print_8h_add840e1fbcb31676e7d8d8b544c4d60b}{clibs\+\_\+set\+\_\+output}} (FILE \texorpdfstring{$\ast$}{*}out, FILE \texorpdfstring{$\ast$}{*}err)
+\begin{DoxyCompactList}\small\item\em Sets thread-\/local output and error streams. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{print_8h_a1c948e401597ea65df8bd06fe2103b40}{clibs\+\_\+get\+\_\+out}} (void)
+\begin{DoxyCompactList}\small\item\em Gets current output stream (fallback\+: stdout). \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{print_8h_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\+\_\+get\+\_\+err}} (void)
+\begin{DoxyCompactList}\small\item\em Gets current error stream (fallback\+: stderr). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-Console printing related macros. 
+\doxysubsection{Detailed Description}
+Thread-\/aware printing macros with redirect support. 
+
+This module provides print macros (like printf, puts) that redirect output to thread-\/local FILE\texorpdfstring{$\ast$}{*} streams, with fallback to stdout/stderr. Intended for portable, lock-\/free console or file printing.
 
 \begin{DoxyAuthor}{Author}
-ByteBard 
+Byte\+Bard 
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-M\+IT
+MIT 
 \end{DoxyCopyright}
-The macro definition seen in this document represent the platform data of Unix. 
 
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{print_8h_a994994514490b70ee6a5dd679f28acbc}\label{print_8h_a994994514490b70ee6a5dd679f28acbc}} 
-\index{print.\+h@{print.\+h}!D\+E\+B\+U\+G\+\_\+\+I\+N\+FO@{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}}
-\index{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO@{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}{DEBUG\_INFO}}
-{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\label{doc-define-members}
+\Hypertarget{print_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{print_8h_a622294e3e1b45ac441e1ae9e4d1b0f1b}\index{print.h@{print.h}!DEBUG\_INFO@{DEBUG\_INFO}}
+\index{DEBUG\_INFO@{DEBUG\_INFO}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_INFO}{DEBUG\_INFO}}
+{\footnotesize\ttfamily \label{print_8h_a622294e3e1b45ac441e1ae9e4d1b0f1b} 
+\#define DEBUG\+\_\+\+INFO(\begin{DoxyParamCaption}\item[{}]{fmt}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stderr, \textcolor{stringliteral}{"(%s:%d) "} format \textcolor{stringliteral}{"%s"}, \(\backslash\)
-            \_\_FILE\_\_, \_\_LINE\_\_, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ fprintf(\mbox{\hyperlink{clibs__logging_8c_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\_get\_err}}(),\ \textcolor{stringliteral}{"{}(\%s:\%d)\ "{}}\ fmt\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#\#\_\_VA\_ARGS\_\_);\ \}\ \textcolor{keywordflow}{while}\ (0)}
+
 \end{DoxyCode}
 
 
-Print formated debug message to {\bfseries stderr} with trailing E\+OL. 
+Print debug message with file and line info. 
 
-{\bfseries D\+E\+B\+U\+G\+\_\+\+I\+N\+FO} works similarly to {\bfseries P\+U\+T\+E\+RR} but adds source file and line number. Hence, developers can track the location of the message more easily. \mbox{\Hypertarget{print_8h_a36f6a6453e7533808c32a37f455068a0}\label{print_8h_a36f6a6453e7533808c32a37f455068a0}} 
-\index{print.\+h@{print.\+h}!P\+E\+R\+R\+OR@{P\+E\+R\+R\+OR}}
-\index{P\+E\+R\+R\+OR@{P\+E\+R\+R\+OR}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+E\+R\+R\+OR}{PERROR}}
-{\footnotesize\ttfamily \#define P\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+\Hypertarget{print_8h_af4815d46d1f11e8d8026997aad210fcf}\index{print.h@{print.h}!PERROR@{PERROR}}
+\index{PERROR@{PERROR}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PERROR}{PERROR}}
+{\footnotesize\ttfamily \label{print_8h_af4815d46d1f11e8d8026997aad210fcf} 
+\#define PERROR(\begin{DoxyParamCaption}\item[{}]{fmt}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stderr, format, ##\_\_VA\_ARGS\_\_); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ fprintf(\mbox{\hyperlink{clibs__logging_8c_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\_get\_err}}(),\ fmt,\ \#\#\_\_VA\_ARGS\_\_);\ \}\ \textcolor{keywordflow}{while}\ (0)}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stderr} without trailing E\+OL. 
+Print to error stream (like fprintf(stderr,...)). 
 
-{\bfseries P\+E\+R\+R\+OR} works as {\bfseries P\+R\+I\+NT}, but to {\bfseries stderr}. \mbox{\Hypertarget{print_8h_af990e936c83edcff058ae8ec5864adec}\label{print_8h_af990e936c83edcff058ae8ec5864adec}} 
-\index{print.\+h@{print.\+h}!P\+R\+I\+NT@{P\+R\+I\+NT}}
-\index{P\+R\+I\+NT@{P\+R\+I\+NT}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+R\+I\+NT}{PRINT}}
-{\footnotesize\ttfamily \#define P\+R\+I\+NT(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+\Hypertarget{print_8h_ab854488bd762fe2fd3293666ae7253ee}\index{print.h@{print.h}!PRINT@{PRINT}}
+\index{PRINT@{PRINT}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PRINT}{PRINT}}
+{\footnotesize\ttfamily \label{print_8h_ab854488bd762fe2fd3293666ae7253ee} 
+\#define PRINT(\begin{DoxyParamCaption}\item[{}]{fmt}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stdout, format, ##\_\_VA\_ARGS\_\_); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ fprintf(\mbox{\hyperlink{clibs__logging_8c_a1c948e401597ea65df8bd06fe2103b40}{clibs\_get\_out}}(),\ fmt,\ \#\#\_\_VA\_ARGS\_\_);\ \}\ \textcolor{keywordflow}{while}\ (0)}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stdout} without trailing E\+OL. 
+Print to output stream (like printf). 
 
-Basically, {\bfseries P\+R\+I\+NT} is just a repackaged {\itshape printf} function seen {\bfseries stdio.\+h}. \mbox{\Hypertarget{print_8h_a84559fc324a4622242ee818f9025141f}\label{print_8h_a84559fc324a4622242ee818f9025141f}} 
-\index{print.\+h@{print.\+h}!P\+U\+T\+E\+RR@{P\+U\+T\+E\+RR}}
-\index{P\+U\+T\+E\+RR@{P\+U\+T\+E\+RR}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+U\+T\+E\+RR}{PUTERR}}
-{\footnotesize\ttfamily \#define P\+U\+T\+E\+RR(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+\Hypertarget{print_8h_a71a25b72a64d46c50adefa93b22778f6}\index{print.h@{print.h}!PUTERR@{PUTERR}}
+\index{PUTERR@{PUTERR}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PUTERR}{PUTERR}}
+{\footnotesize\ttfamily \label{print_8h_a71a25b72a64d46c50adefa93b22778f6} 
+\#define PUTERR(\begin{DoxyParamCaption}\item[{}]{fmt}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stderr, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ fprintf(\mbox{\hyperlink{clibs__logging_8c_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\_get\_err}}(),\ fmt\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ \#\#\_\_VA\_ARGS\_\_);\ \}\ \textcolor{keywordflow}{while}\ (0)}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stderr} with trailing E\+OL. 
+Print one line to error stream, with newline. 
 
-The E\+OL will change according to the host environment. \mbox{\Hypertarget{print_8h_ad5ec9098821844c0c27cd849fc930c90}\label{print_8h_ad5ec9098821844c0c27cd849fc930c90}} 
-\index{print.\+h@{print.\+h}!P\+U\+TS@{P\+U\+TS}}
-\index{P\+U\+TS@{P\+U\+TS}!print.\+h@{print.\+h}}
-\subsubsection{\texorpdfstring{P\+U\+TS}{PUTS}}
-{\footnotesize\ttfamily \#define P\+U\+TS(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+\Hypertarget{print_8h_aad4e0dacf39e17968976f9b555235078}\index{print.h@{print.h}!PUTS@{PUTS}}
+\index{PUTS@{PUTS}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{PUTS}{PUTS}}
+{\footnotesize\ttfamily \label{print_8h_aad4e0dacf39e17968976f9b555235078} 
+\#define PUTS(\begin{DoxyParamCaption}\item[{}]{fmt}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
-\begin{DoxyCode}
-\{ \(\backslash\)
-        fprintf(stdout, format \textcolor{stringliteral}{"%s"}, ##\_\_VA\_ARGS\_\_, \hyperlink{platform_8h_aa3d2b101ea5e31185ae18e499d30ed11}{END\_OF\_LINE}); \(\backslash\)
-    \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ fprintf(\mbox{\hyperlink{clibs__logging_8c_a1c948e401597ea65df8bd06fe2103b40}{clibs\_get\_out}}(),\ fmt\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ \#\#\_\_VA\_ARGS\_\_);\ \}\ \textcolor{keywordflow}{while}\ (0)}
+
 \end{DoxyCode}
 
 
-Print formated string to {\bfseries stdout} with trailing E\+OL. 
+Print one line to output stream, with newline. 
 
-The E\+OL will change according to the host environment. 
+
+
+\label{doc-func-members}
+\Hypertarget{print_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{print_8h_af59a6c890b1159c8cb548b7dd18c8f82}\index{print.h@{print.h}!clibs\_get\_err@{clibs\_get\_err}}
+\index{clibs\_get\_err@{clibs\_get\_err}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{clibs\_get\_err()}{clibs\_get\_err()}}
+{\footnotesize\ttfamily \label{print_8h_af59a6c890b1159c8cb548b7dd18c8f82} 
+FILE \texorpdfstring{$\ast$}{*} clibs\+\_\+get\+\_\+err (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gets current error stream (fallback\+: stderr). 
+
+Gets current error stream (fallback\+: stderr).
+
+Falls back to stderr if no thread-\/local error stream is set.
+
+\begin{DoxyReturn}{Returns}
+FILE\texorpdfstring{$\ast$}{*} current error stream. 
+\end{DoxyReturn}
+\Hypertarget{print_8h_a1c948e401597ea65df8bd06fe2103b40}\index{print.h@{print.h}!clibs\_get\_out@{clibs\_get\_out}}
+\index{clibs\_get\_out@{clibs\_get\_out}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{clibs\_get\_out()}{clibs\_get\_out()}}
+{\footnotesize\ttfamily \label{print_8h_a1c948e401597ea65df8bd06fe2103b40} 
+FILE \texorpdfstring{$\ast$}{*} clibs\+\_\+get\+\_\+out (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gets current output stream (fallback\+: stdout). 
+
+Gets current output stream (fallback\+: stdout).
+
+Falls back to stdout if no thread-\/local output stream is set.
+
+\begin{DoxyReturn}{Returns}
+FILE\texorpdfstring{$\ast$}{*} current output stream. 
+\end{DoxyReturn}
+\Hypertarget{print_8h_add840e1fbcb31676e7d8d8b544c4d60b}\index{print.h@{print.h}!clibs\_set\_output@{clibs\_set\_output}}
+\index{clibs\_set\_output@{clibs\_set\_output}!print.h@{print.h}}
+\doxysubsubsection{\texorpdfstring{clibs\_set\_output()}{clibs\_set\_output()}}
+{\footnotesize\ttfamily \label{print_8h_add840e1fbcb31676e7d8d8b544c4d60b} 
+void clibs\+\_\+set\+\_\+output (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{err}{}\end{DoxyParamCaption})}
+
+
+
+Sets thread-\/local output and error streams. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Stream for normal output (default\+: stdout). \\
+\hline
+{\em err} & Stream for error output (default\+: stderr).\\
+\hline
+\end{DoxyParams}
+Sets thread-\/local output and error streams.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream for general messages (default fallback\+: stdout). \\
+\hline
+{\em err} & Output stream for log messages (default fallback\+: stderr). \\
+\hline
+\end{DoxyParams}

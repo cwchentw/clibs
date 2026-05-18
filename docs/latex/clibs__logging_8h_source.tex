@@ -1,0 +1,85 @@
+\doxysection{clibs\+\_\+logging.\+h}
+\hypertarget{clibs__logging_8h_source}{}\label{clibs__logging_8h_source}\mbox{\hyperlink{clibs__logging_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_LOGGING\_H}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ CLIBS\_LOGGING\_H}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\_NONE\ \ \ 0}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\_FATAL\ \ 1}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\_ERROR\ \ 2}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\_WARN\ \ \ 3}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\_INFO\ \ \ 4}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\_DEBUG\ \ 5}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_LOG\_LEVEL}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_LEVEL\ CLIBS\_LOG\_LEVEL\_NONE}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clibs__logging_8h_add840e1fbcb31676e7d8d8b544c4d60b}{clibs\_set\_output}}(FILE\ *out,\ FILE\ *err);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ FILE\ *\mbox{\hyperlink{clibs__logging_8h_a1c948e401597ea65df8bd06fe2103b40}{clibs\_get\_out}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ FILE\ *\mbox{\hyperlink{clibs__logging_8h_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\_get\_err}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#if\ CLIBS\_LOG\_LEVEL\ >=\ CLIBS\_LOG\_LEVEL\_DEBUG}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_DEBUG(fmt,\ ...)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ fprintf(clibs\_get\_err(),\ "{}[DEBUG]\ (\%s:\%d)\ "{}\ fmt\ "{}\(\backslash\)n"{},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#\#\_\_VA\_ARGS\_\_);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_DEBUG(...)\ ((void)0)}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#if\ CLIBS\_LOG\_LEVEL\ >=\ CLIBS\_LOG\_LEVEL\_INFO}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_INFO(fmt,\ ...)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ fprintf(clibs\_get\_err(),\ "{}[INFO]\ "{}\ fmt\ "{}\(\backslash\)n"{},\ \#\#\_\_VA\_ARGS\_\_);\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_INFO(...)\ ((void)0)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#if\ CLIBS\_LOG\_LEVEL\ >=\ CLIBS\_LOG\_LEVEL\_WARN}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_WARN(fmt,\ ...)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ fprintf(clibs\_get\_err(),\ "{}[WARN]\ "{}\ fmt\ "{}\(\backslash\)n"{},\ \#\#\_\_VA\_ARGS\_\_);\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_WARN(...)\ ((void)0)}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#if\ CLIBS\_LOG\_LEVEL\ >=\ CLIBS\_LOG\_LEVEL\_ERROR}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_ERROR(fmt,\ ...)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ fprintf(clibs\_get\_err(),\ "{}[ERROR]\ "{}\ fmt\ "{}\(\backslash\)n"{},\ \#\#\_\_VA\_ARGS\_\_);\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_ERROR(...)\ ((void)0)}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#if\ CLIBS\_LOG\_LEVEL\ >=\ CLIBS\_LOG\_LEVEL\_FATAL}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_FATAL(fmt,\ ...)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ fprintf(clibs\_get\_err(),\ "{}[FATAL]\ (\%s:\%d)\ "{}\ fmt\ "{}\(\backslash\)n"{},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#\#\_\_VA\_ARGS\_\_);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ CLIBS\_LOG\_FATAL(...)\ ((void)0)}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00158\ \}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CLIBS\_LOGGING\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

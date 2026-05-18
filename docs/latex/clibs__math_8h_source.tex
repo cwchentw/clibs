@@ -1,0 +1,98 @@
+\doxysection{clibs\+\_\+math.\+h}
+\hypertarget{clibs__math_8h_source}{}\label{clibs__math_8h_source}\mbox{\hyperlink{clibs__math_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_CMATH\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ CLIBS\_CMATH\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MAX}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#define\ MAX(a,\ b)\ ((a)\ >\ (b)\ ?\ (a)\ :\ (b))}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ MIN}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \#define\ MIN(a,\ b)\ ((a)\ <\ (b)\ ?\ (a)\ :\ (b))}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ ABS}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ \#define\ ABS(a)\ ((a)\ >\ 0.0\ ?\ (a)\ :\ -\/(a))}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#ifndef\ IS\_EQUAL}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \#define\ IS\_EQUAL(a,\ b,\ epsilon)\ (ABS((a)\ -\/\ (b))\ <=\ (epsilon))}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifndef\ COMPARE}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \#define\ COMPARE(a,\ b)\ ((a)\ >\ (b)\ ?\ 1\ :\ (a)\ ==\ (b)\ ?\ 0\ :\ -\/1)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#ifndef\ IS\_EVEN}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ \#define\ IS\_EVEN(n)\ (!((n)\ \&\ 1))}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#ifndef\ IS\_ODD}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ \#define\ IS\_ODD(n)\ ((n)\ \&\ 1)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#ifndef\ SWAP}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \ \ \#define\ SWAP(a,\ b)\ (((a)\ \string^=\ (b)),\ ((b)\ \string^=\ (a)),\ ((a)\ \string^=\ (b)))}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#ifndef\ RANDINT}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ \#define\ RANDINT(min,\ max)\ ((min)\ +\ rand()\ \%\ ((max)\ -\/\ (min)\ +\ 1))\ }}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#ifndef\ INF}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <math.h>}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ INF\ (-\/logf(0.0))}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ INF\ (1.0\ /\ 0.0)}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#ifndef\ IS\_INF}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <math.h>}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ IS\_INF(n)\ (!\_finite(n))}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ IS\_INF(n)\ ((n)\ >\ FLT\_MAX)}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#ifndef\ NEG\_INF}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <math.h>}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEG\_INF\ (logf(0.0))}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEG\_INF\ (-\/1.0\ /\ 0.0)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#ifndef\ IS\_NEG\_INF}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <math.h>}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ IS\_NEG\_INF(n)\ (!\_finite(n)\ \&\&\ (n)\ <\ 0)}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ IS\_NEG\_INF(n)\ (-\/(n)\ >\ FLT\_MAX)}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#ifndef\ NaN}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <math.h>}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NaN\ (logf(0.0)\ -\/\ logf(0.0))}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NaN\ (0.0\ /\ 0.0)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#ifndef\ IS\_NaN}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\ \ \ \ \#define\ IS\_NaN(n)\ \(\backslash\)}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ ((n)\ >\ (n)\ \ ?\ 0\ :\ \(\backslash\)}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ (n)\ ==\ (n)\ ?\ 0\ :\ \(\backslash\)}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ (n)\ <\ (n)\ \ ?\ 0\ :\ 1)}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ CLIBS\_CMATH\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,88 @@
+\doxysection{print.\+c File Reference}
+\hypertarget{print_8c}{}\label{print_8c}\index{print.c@{print.c}}
+
+
+Implementation of thread-\/local output streams for print macros.  
+
+
+{\ttfamily \#include "{}print.\+h"{}}\newline
+Include dependency graph for print.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{print_8c_af8556c37f3acfa45992b8697930c501b}\label{print_8c_af8556c37f3acfa45992b8697930c501b} 
+\#define {\bfseries THREAD\+\_\+\+LOCAL}~\+\_\+\+\_\+thread
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{print_8c_add840e1fbcb31676e7d8d8b544c4d60b}{clibs\+\_\+set\+\_\+output}} (FILE \texorpdfstring{$\ast$}{*}out, FILE \texorpdfstring{$\ast$}{*}err)
+\begin{DoxyCompactList}\small\item\em Sets thread-\/local output streams. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{print_8c_a1c948e401597ea65df8bd06fe2103b40}{clibs\+\_\+get\+\_\+out}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current thread-\/local output stream. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{print_8c_af59a6c890b1159c8cb548b7dd18c8f82}{clibs\+\_\+get\+\_\+err}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current thread-\/local error stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of thread-\/local output streams for print macros. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{print_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{print_8c_af59a6c890b1159c8cb548b7dd18c8f82}\index{print.c@{print.c}!clibs\_get\_err@{clibs\_get\_err}}
+\index{clibs\_get\_err@{clibs\_get\_err}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{clibs\_get\_err()}{clibs\_get\_err()}}
+{\footnotesize\ttfamily \label{print_8c_af59a6c890b1159c8cb548b7dd18c8f82} 
+FILE \texorpdfstring{$\ast$}{*} clibs\+\_\+get\+\_\+err (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current thread-\/local error stream. 
+
+Gets current error stream (fallback\+: stderr).
+
+Falls back to stderr if no thread-\/local error stream is set.
+
+\begin{DoxyReturn}{Returns}
+FILE\texorpdfstring{$\ast$}{*} current error stream. 
+\end{DoxyReturn}
+\Hypertarget{print_8c_a1c948e401597ea65df8bd06fe2103b40}\index{print.c@{print.c}!clibs\_get\_out@{clibs\_get\_out}}
+\index{clibs\_get\_out@{clibs\_get\_out}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{clibs\_get\_out()}{clibs\_get\_out()}}
+{\footnotesize\ttfamily \label{print_8c_a1c948e401597ea65df8bd06fe2103b40} 
+FILE \texorpdfstring{$\ast$}{*} clibs\+\_\+get\+\_\+out (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current thread-\/local output stream. 
+
+Gets current output stream (fallback\+: stdout).
+
+Falls back to stdout if no thread-\/local output stream is set.
+
+\begin{DoxyReturn}{Returns}
+FILE\texorpdfstring{$\ast$}{*} current output stream. 
+\end{DoxyReturn}
+\Hypertarget{print_8c_add840e1fbcb31676e7d8d8b544c4d60b}\index{print.c@{print.c}!clibs\_set\_output@{clibs\_set\_output}}
+\index{clibs\_set\_output@{clibs\_set\_output}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{clibs\_set\_output()}{clibs\_set\_output()}}
+{\footnotesize\ttfamily \label{print_8c_add840e1fbcb31676e7d8d8b544c4d60b} 
+void clibs\+\_\+set\+\_\+output (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{err}{}\end{DoxyParamCaption})}
+
+
+
+Sets thread-\/local output streams. 
+
+Sets thread-\/local output and error streams.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream for general messages (default fallback\+: stdout). \\
+\hline
+{\em err} & Output stream for log messages (default fallback\+: stderr). \\
+\hline
+\end{DoxyParams}

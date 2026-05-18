@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['max',['MAX',['../clibs__math_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'clibs_math.h']]],
-  ['min',['MIN',['../clibs__math_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'clibs_math.h']]]
+  ['nan_0',['NaN',['../clibs__math_8h.html#a953f667fb27fb68dd74a487d002b19b5',1,'clibs_math.h']]],
+  ['neg_5finf_1',['NEG_INF',['../clibs__math_8h.html#a98e3e165debaf418b6b285ff7538d3f3',1,'clibs_math.h']]]
 ];

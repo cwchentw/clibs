@@ -1,0 +1,63 @@
+\doxysection{hash\+\_\+table.\+h File Reference}
+\hypertarget{hash__table_8h}{}\label{hash__table_8h}\index{hash\_table.h@{hash\_table.h}}
+
+
+Constant C string hash table.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hash__table_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{hash__table_8h_aa93f0eb578d23995850d61f7d61c55c1} 
+\#define {\bfseries FALSE}~0
+\item 
+\Hypertarget{hash__table_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{hash__table_8h_aa8cecfc5c5c054d2875c03e77b7be15d} 
+\#define {\bfseries TRUE}~1
+\item 
+\Hypertarget{hash__table_8h_af7c650f18c4f6a93c33638cf9426b216}\label{hash__table_8h_af7c650f18c4f6a93c33638cf9426b216} 
+\#define {\bfseries \+\_\+\+BOOL\+\_\+\+IS\+\_\+\+DEFINED}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hash__table_8h_af492d2bddcb2befacb3aa03dcdf9aafd}\label{hash__table_8h_af492d2bddcb2befacb3aa03dcdf9aafd} 
+typedef char {\bfseries BOOL}
+\item 
+\Hypertarget{hash__table_8h_a07fabf85b21093a5b3037d21f7ce9a1b}\label{hash__table_8h_a07fabf85b21093a5b3037d21f7ce9a1b} 
+typedef struct hash\+\_\+table\+\_\+t {\bfseries hash\+\_\+table\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hash__table_8h_ae3c999b91692a9f8102651707a7adf57}\label{hash__table_8h_ae3c999b91692a9f8102651707a7adf57} 
+\mbox{\hyperlink{structhash__table__t}{hash\+\_\+table\+\_\+t}} \texorpdfstring{$\ast$}{*} {\bfseries hash\+\_\+table\+\_\+new} (void)
+\item 
+\Hypertarget{hash__table_8h_a182b38b164579232e6d3f8d5c53e0f31}\label{hash__table_8h_a182b38b164579232e6d3f8d5c53e0f31} 
+BOOL {\bfseries hash\+\_\+table\+\_\+add} (\mbox{\hyperlink{structhash__table__t}{hash\+\_\+table\+\_\+t}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}key, const char \texorpdfstring{$\ast$}{*}value)
+\item 
+\Hypertarget{hash__table_8h_a4f9f14df38ec05a944a8de3fd9f20356}\label{hash__table_8h_a4f9f14df38ec05a944a8de3fd9f20356} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries hash\+\_\+table\+\_\+get} (\mbox{\hyperlink{structhash__table__t}{hash\+\_\+table\+\_\+t}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}key)
+\item 
+\Hypertarget{hash__table_8h_a61625ddbfc4fc64fdda2c12d7ac7ec7a}\label{hash__table_8h_a61625ddbfc4fc64fdda2c12d7ac7ec7a} 
+BOOL {\bfseries hash\+\_\+table\+\_\+remove} (\mbox{\hyperlink{structhash__table__t}{hash\+\_\+table\+\_\+t}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}key)
+\item 
+\Hypertarget{hash__table_8h_aae89c86ae4ea2197ba45cab3fefb791f}\label{hash__table_8h_aae89c86ae4ea2197ba45cab3fefb791f} 
+void {\bfseries hash\+\_\+table\+\_\+delete} (\mbox{\hyperlink{structhash__table__t}{hash\+\_\+table\+\_\+t}} \texorpdfstring{$\ast$}{*}self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Constant C string hash table. 
+
+\begin{DoxyAuthor}{Author}
+Byte\+Bard 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+MIT
+\end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+This hash table is implemented as a bucket array and has not been tested with large datasets. Not recommended for high-\/performance scenarios.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+his hash table uses the simple Djb2 algorithm and is not suitable for security-\/sensitive contexts. 
+\end{DoxyWarning}

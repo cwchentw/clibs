@@ -1,0 +1,73 @@
+\doxysection{cstring.\+h}
+\hypertarget{cstring_8h_source}{}\label{cstring_8h_source}\mbox{\hyperlink{cstring_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_CSTRING\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CLIBS\_CSTRING\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#include\ <cstdio>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \#include\ <stdio.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ Custom\ boolean\ type.\ */}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#if\ \_MSC\_VER}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \#include\ <windows.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ \_BOOL\_IS\_DEFINED}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{bool}\ BOOL;}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ FALSE\ \ false}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ TRUE\ \ \ true}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ \_BOOL\_IS\_DEFINED}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ \#endif\ \ }\textcolor{comment}{/*\ BOOL\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ \#if\ \_\_STDC\_VERSION\_\_\ <\ 199901L}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifndef\ \_BOOL\_IS\_DEFINED}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ BOOL;}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#define\ FALSE\ \ 0}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#define\ TRUE\ \ \ 1}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#define\ \_BOOL\_IS\_DEFINED}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif\ \ }\textcolor{comment}{/*\ BOOL\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifndef\ \_BOOL\_IS\_DEFINED}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#include\ <stdbool.h>}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{bool}\ BOOL;}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#define\ FALSE\ \ false}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#define\ TRUE\ \ \ true}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#define\ \_BOOL\_IS\_DEFINED}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif\ \ }\textcolor{comment}{/*\ BOOL\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \#endif\ \ }\textcolor{comment}{/*\ C89\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ string\_is\_equal(a,\ b)\ (0\ ==\ strcmp((a),\ (b)))}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ BOOL\ \mbox{\hyperlink{cstring_8h_ab54f92ad286b028ebf7c7355050cefcd}{string\_starts\_with}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *b);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ BOOL\ \mbox{\hyperlink{cstring_8h_ac5530f6f236cfec990a0e2248a3f5004}{string\_contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *b);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ BOOL\ \mbox{\hyperlink{cstring_8h_ae7ebe8f808dbc71ded2f909b20362d3e}{string\_is\_space\_only}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *s);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{cstring_8h_aba0c7478892dcd50b723a42c29546167}{string\_allocate\_char}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{cstring_8h_ad65a1edcb53a27dd0bc7c5d1047cf2d7}{string\_allocate}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *s);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{cstring_8h_ab274fbff7bbb4a1da6e4853f8ab3bde7}{string\_allocate\_substring}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *s,\ \textcolor{keywordtype}{size\_t}\ from,\ \textcolor{keywordtype}{size\_t}\ to);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{cstring_8h_a2e015992f61a396fbb875bc6f5ff61af}{string\_concat}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *b);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00128\ FILE\ *\ \mbox{\hyperlink{cstring_8h_ab309510e05ead025d13218b98585ac9e}{string\_to\_stream}}(\textcolor{keywordtype}{char}\ *s);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ CLIBS\_CSTRING\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

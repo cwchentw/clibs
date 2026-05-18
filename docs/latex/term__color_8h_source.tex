@@ -1,0 +1,141 @@
+\doxysection{term\+\_\+color.\+h}
+\hypertarget{term__color_8h_source}{}\label{term__color_8h_source}\mbox{\hyperlink{term__color_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CLIBS\_TERM\_COLOR}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CLIBS\_TERM\_COLOR}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#error\ "{}term\_color.h\ is\ not\ supported"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ \_TERM\_COLOR\_DEFINED}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{term__color_8h_ace87d4dc8977f524b5dc40c2b1a53754}{term\_color\_t}};}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \#define\ \_TERM\_COLOR\_DEFINED}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_RESET\ \ "{}\(\backslash\)e[0m"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_BLACK\ \ "{}\(\backslash\)e[0;30m"{}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_RED\ \ "{}\(\backslash\)e[0;31m"{}}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_GREEN\ \ "{}\(\backslash\)e[0;32m"{}}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[0;33m"{}}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_BLUE\ \ "{}\(\backslash\)e[0;34m"{}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[0;35m"{}}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_CYAN\ \ "{}\(\backslash\)e[0;36m"{}}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ TERM\_COLOR\_WHITE\ \ "{}\(\backslash\)e[0;37m"{}}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_BLACK\ \ "{}\(\backslash\)e[0;90m"{}}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_RED\ \ "{}\(\backslash\)e[0;91m"{}}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_GREEN\ \ "{}\(\backslash\)e[0;92m"{}}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[0;93m"{}}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_BLUE\ \ "{}\(\backslash\)e[0;94m"{}}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[0;95m"{}}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_CYAN\ \ "{}\(\backslash\)e[0;96m"{}}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_COLOR\_WHITE\ \ "{}\(\backslash\)e[0;97m"{}}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_BLACK\ \ "{}\(\backslash\)e[1;30m"{}}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_RED\ \ "{}\(\backslash\)e[1;31m"{}}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_GREEN\ \ "{}\(\backslash\)e[1;32m"{}}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[1;33m"{}}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_BLUE\ \ "{}\(\backslash\)e[1;34m"{}}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[1;35m"{}}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_CYAN\ \ "{}\(\backslash\)e[1;36m"{}}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_COLOR\_WHITE\ \ "{}\(\backslash\)e[1;37m"{}}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_BLACK\ \ "{}\(\backslash\)e[1;90m"{}}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_RED\ \ "{}\(\backslash\)e[1;91m"{}}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_GREEN\ \ "{}\(\backslash\)e[1;92m"{}}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[1;93m"{}}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_BLUE\ \ "{}\(\backslash\)e[1;94m"{}}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[1;95m"{}}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_CYAN\ \ "{}\(\backslash\)e[1;96m"{}}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ TERM\_BOLD\_BRIGHT\_COLOR\_WHITE\ \ "{}\(\backslash\)e[1;97m"{}}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_BLACK\ \ "{}\(\backslash\)e[4;30m"{}}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_RED\ \ "{}\(\backslash\)e[4;31m"{}}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_GREEN\ \ "{}\(\backslash\)e[4;32m"{}}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[4;33m"{}}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_BLUE\ \ "{}\(\backslash\)e[4;34m"{}}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[4;35m"{}}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_CYAN\ \ "{}\(\backslash\)e[4;36m"{}}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ TERM\_UNDERLINE\_COLOR\_WHITE\ \ "{}\(\backslash\)e[4;37m"{}}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_BLACK\ \ "{}\(\backslash\)e[40m"{}}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_RED\ \ "{}\(\backslash\)e[41m"{}}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_GREEN\ \ \ "{}\(\backslash\)e[42m"{}}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[43m"{}}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_BLUE\ "{}\(\backslash\)e[44m"{}}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[45m"{}}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_CYAN\ \ "{}\(\backslash\)e[46m"{}}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ TERM\_BACKGROUND\_COLOR\_WHITE\ \ "{}\(\backslash\)e[47m"{}}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_BLACK\ \ "{}\(\backslash\)e[100m"{}}}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_RED\ \ "{}\(\backslash\)e[101m"{}}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_GREEN\ \ "{}\(\backslash\)e[102m"{}}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_YELLOW\ \ "{}\(\backslash\)e[103m"{}}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_BLUE\ \ "{}\(\backslash\)e[104m"{}}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_PURPLE\ \ "{}\(\backslash\)e[105m"{}}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_CYAN\ \ "{}\(\backslash\)e[106m"{}}}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#define\ TERM\_BRIGHT\_BACKGROUND\_COLOR\_WHITE\ \ "{}\(\backslash\)e[107m"{}}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ CLIBS\_TERM\_COLOR\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
