@@ -9,34 +9,33 @@
 #ifndef CLIBS_BOOLEAN_H
 #define CLIBS_BOOLEAN_H
 
-#if defined(_WIN32)
-    /* On Windows, use the native Win32 BOOL */
-    #include <windows.h>
-
-#else  /* Not Windows */
-
-    #ifndef CLIBS_BOOL_DEFINED
-
-        #if defined(__cplusplus)
-            typedef bool BOOL;
-            #define TRUE  true
-            #define FALSE false
-
-        #elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+/* Custom boolean type. */
+#ifndef _WINDOWS_
+#ifdef __cplusplus
+    #ifndef _BOOL_IS_DEFINED
+        typedef bool BOOL;
+        #define FALSE  false
+        #define TRUE   true
+        #define _BOOL_IS_DEFINED
+    #endif
+#else
+    #if __STDC_VERSION__ < 199901L
+        #ifndef _BOOL_IS_DEFINED
+            typedef char BOOL;
+            #define FALSE  0
+            #define TRUE   1
+            #define _BOOL_IS_DEFINED
+        #endif
+    #else
+        #ifndef _BOOL_IS_DEFINED
             #include <stdbool.h>
             typedef bool BOOL;
-            #define TRUE  true
-            #define FALSE false
-
-        #else
-            typedef unsigned char BOOL;
-            #define TRUE  1
-            #define FALSE 0
+            #define FALSE  false
+            #define TRUE   true
+            #define _BOOL_IS_DEFINED
         #endif
-
-        #define CLIBS_BOOL_DEFINED
-    #endif  /* CLIBS_BOOL_DEFINED */
-
-#endif  /* _WIN32 */
+    #endif
+#endif
+#endif
 
 #endif  /* CLIBS_BOOLEAN_H */
