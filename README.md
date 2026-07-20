@@ -1,28 +1,27 @@
 # clibs
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build status](https://ci.appveyor.com/api/projects/status/69a3u5o6wm3itj8w?svg=true)](https://ci.appveyor.com/project/cwchentw/clibs)
-
 Self-contained utilities for C.
 
 Visit the **clibs** website [here](https://cwchentw.github.io/clibs/html/index.html).  
 Visit the **clibs** repository [here](https://github.com/cwchentw/clibs/).
-
----
 
 ## ⚠️ Warning
 
 **clibs** is still experimental and primarily intended for personal use.  
 The API may change without notice.
 
----
-
 ## ❓ What is clibs?
 
 **clibs** is a collection of utility code (types, typedefs, macros, functions) used across C programs.  
 It is self-contained and domain-neutral, designed to be applicable in various contexts.
 
----
+## 🐧 Project Status
+
+The original goal of **clibs** was to build a portable compatibility and abstraction layer in C. However, it is no longer the 1970s. For most developers today, the efficient development model is managed code + C ABI + kernel code. Mainstream languages all support FFI, allowing kernel code to be linked through the C ABI.
+
+If one truly intends to develop systems programs, C++ or Rust should be used instead of C. The contemporary primary use case for C development is resource-constrained environments.
+
+This project has entered maintenance mode. No new libraries will be added, but bug fixes will be applied when necessary.
 
 ## 🖥️ System Requirements
 
@@ -31,27 +30,6 @@ It is self-contained and domain-neutral, designed to be applicable in various co
 
 **clibs** is written in ANSI C (C89). However, we have tested it with C89, C99, and C11.  
 You can use it with either classic or modern C codebases.
-
-We have successfully compiled and run **clibs** with:
-
-- GCC
-- Clang
-- Visual C++
-- Intel C++ Compiler
-
-We also test **clibs** on the following Unix or Unix-like systems:
-
-- Ubuntu 20.04 LTS
-- Rocky Linux 8.5
-- openSUSE Leap 15.3
-- FreeBSD 13.0
-
-It should also work on other Unix-like systems.
-
-Additionally, we test **clibs** on Windows using [AppVeyor](https://www.appveyor.com/),  
-so it should be compatible with Windows as well.
-
----
 
 ## 📦 How to Use
 
@@ -63,8 +41,6 @@ The utilities in **clibs** are self-contained, provided either as:
 Just copy the components you need into your C project.
 
 Files starting with `test_*.c` are for testing purposes and are **not required** for using **clibs**.
-
----
 
 ## 🧰 Available Utilities
 
@@ -82,8 +58,6 @@ Files starting with `test_*.c` are for testing purposes and are **not required**
 - **term_color.h** – Console color macros
 
 Browse the **clibs** API documentation [here](https://cwchentw.github.io/clibs/html/index.html).
-
----
 
 ## 📝 License
 
